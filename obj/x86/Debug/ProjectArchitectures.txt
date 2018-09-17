@@ -1,0 +1,1 @@
+C:\Users\wang\source\repos\App1\UsefulWeather\UsefulWeather.csproj;x86

@@ -1,0 +1,193 @@
+﻿<Page
+    x:Class="UsefulWeather.LocationPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UsefulWeather"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="LightGray">
+        <StackPanel VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Latitude"
+                           FontSize="20"
+                           VerticalAlignment="Center"/>
+                <TextBlock Text="Longitude"
+                           FontSize="20"
+                           Grid.Row="1"
+                           VerticalAlignment="Center"/>
+                <TextBox Name="lat_textbox"
+                         Width="100"
+                         Margin="10"
+                         Grid.Column="1"/>
+                <TextBox Name="Lon_textbox"
+                         Width="100"
+                         Grid.Row="1"
+                         Margin="10"
+                         Grid.Column="1"/>
+                <Button Name="city_button"                      
+                        Grid.RowSpan="2"
+                        Grid.Column="2"
+                        Width="110"
+                        Content="Get Weather"
+                        Click="city_button_Click"/>
+            </Grid>
+            <RelativePanel>
+                <TextBlock Name="locationname_textblock"
+                           FontSize="30"
+                           RelativePanel.AlignLeftWithPanel="True"                          
+                           Text="{Binding city.name}"/>
+                <TextBlock Name="temp_textblock"
+                           FontSize="30"
+                           RelativePanel.RightOf="locationname_textblock"
+                           Margin="30,0,0,0"                          
+                           Text="{Binding list[0].main.temp}"/>
+                <TextBlock Name="C_textblock"
+                           FontSize="30"                          
+                           RelativePanel.RightOf="temp_textblock"/>
+                <TextBlock Name="mainDec_textblock"
+                           FontSize="30"
+                           RelativePanel.Below="locationname_textblock"                       
+                           Text="{Binding list[0].weather[0].description}"/>
+                <Image Name="main_Image"
+                       Height="100"
+                       Width="100"
+                       RelativePanel.AlignRightWithPanel="True"/>
+            </RelativePanel>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <TextBlock Name="Time_textblock"
+                               FontSize="20"
+                               FontWeight="Bold"
+                               HorizontalAlignment="Center"/>
+                    <TextBlock Name="time1_textblock"
+                               FontSize="22"
+                               Text="{Binding list[1].dt_txt}"/>
+                    <TextBlock Name="time2_textblock"
+                               FontSize="22"
+                               Text="{Binding list[2].dt_txt}"/>
+                    <TextBlock Name="time3_textblock"
+                               FontSize="22"
+                               Text="{Binding list[3].dt_txt}"/>
+                    <TextBlock Name="time4_textblock"
+                               FontSize="22"
+                               Text="{Binding list[4].dt_txt}"/>
+                    <TextBlock Name="time5_textblock"
+                               FontSize="22"
+                               Text="{Binding list[5].dt_txt}"/>
+                    <TextBlock Name="time6_textblock"
+                               FontSize="22"
+                               Text="{Binding list[6].dt_txt}"/>
+                    <TextBlock Name="time7_textblock"
+                               FontSize="22"
+                               Text="{Binding list[7].dt_txt}"/>
+                </StackPanel>
+                <StackPanel Margin="10,0,0,0">
+                    <TextBlock Name="Temp_textblock"
+                               FontSize="20"
+                               FontWeight="Bold"/>
+                    <TextBlock Name="temp1_textblock"
+                               FontSize="22"
+                               HorizontalAlignment="Center"
+                               Text="{Binding list[1].main.temp}"/>
+                    <TextBlock Name="temp2_textblock"
+                               FontSize="22"
+                               HorizontalAlignment="Center"
+                               Text="{Binding list[2].main.temp}"/>
+                    <TextBlock Name="temp3_textblock"
+                               FontSize="22"
+                               HorizontalAlignment="Center"
+                               Text="{Binding list[3].main.temp}"/>
+                    <TextBlock Name="temp4_textblock"
+                               FontSize="22"
+                               HorizontalAlignment="Center"
+                               Text="{Binding list[4].main.temp}"/>
+                    <TextBlock Name="temp5_textblock"
+                               FontSize="22"
+                               HorizontalAlignment="Center"
+                               Text="{Binding list[5].main.temp}"/>
+                    <TextBlock Name="temp6_textblock"
+                               FontSize="22"
+                               HorizontalAlignment="Center"
+                               Text="{Binding list[6].main.temp}"/>
+                    <TextBlock Name="temp7_textblock"
+                               FontSize="22"
+                               HorizontalAlignment="Center"
+                               Text="{Binding list[7].main.temp}"/>
+                </StackPanel>
+                <StackPanel Margin="10,0,0,0">
+                    <TextBlock Name="Dec_textblock"
+                               FontSize="22"
+                               HorizontalAlignment="Center"
+                               FontWeight="Bold"/>
+                    <TextBlock Name="dec1_textblock"
+                               FontSize="22"
+                               HorizontalAlignment="Center"
+                               Text="{Binding list[1].weather[0].description}"/>
+                    <TextBlock Name="dec2_textblock"
+                               FontSize="22"
+                               HorizontalAlignment="Center"
+                               Text="{Binding list[2].weather[0].description}"/>
+                    <TextBlock Name="dec3_textblock"
+                               FontSize="22"
+                               HorizontalAlignment="Center"
+                               Text="{Binding list[3].weather[0].description}"/>
+                    <TextBlock Name="dec4_textblock"
+                               FontSize="22"
+                               HorizontalAlignment="Center"
+                               Text="{Binding list[4].weather[0].description}"/>
+                    <TextBlock Name="dec5_textblock"
+                               FontSize="22"
+                               HorizontalAlignment="Center"
+                               Text="{Binding list[5].weather[0].description}"/>
+                    <TextBlock Name="dec6_textblock"
+                               FontSize="22"
+                               HorizontalAlignment="Center"
+                               Text="{Binding list[6].weather[0].description}"/>
+                    <TextBlock Name="dec7_textblock"
+                               FontSize="22"
+                               HorizontalAlignment="Center"
+                               Text="{Binding list[7].weather[0].description}"/>
+                </StackPanel>
+                <StackPanel Margin="10,0,0,0">
+                    <TextBlock Name="Icon_textblock"
+                               FontSize="20"
+                               FontWeight="Bold"/>
+                    <Image Name="image1_image"
+                           Height="30"
+                           Width="30"/>
+                    <Image Name="image2_image"
+                           Height="30"
+                           Width="30"/>
+                    <Image Name="image3_image"
+                           Height="30"
+                           Width="30"/>
+                    <Image Name="image4_image"
+                           Height="30"
+                           Width="30"/>
+                    <Image Name="image5_image"
+                           Height="30"
+                           Width="30"/>
+                    <Image Name="image6_image"
+                           Height="30"
+                           Width="30"/>
+                    <Image Name="image7_image"
+                           Height="30"
+                           Width="30"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid> 
+</Page>
