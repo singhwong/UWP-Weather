@@ -31,38 +31,53 @@ namespace UsefulWeather
 
         private async void cityname_button_Click(object sender, RoutedEventArgs e)
         {
-            RootObject weather = await weatherAPI.GetWeatherByCityName(cityname_textbox.Text);
-            DataContext = weather;
-            C_textblock.Text = "°C";
-            Time_textblock.Text = "Time";
-            Temp_textblock.Text = "Temperature";
-            Dec_textblock.Text = "Description";
-            Icon_textblock.Text = "Icon";
-            cityname_textbox.Text = "";
+            try
+            {
+                RootObject weather = await weatherAPI.GetWeatherByCityName(cityname_textbox.Text);
+                DataContext = weather;
+                C_textblock.Text = "°C";
+                Time_textblock.Text = "Time";
+                Temp_textblock.Text = "Temperature";
+                Dec_textblock.Text = "Description";
+                Icon_textblock.Text = "Icon";
+                cityname_textbox.Text = "";
 
-            var icon = String.Format("ms-appx:///Assets/WeatherIcons/{0}.png", weather.list[0].weather[0].icon);
-            main_Image.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
+                var icon = String.Format("ms-appx:///Assets/WeatherIcons/{0}.png", weather.list[0].weather[0].icon);
+                main_Image.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
 
-            var icon1 = String.Format("ms-appx:///Assets/WeatherIcons/{0}.png", weather.list[1].weather[0].icon);
-            image1_image.Source = new BitmapImage(new Uri(icon1, UriKind.Absolute));
+                var icon1 = String.Format("ms-appx:///Assets/WeatherIcons/{0}.png", weather.list[1].weather[0].icon);
+                image1_image.Source = new BitmapImage(new Uri(icon1, UriKind.Absolute));
 
-            var icon2 = String.Format("ms-appx:///Assets/WeatherIcons/{0}.png", weather.list[2].weather[0].icon);
-            image2_image.Source = new BitmapImage(new Uri(icon2, UriKind.Absolute));
+                var icon2 = String.Format("ms-appx:///Assets/WeatherIcons/{0}.png", weather.list[2].weather[0].icon);
+                image2_image.Source = new BitmapImage(new Uri(icon2, UriKind.Absolute));
 
-            var icon3 = String.Format("ms-appx:///Assets/WeatherIcons/{0}.png", weather.list[3].weather[0].icon);
-            image3_image.Source = new BitmapImage(new Uri(icon3, UriKind.Absolute));
+                var icon3 = String.Format("ms-appx:///Assets/WeatherIcons/{0}.png", weather.list[3].weather[0].icon);
+                image3_image.Source = new BitmapImage(new Uri(icon3, UriKind.Absolute));
 
-            var icon4 = String.Format("ms-appx:///Assets/WeatherIcons/{0}.png", weather.list[4].weather[0].icon);
-            image4_image.Source = new BitmapImage(new Uri(icon4, UriKind.Absolute));
+                var icon4 = String.Format("ms-appx:///Assets/WeatherIcons/{0}.png", weather.list[4].weather[0].icon);
+                image4_image.Source = new BitmapImage(new Uri(icon4, UriKind.Absolute));
 
-            var icon5 = String.Format("ms-appx:///Assets/WeatherIcons/{0}.png", weather.list[5].weather[0].icon);
-            image5_image.Source = new BitmapImage(new Uri(icon5, UriKind.Absolute));
+                var icon5 = String.Format("ms-appx:///Assets/WeatherIcons/{0}.png", weather.list[5].weather[0].icon);
+                image5_image.Source = new BitmapImage(new Uri(icon5, UriKind.Absolute));
 
-            var icon6 = String.Format("ms-appx:///Assets/WeatherIcons/{0}.png", weather.list[6].weather[0].icon);
-            image6_image.Source = new BitmapImage(new Uri(icon6, UriKind.Absolute));
+                var icon6 = String.Format("ms-appx:///Assets/WeatherIcons/{0}.png", weather.list[6].weather[0].icon);
+                image6_image.Source = new BitmapImage(new Uri(icon6, UriKind.Absolute));
 
-            var icon7 = String.Format("ms-appx:///Assets/WeatherIcons/{0}.png", weather.list[7].weather[0].icon);
-            image7_image.Source = new BitmapImage(new Uri(icon7, UriKind.Absolute));
+                var icon7 = String.Format("ms-appx:///Assets/WeatherIcons/{0}.png", weather.list[7].weather[0].icon);
+                image7_image.Source = new BitmapImage(new Uri(icon7, UriKind.Absolute));
+            }
+            catch
+            {
+                ContentDialog dia = new ContentDialog
+                {
+                    Title = "Wrong Input",
+                    Content = "Enter the city name is wrong, please input again.",
+                    IsPrimaryButtonEnabled = true,
+                    PrimaryButtonText = "OK",
+                };
+                ContentDialogResult result = await dia.ShowAsync();
+            }
+            
         }
     }
 }
