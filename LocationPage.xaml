@@ -64,7 +64,7 @@
                            Text="{Binding list[0].main.temp}"/>
                 <TextBlock Name="C_textblock"
                            FontSize="30"
-                           Foreground="LightBlue"
+                           Foreground="White"
                            RelativePanel.RightOf="temp_textblock"/>
                 <TextBlock Name="mainDec_textblock"
                            FontSize="30"

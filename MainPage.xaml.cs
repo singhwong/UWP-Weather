@@ -45,10 +45,15 @@ namespace UsefulWeather
                 main_frame.Navigate(typeof(LocationPage));
                 main_title.Text = "LocationWeather";
             }
-            else
+            else if (listbox_itemthree.IsSelected)
             {
                 main_frame.Navigate(typeof(CityPage));
                 main_title.Text = "CityWeather";
+            }
+            else
+            {
+                main_frame.Navigate(typeof(SettingPage));
+                main_title.Text = "Setting";
             }
         }
     }

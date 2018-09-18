@@ -232,4 +232,8 @@ C:\Users\wang\source\repos\App1\UsefulWeather\obj\x86\Debug\CityPage.xaml
 C:\Users\wang\source\repos\App1\UsefulWeather\obj\x86\Debug\LocationPage.xaml
 C:\Users\wang\source\repos\App1\UsefulWeather\obj\x86\Debug\CityPage.xbf
 C:\Users\wang\source\repos\App1\UsefulWeather\obj\x86\Debug\LocationPage.xbf
-C:\Users\wang\source\repos\App1\UsefulWeather\obj\x86\Debug\UsefulWeather.csprojAssemblyReference.cache
+C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\SettingPage.xbf
+C:\Users\wang\source\repos\App1\UsefulWeather\obj\x86\Debug\SettingPage.g.i.cs
+C:\Users\wang\source\repos\App1\UsefulWeather\obj\x86\Debug\SettingPage.g.cs
+C:\Users\wang\source\repos\App1\UsefulWeather\obj\x86\Debug\SettingPage.xaml
+C:\Users\wang\source\repos\App1\UsefulWeather\obj\x86\Debug\SettingPage.xbf

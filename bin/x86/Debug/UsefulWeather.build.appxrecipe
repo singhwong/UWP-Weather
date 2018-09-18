@@ -486,6 +486,9 @@
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\SettingPage.xbf">
+      <PackagePath>SettingPage.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>

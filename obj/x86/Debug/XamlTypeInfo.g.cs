@@ -189,21 +189,23 @@ namespace UsefulWeather.UsefulWeather_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[6];
+            _typeNameTable = new string[7];
             _typeNameTable[0] = "UsefulWeather.CityPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[3] = "UsefulWeather.HomePage";
             _typeNameTable[4] = "UsefulWeather.LocationPage";
             _typeNameTable[5] = "UsefulWeather.MainPage";
+            _typeNameTable[6] = "UsefulWeather.SettingPage";
 
-            _typeTable = new global::System.Type[6];
+            _typeTable = new global::System.Type[7];
             _typeTable[0] = typeof(global::UsefulWeather.CityPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[3] = typeof(global::UsefulWeather.HomePage);
             _typeTable[4] = typeof(global::UsefulWeather.LocationPage);
             _typeTable[5] = typeof(global::UsefulWeather.MainPage);
+            _typeTable[6] = typeof(global::UsefulWeather.SettingPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -242,6 +244,7 @@ namespace UsefulWeather.UsefulWeather_XamlTypeInfo
         private object Activate_3_HomePage() { return new global::UsefulWeather.HomePage(); }
         private object Activate_4_LocationPage() { return new global::UsefulWeather.LocationPage(); }
         private object Activate_5_MainPage() { return new global::UsefulWeather.MainPage(); }
+        private object Activate_6_SettingPage() { return new global::UsefulWeather.SettingPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -285,6 +288,13 @@ namespace UsefulWeather.UsefulWeather_XamlTypeInfo
             case 5:   //  UsefulWeather.MainPage
                 userType = new global::UsefulWeather.UsefulWeather_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_5_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 6:   //  UsefulWeather.SettingPage
+                userType = new global::UsefulWeather.UsefulWeather_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_6_SettingPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
