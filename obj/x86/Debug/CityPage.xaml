@@ -101,8 +101,8 @@
                            RelativePanel.Below="mainMinTem_String"
                            RelativePanel.RightOf="mainWindSpeed_textblock"/>
                 <Image x:ConnectionId='47' Name="main_Image"
-                       Height="100"
-                       Width="100"
+                       Height="200"
+                       Width="200"
                        RelativePanel.AlignVerticalCenterWithPanel="True"
                        RelativePanel.AlignRightWithPanel="True"/>
             </RelativePanel>

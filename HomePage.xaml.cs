@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Notifications;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -47,9 +48,9 @@ namespace UsefulWeather
             MaxTempC_textblock.Text = "°C";
             MinTempC_textblock.Text = "°C";
 
-
-            var icon = String.Format("ms-appx:///Assets/WeatherIcons/{0}.png",weather.list[0].weather[0].icon);
-            main_Image.Source = new BitmapImage(new Uri(icon,UriKind.Absolute));
+            ShowMessage();
+            var icon = String.Format("ms-appx:///Assets/WeatherIcons/{0}.png", weather.list[0].weather[0].icon);
+            main_Image.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
 
             var icon1 = String.Format("ms-appx:///Assets/WeatherIcons/{0}.png", weather.list[1].weather[0].icon);
             image1_image.Source = new BitmapImage(new Uri(icon1, UriKind.Absolute));
@@ -73,6 +74,17 @@ namespace UsefulWeather
             image7_image.Source = new BitmapImage(new Uri(icon7, UriKind.Absolute));
 
 
+        }
+        private void ShowMessage()
+        {
+            var tileXml = TileUpdateManager.GetTemplateContent(TileTemplateType.TileSquare150x150Text01);
+            var tileAttributes = tileXml.GetElementsByTagName("text");
+            tileAttributes[0].AppendChild(tileXml.CreateTextNode(cityname_textblock.Text));
+            tileAttributes[1].AppendChild(tileXml.CreateTextNode(temp_textblock.Text + "°C"));
+            tileAttributes[2].AppendChild(tileXml.CreateTextNode(mainDec_textblock.Text));
+            tileAttributes[3].AppendChild(tileXml.CreateTextNode(mainWindSpeed_textblock.Text + "km/h"));
+            var tileNotification = new TileNotification(tileXml);
+            TileUpdateManager.CreateTileUpdaterForApplication().Update(tileNotification);
         }
     }
 }
