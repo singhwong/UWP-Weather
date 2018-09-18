@@ -41,6 +41,12 @@ namespace UsefulWeather
                 Dec_textblock.Text = "Description";
                 Icon_textblock.Text = "Icon";
                 cityname_textbox.Text = "";
+                mainMaxTem_String.Text = "Max Temp:";
+                mainMinTem_String.Text = "Min Temp:";
+                mainWindSpeed_String.Text = "Wind Speed:";
+                WindSpeedUnit_String.Text = "km/h";
+                MaxTempC_textblock.Text = "°C";
+                MinTempC_textblock.Text = "°C";
 
                 var icon = String.Format("ms-appx:///Assets/WeatherIcons/{0}.png", weather.list[0].weather[0].icon);
                 main_Image.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
