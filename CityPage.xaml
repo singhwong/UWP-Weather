@@ -25,20 +25,32 @@
                         Click="cityname_button_Click"/>
         </StackPanel>
         <RelativePanel>
+            <TextBlock Name="country_textblock"
+                       FontSize="30"
+                       Foreground="LightBlue"
+                       FontWeight="Bold"
+                       RelativePanel.AlignTopWithPanel="True"
+                       Text="{Binding city.country}"/>
             <TextBlock Name="cityname_textblock"
                            FontSize="30"
                            Foreground="LightBlue"
+                           FontWeight="Bold"
+                           RelativePanel.Below="country_textblock"
                            RelativePanel.AlignLeftWithPanel="True"                          
                            Text="{Binding city.name}"/>
             <TextBlock Name="temp_textblock"
                            FontSize="30"
+                           FontWeight="Bold"
                            Foreground="LightBlue"
+                           RelativePanel.Below="country_textblock"
                            RelativePanel.RightOf="cityname_textblock"
                            Margin="30,0,0,0"                          
                            Text="{Binding list[0].main.temp}"/>
             <TextBlock Name="C_textblock"
                            FontSize="30"
+                           FontWeight="Bold"
                            Foreground="White"
+                           RelativePanel.Below="country_textblock"
                            RelativePanel.RightOf="temp_textblock"/>
             <TextBlock Name="mainDec_textblock"
                            FontSize="30"

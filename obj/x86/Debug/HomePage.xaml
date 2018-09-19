@@ -11,35 +11,44 @@
 
     <StackPanel>
         <RelativePanel>
-            <TextBlock x:ConnectionId='34' Name="cityname_textblock"
+            <TextBlock x:ConnectionId='34' Name="country_textblock"
+                       FontSize="30"
+                       Foreground="LightBlue"
+                       FontWeight="Bold"
+                       RelativePanel.AlignTopWithPanel="True"
+                       Text="{Binding city.country}"/>
+            <TextBlock x:ConnectionId='35' Name="cityname_textblock"
                            FontSize="30"
                            Foreground="LightBlue"
                            FontWeight="Bold"
+                           RelativePanel.Below="country_textblock"
                            RelativePanel.AlignLeftWithPanel="True"                          
                            Text="{Binding city.name}"/>
-            <TextBlock x:ConnectionId='35' Name="temp_textblock"
+            <TextBlock x:ConnectionId='36' Name="temp_textblock"
                            FontSize="30"
                            FontWeight="Bold"
                            Foreground="LightBlue"
+                           RelativePanel.Below="country_textblock"
                            RelativePanel.RightOf="cityname_textblock"
                            Margin="30,0,0,0"                          
                            Text="{Binding list[0].main.temp}"/>
-            <TextBlock x:ConnectionId='36' Name="C_textblock"
+            <TextBlock x:ConnectionId='37' Name="C_textblock"
                            FontSize="30"
                            FontWeight="Bold"
                            Foreground="White"
+                           RelativePanel.Below="country_textblock"
                            RelativePanel.RightOf="temp_textblock"/>
-            <TextBlock x:ConnectionId='37' Name="mainDec_textblock"
+            <TextBlock x:ConnectionId='38' Name="mainDec_textblock"
                            FontSize="30"
                            FontWeight="Bold"
                            Foreground="LightBlue"
                            RelativePanel.Below="cityname_textblock"                       
                            Text="{Binding list[0].weather[0].description}"/>
-            <TextBlock x:ConnectionId='38' Name="mainMaxTem_String"
+            <TextBlock x:ConnectionId='39' Name="mainMaxTem_String"
                            FontSize="20"
                            Foreground="White"
                            RelativePanel.Below="mainDec_textblock"/>
-            <TextBlock x:ConnectionId='39' Name="mainMaxTem_textblock"
+            <TextBlock x:ConnectionId='40' Name="mainMaxTem_textblock"
                            FontSize="20"
                            FontWeight="Bold"
                            Foreground="LightBlue"
@@ -47,17 +56,17 @@
                            RelativePanel.Below="mainDec_textblock"
                            Margin="10,0,0,0"
                            Text="{Binding list[0].main.temp_max}"/>
-            <TextBlock x:ConnectionId='40' Name="MaxTempC_textblock"
+            <TextBlock x:ConnectionId='41' Name="MaxTempC_textblock"
                            FontSize="20"
                            FontWeight="Bold"
                            Foreground="White"
                            RelativePanel.RightOf="mainMaxTem_textblock"
                            RelativePanel.Below="mainDec_textblock"/>
-            <TextBlock x:ConnectionId='41' Name="mainMinTem_String"
+            <TextBlock x:ConnectionId='42' Name="mainMinTem_String"
                            FontSize="20"
                            Foreground="White"
                            RelativePanel.Below="mainMaxTem_String"/>
-            <TextBlock x:ConnectionId='42' Name="mainMinTem_textblock"
+            <TextBlock x:ConnectionId='43' Name="mainMinTem_textblock"
                            FontSize="20"
                            FontWeight="Bold"
                            Foreground="LightBlue"
@@ -65,17 +74,17 @@
                            RelativePanel.RightOf="mainMinTem_String"
                            RelativePanel.Below="mainMaxTem_String"
                            Text="{Binding list[0].main.temp_min}"/>
-            <TextBlock x:ConnectionId='43' Name="MinTempC_textblock"
+            <TextBlock x:ConnectionId='44' Name="MinTempC_textblock"
                            FontSize="20"
                            FontWeight="Bold"
                            Foreground="White"
                            RelativePanel.RightOf="mainMinTem_textblock"
                            RelativePanel.Below="mainMaxTem_String"/>
-            <TextBlock x:ConnectionId='44' Name="mainWindSpeed_String"
+            <TextBlock x:ConnectionId='45' Name="mainWindSpeed_String"
                            FontSize="20"
                            Foreground="White"
                            RelativePanel.Below="mainMinTem_String"/>
-            <TextBlock x:ConnectionId='45' Name="mainWindSpeed_textblock"
+            <TextBlock x:ConnectionId='46' Name="mainWindSpeed_textblock"
                            FontSize="20"
                            FontWeight="Bold"
                            Foreground="LightBlue"
@@ -83,12 +92,12 @@
                            RelativePanel.RightOf="mainWindSpeed_String"
                            Margin="10,0,0,0"
                            Text="{Binding list[0].wind.speed}"/>
-            <TextBlock x:ConnectionId='46' Name="WindSpeedUnit_String"
+            <TextBlock x:ConnectionId='47' Name="WindSpeedUnit_String"
                            FontSize="20"
                            Foreground="White"
                            RelativePanel.Below="mainMinTem_String"
                            RelativePanel.RightOf="mainWindSpeed_textblock"/>
-            <Image x:ConnectionId='47' Name="main_Image"
+            <Image x:ConnectionId='48' Name="main_Image"
                        Height="200"
                        Width="200"
                        RelativePanel.AlignVerticalCenterWithPanel="True"

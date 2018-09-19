@@ -133,7 +133,8 @@
                         </Frame>
 
                     </ScrollViewer>
-                    <StackPanel Name="setting_stackPanel">
+                    <StackPanel Name="setting_stackPanel"
+                                VerticalAlignment="Bottom">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="BackGround Color"
                                        Foreground="White"

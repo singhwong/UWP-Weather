@@ -13,6 +13,7 @@
     <RootPropertyPathName Name="temp_max" />
     <RootPropertyPathName Name="city" />
     <RootPropertyPathName Name="name" />
+    <RootPropertyPathName Name="country" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -27,15 +28,18 @@
       <RootProperty Name="Orientation" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Name" />
+      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
       <RootProperty Name="Children" />
+      <RootMethod Name="GetAlignTopWithPanel" />
+      <RootMethod Name="SetAlignTopWithPanel" />
+      <RootMethod Name="GetBelow" />
+      <RootMethod Name="SetBelow" />
       <RootMethod Name="GetAlignLeftWithPanel" />
       <RootMethod Name="SetAlignLeftWithPanel" />
       <RootMethod Name="GetRightOf" />
       <RootMethod Name="SetRightOf" />
-      <RootMethod Name="GetBelow" />
-      <RootMethod Name="SetBelow" />
       <RootMethod Name="GetAlignVerticalCenterWithPanel" />
       <RootMethod Name="SetAlignVerticalCenterWithPanel" />
       <RootMethod Name="GetAlignRightWithPanel" />
