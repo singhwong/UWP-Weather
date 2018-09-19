@@ -6,22 +6,34 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Loaded="Page_Loaded">
 
-    <Grid Background="Gray">
+    <Grid Name="main_grid"
+          VerticalAlignment="Stretch">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Button Name="list_button"
+                    Height="45"
+                    Width="45"
+                    FontFamily="Segoe MDL2 Assets"
+                    Content="&#xE71D;"
+                    FontSize="30"
+                    Background="Gray"
+                    Foreground="White"
+                    Click="list_button_Click"/>
+        <Button Name="back_button"
                 Height="45"
                 Width="45"
                 FontFamily="Segoe MDL2 Assets"
-                Content="&#xE71D;"
-                FontSize="30"
-                Background="Gray"
+                Content="&#xE72B;"
+                Margin="50,0,0,0"
                 Foreground="White"
-                Click="list_button_Click"/>
+                Background="Gray"
+                FontSize="30"
+                Click="back_button_Click"/>
         <TextBlock Name="main_title"
                    Text="CurrentWeather"
                    FontSize="30"
@@ -30,82 +42,129 @@
                    Foreground="White"
                    VerticalAlignment="Center"/>
         <SplitView Grid.Row="1"
-                   Name="main_splitview"
-                   DisplayMode="CompactInline"
-                   CompactPaneLength="45"
-                   OpenPaneLength="170">
+                       Name="main_splitview"
+                       DisplayMode="CompactInline"
+                       CompactPaneLength="45"
+                       OpenPaneLength="170">
             <SplitView.Pane>
-                <ListBox Name="main_listbox"
-                         SelectionMode="Single"
-                         Background="Gray"
-                         SelectionChanged="main_listbox_SelectionChanged">
-                    <ListBoxItem Name="listbox_itemone">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets"
-                                       Text="&#xE80F;"
-                                       FontSize="25"
-                                       Margin="-2,0,0,0"
-                                       Foreground="White"
-                                       VerticalAlignment="Center"/>
-                            <TextBlock Text="Home"
-                                       FontSize="20"
-                                       Foreground="White"
-                                       Margin="20,0,0,0"/>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <ListBoxItem Name="listbox_itemtwo">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets"
-                                       Text="&#xE707;"
-                                       FontSize="25"
-                                       Margin="-2,0,0,0"
-                                       Foreground="White"
-                                       VerticalAlignment="Center"/>
-                            <TextBlock Text="Location"
-                                       FontSize="20"
-                                       Foreground="White"
-                                       Margin="20,0,0,0"/>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <ListBoxItem Name="listbox_itemthree">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets"
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <ListBox Name="main_listbox"
+                             SelectionMode="Single"
+                             Background="Gray"
+                             SelectionChanged="main_listbox_SelectionChanged">
+                        <ListBoxItem Name="listbox_itemone">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets"
+                                           Text="&#xE80F;"
+                                           FontSize="25"
+                                           Margin="-2,0,0,0"
+                                           Foreground="White"
+                                           VerticalAlignment="Center"/>
+                                <TextBlock Text="Home"
+                                           FontSize="20"
+                                           Foreground="White"
+                                           Margin="20,0,0,0"/>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem Name="listbox_itemtwo">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets"
+                                           Text="&#xE707;"
+                                           FontSize="25"
+                                           Margin="-2,0,0,0"
+                                           Foreground="White"
+                                           VerticalAlignment="Center"/>
+                                <TextBlock Text="Location"
+                                           FontSize="20"
+                                           Foreground="White"
+                                           Margin="20,0,0,0"/>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem Name="listbox_itemthree">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets"
                                        Text="&#xEC06;"
                                        FontSize="25"
                                        Margin="-2,0,0,0"
                                        Foreground="White"
                                        VerticalAlignment="Center"/>
-                            <TextBlock Text="City"
+                                <TextBlock Text="City"
                                        FontSize="20"
                                        Foreground="White"
                                        Margin="20,0,0,0"/>
-                        </StackPanel>
-                    </ListBoxItem>
-                    <ListBoxItem Name="listbox_itemSetting">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets"
-                                       Text="&#xE713;"
-                                       FontSize="25"
-                                       Margin="-2,0,0,0"
-                                       Foreground="White"
-                                       VerticalAlignment="Center"/>
-                            <TextBlock Text="Setting"
-                                       FontSize="20"
-                                       Foreground="White"
-                                       Margin="20,0,0,0"/>
-                        </StackPanel>
-                    </ListBoxItem>
-                </ListBox>
+                            </StackPanel>
+                        </ListBoxItem>
+
+                    </ListBox>
+                    <ListBox Name="setting_listbox"
+                             Grid.Row="1"
+                             SelectionChanged="setting_listbox_SelectionChanged">
+                        <ListBoxItem Name="listbox_itemSetting">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets"
+                                           Text="&#xE713;"
+                                           FontSize="25"
+                                           Margin="-2,0,0,0"
+                                           Foreground="White"
+                                           VerticalAlignment="Center"/>
+                                <TextBlock Text="Setting"
+                                           FontSize="20"
+                                           Foreground="White"
+                                           Margin="20,0,0,0"/>
+                            </StackPanel>
+                        </ListBoxItem>
+                    </ListBox>
+                </Grid>
+
             </SplitView.Pane>
             <SplitView.Content>
-                <ScrollViewer HorizontalScrollMode="Auto"
-                              VerticalScrollMode="Auto"
-                              HorizontalScrollBarVisibility="Visible">
-                    <Frame Name="main_frame"
-                       Background="Gray">
-                    </Frame>
-                </ScrollViewer>
-               
+                <StackPanel>
+                    <ScrollViewer Name="main_scrollViewer"
+                                      HorizontalScrollMode="Auto"
+                                      VerticalScrollMode="Auto"
+                                      HorizontalScrollBarVisibility="Visible">
+                        <Frame Name="main_frame"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center">
+                        </Frame>
+
+                    </ScrollViewer>
+                    <StackPanel Name="setting_stackPanel">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="BackGround Color"
+                                       Foreground="White"
+                                       Margin="100,0,0,0"
+                                       VerticalAlignment="Center"/>
+                            <ComboBox Name="setting_combobox"
+                                      SelectionChanged="setting_combobox_SelectionChanged"
+                                      Margin="30,0,0,0"
+                                      VerticalAlignment="Center">
+                                <ComboBoxItem Content="Red"/>
+                                <ComboBoxItem Content="SkyBlue"/>
+                                <ComboBoxItem Content="Black"
+                                                  IsSelected="True"/>
+                                <ComboBoxItem Content="Gray"/>
+                                <ComboBoxItem Content="LightGray"/>
+                                <ComboBoxItem Content="WhiteSmoke"/>
+                                <ComboBoxItem Content="DeepPink"/>
+                            </ComboBox>
+                        </StackPanel>
+                        <!--<ColorPicker x:Name="main_colorPicker"
+                                         HorizontalAlignment="Left"
+                                         Margin="100,0,0,0"
+                                         Width="100"
+                                         ColorSpectrumShape="Ring"
+                                         IsColorPreviewVisible="False"
+                                         IsColorChannelTextInputVisible="False"
+                                         IsHexInputVisible="False"
+                                         ColorChanged="main_colorPicker_ColorChanged"/>-->
+                    </StackPanel>
+
+                </StackPanel>
             </SplitView.Content>
         </SplitView>
     </Grid>

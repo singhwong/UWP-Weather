@@ -26,5 +26,6 @@ namespace UsefulWeather
         {
             this.InitializeComponent();
         }
+        MainPage main_page = new MainPage();
     }
 }

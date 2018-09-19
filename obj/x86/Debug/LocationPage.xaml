@@ -8,40 +8,38 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <StackPanel VerticalAlignment="Center"
-                    HorizontalAlignment="Center">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock Text="Latitude"
+    <StackPanel>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Latitude"
                            FontSize="20"
                            Foreground="White"
                            VerticalAlignment="Center"/>
-                <TextBlock Text="Longitude"
+            <TextBlock Text="Longitude"
                            FontSize="20"
                            Grid.Row="1"
                            Foreground="White"
                            VerticalAlignment="Center"/>
-                <TextBox x:ConnectionId='48' Name="lat_textbox"
+            <TextBox x:ConnectionId='48' Name="lat_textbox"
                          Width="100"
                          Margin="10"
                          Background="White"
                          Grid.Column="1"/>
-                <TextBox x:ConnectionId='49' Name="Lon_textbox"
+            <TextBox x:ConnectionId='49' Name="Lon_textbox"
                          Width="100"
                          Background="White"
                          Grid.Row="1"
                          Margin="10"
                          Grid.Column="1"/>
-                <Button x:ConnectionId='50' Name="city_button"                      
+            <Button x:ConnectionId='50' Name="city_button"                      
                         Grid.RowSpan="2"
                         Grid.Column="2"
                         Width="110"
@@ -49,235 +47,234 @@
                         Background="Pink"
                         Content="Get Weather"
                                                  />
-            </Grid>
-            <RelativePanel>
-                <TextBlock x:ConnectionId='34' Name="locationname_textblock"
+        </Grid>
+        <RelativePanel>
+            <TextBlock x:ConnectionId='34' Name="locationname_textblock"
                            FontSize="30"
                            Foreground="LightBlue"
                            RelativePanel.AlignLeftWithPanel="True"                          
                            Text="{Binding city.name}"/>
-                <TextBlock x:ConnectionId='35' Name="temp_textblock"
+            <TextBlock x:ConnectionId='35' Name="temp_textblock"
                            FontSize="30"
                            Foreground="LightBlue"
                            RelativePanel.RightOf="locationname_textblock"
                            Margin="30,0,0,0"                          
                            Text="{Binding list[0].main.temp}"/>
-                <TextBlock x:ConnectionId='36' Name="C_textblock"
+            <TextBlock x:ConnectionId='36' Name="C_textblock"
                            FontSize="30"
                            Foreground="White"
                            RelativePanel.RightOf="temp_textblock"/>
-                <TextBlock x:ConnectionId='37' Name="mainDec_textblock"
+            <TextBlock x:ConnectionId='37' Name="mainDec_textblock"
                            FontSize="30"
                            Foreground="LightBlue"
                            RelativePanel.Below="locationname_textblock"                       
                            Text="{Binding list[0].weather[0].description}"/>
-                <TextBlock x:ConnectionId='38' Name="mainMaxTem_String"
-                           FontSize="30"
+            <TextBlock x:ConnectionId='38' Name="mainMaxTem_String"
+                           FontSize="20"
                            Foreground="White"
                            RelativePanel.Below="mainDec_textblock"/>
-                <TextBlock x:ConnectionId='39' Name="mainMaxTem_textblock"
-                           FontSize="30"
+            <TextBlock x:ConnectionId='39' Name="mainMaxTem_textblock"
+                           FontSize="20"
                            FontWeight="Bold"
                            Foreground="LightBlue"
                            RelativePanel.RightOf="mainMaxTem_String"
                            RelativePanel.Below="mainDec_textblock"
                            Margin="10,0,0,0"
                            Text="{Binding list[0].main.temp_max}"/>
-                <TextBlock x:ConnectionId='40' Name="MaxTempC_textblock"
-                           FontSize="30"
+            <TextBlock x:ConnectionId='40' Name="MaxTempC_textblock"
+                           FontSize="20"
                            FontWeight="Bold"
                            Foreground="White"
                            RelativePanel.RightOf="mainMaxTem_textblock"
                            RelativePanel.Below="mainDec_textblock"/>
-                <TextBlock x:ConnectionId='41' Name="mainMinTem_String"
-                           FontSize="30"
+            <TextBlock x:ConnectionId='41' Name="mainMinTem_String"
+                           FontSize="20"
                            Foreground="White"
                            RelativePanel.Below="mainMaxTem_String"/>
-                <TextBlock x:ConnectionId='42' Name="mainMinTem_textblock"
-                           FontSize="30"
+            <TextBlock x:ConnectionId='42' Name="mainMinTem_textblock"
+                           FontSize="20"
                            FontWeight="Bold"
                            Foreground="LightBlue"
                            Margin="10,0,0,0"
                            RelativePanel.RightOf="mainMinTem_String"
                            RelativePanel.Below="mainMaxTem_String"
                            Text="{Binding list[0].main.temp_min}"/>
-                <TextBlock x:ConnectionId='43' Name="MinTempC_textblock"
-                           FontSize="30"
+            <TextBlock x:ConnectionId='43' Name="MinTempC_textblock"
+                           FontSize="20"
                            FontWeight="Bold"
                            Foreground="White"
                            RelativePanel.RightOf="mainMinTem_textblock"
                            RelativePanel.Below="mainMaxTem_String"/>
-                <TextBlock x:ConnectionId='44' Name="mainWindSpeed_String"
-                           FontSize="30"
+            <TextBlock x:ConnectionId='44' Name="mainWindSpeed_String"
+                           FontSize="20"
                            Foreground="White"
                            RelativePanel.Below="mainMinTem_String"/>
-                <TextBlock x:ConnectionId='45' Name="mainWindSpeed_textblock"
-                           FontSize="30"
+            <TextBlock x:ConnectionId='45' Name="mainWindSpeed_textblock"
+                           FontSize="20"
                            FontWeight="Bold"
                            Foreground="LightBlue"
                            RelativePanel.Below="mainMinTem_textblock"
                            RelativePanel.RightOf="mainWindSpeed_String"
                            Margin="10,0,0,0"
                            Text="{Binding list[0].wind.speed}"/>
-                <TextBlock x:ConnectionId='46' Name="WindSpeedUnit_String"
-                           FontSize="30"
+            <TextBlock x:ConnectionId='46' Name="WindSpeedUnit_String"
+                           FontSize="20"
                            Foreground="White"
                            RelativePanel.Below="mainMinTem_String"
                            RelativePanel.RightOf="mainWindSpeed_textblock"/>
-                <Image x:ConnectionId='47' Name="main_Image"
+            <Image x:ConnectionId='47' Name="main_Image"
                        Height="200"
                        Width="200"
                        RelativePanel.AlignVerticalCenterWithPanel="True"
                        RelativePanel.AlignRightWithPanel="True"/>
-            </RelativePanel>
-            <StackPanel Orientation="Horizontal">
-                <StackPanel>
-                    <TextBlock x:ConnectionId='26' Name="Time_textblock"
+        </RelativePanel>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel>
+                <TextBlock x:ConnectionId='26' Name="Time_textblock"
                                FontSize="20"
                                FontWeight="Bold"
                                Foreground="White"
                                HorizontalAlignment="Center"/>
-                    <TextBlock x:ConnectionId='27' Name="time1_textblock"
+                <TextBlock x:ConnectionId='27' Name="time1_textblock"
                                FontSize="22"
                                Foreground="SkyBlue"
                                Text="{Binding list[1].dt_txt}"/>
-                    <TextBlock x:ConnectionId='28' Name="time2_textblock"
+                <TextBlock x:ConnectionId='28' Name="time2_textblock"
                                FontSize="22"
                                Foreground="SkyBlue"
                                Text="{Binding list[2].dt_txt}"/>
-                    <TextBlock x:ConnectionId='29' Name="time3_textblock"
+                <TextBlock x:ConnectionId='29' Name="time3_textblock"
                                FontSize="22"
                                Foreground="SkyBlue"
                                Text="{Binding list[3].dt_txt}"/>
-                    <TextBlock x:ConnectionId='30' Name="time4_textblock"
+                <TextBlock x:ConnectionId='30' Name="time4_textblock"
                                FontSize="22"
                                Foreground="SkyBlue"
                                Text="{Binding list[4].dt_txt}"/>
-                    <TextBlock x:ConnectionId='31' Name="time5_textblock"
+                <TextBlock x:ConnectionId='31' Name="time5_textblock"
                                FontSize="22"
                                Foreground="SkyBlue"
                                Text="{Binding list[5].dt_txt}"/>
-                    <TextBlock x:ConnectionId='32' Name="time6_textblock"
+                <TextBlock x:ConnectionId='32' Name="time6_textblock"
                                FontSize="22"
                                Foreground="SkyBlue"
                                Text="{Binding list[6].dt_txt}"/>
-                    <TextBlock x:ConnectionId='33' Name="time7_textblock"
+                <TextBlock x:ConnectionId='33' Name="time7_textblock"
                                FontSize="22"
                                Foreground="SkyBlue"
                                Text="{Binding list[7].dt_txt}"/>
-                </StackPanel>
-                <StackPanel Margin="10,0,0,0">
-                    <TextBlock x:ConnectionId='18' Name="Temp_textblock"
+            </StackPanel>
+            <StackPanel Margin="10,0,0,0">
+                <TextBlock x:ConnectionId='18' Name="Temp_textblock"
                                FontSize="20"
                                Foreground="White"
                                FontWeight="Bold"/>
-                    <TextBlock x:ConnectionId='19' Name="temp1_textblock"
+                <TextBlock x:ConnectionId='19' Name="temp1_textblock"
                                FontSize="22"
                                Foreground="SkyBlue"
                                HorizontalAlignment="Center"
                                Text="{Binding list[1].main.temp}"/>
-                    <TextBlock x:ConnectionId='20' Name="temp2_textblock"
+                <TextBlock x:ConnectionId='20' Name="temp2_textblock"
                                FontSize="22"
                                Foreground="SkyBlue"
                                HorizontalAlignment="Center"
                                Text="{Binding list[2].main.temp}"/>
-                    <TextBlock x:ConnectionId='21' Name="temp3_textblock"
+                <TextBlock x:ConnectionId='21' Name="temp3_textblock"
                                FontSize="22"
                                Foreground="SkyBlue"
                                HorizontalAlignment="Center"
                                Text="{Binding list[3].main.temp}"/>
-                    <TextBlock x:ConnectionId='22' Name="temp4_textblock"
+                <TextBlock x:ConnectionId='22' Name="temp4_textblock"
                                FontSize="22"
                                Foreground="SkyBlue"
                                HorizontalAlignment="Center"
                                Text="{Binding list[4].main.temp}"/>
-                    <TextBlock x:ConnectionId='23' Name="temp5_textblock"
+                <TextBlock x:ConnectionId='23' Name="temp5_textblock"
                                FontSize="22"
                                Foreground="SkyBlue"
                                HorizontalAlignment="Center"
                                Text="{Binding list[5].main.temp}"/>
-                    <TextBlock x:ConnectionId='24' Name="temp6_textblock"
+                <TextBlock x:ConnectionId='24' Name="temp6_textblock"
                                FontSize="22"
                                Foreground="SkyBlue"
                                HorizontalAlignment="Center"
                                Text="{Binding list[6].main.temp}"/>
-                    <TextBlock x:ConnectionId='25' Name="temp7_textblock"
+                <TextBlock x:ConnectionId='25' Name="temp7_textblock"
                                FontSize="22"
                                Foreground="SkyBlue"
                                HorizontalAlignment="Center"
                                Text="{Binding list[7].main.temp}"/>
-                </StackPanel>
-                <StackPanel Margin="10,0,0,0">
-                    <TextBlock x:ConnectionId='10' Name="Dec_textblock"
+            </StackPanel>
+            <StackPanel Margin="10,0,0,0">
+                <TextBlock x:ConnectionId='10' Name="Dec_textblock"
                                FontSize="22"
                                Foreground="White"
                                HorizontalAlignment="Center"
                                FontWeight="Bold"/>
-                    <TextBlock x:ConnectionId='11' Name="dec1_textblock"
+                <TextBlock x:ConnectionId='11' Name="dec1_textblock"
                                FontSize="22"
                                Foreground="SkyBlue"
                                HorizontalAlignment="Center"
                                Text="{Binding list[1].weather[0].description}"/>
-                    <TextBlock x:ConnectionId='12' Name="dec2_textblock"
+                <TextBlock x:ConnectionId='12' Name="dec2_textblock"
                                FontSize="22"
                                Foreground="SkyBlue"
                                HorizontalAlignment="Center"
                                Text="{Binding list[2].weather[0].description}"/>
-                    <TextBlock x:ConnectionId='13' Name="dec3_textblock"
+                <TextBlock x:ConnectionId='13' Name="dec3_textblock"
                                FontSize="22"
                                Foreground="SkyBlue"
                                HorizontalAlignment="Center"
                                Text="{Binding list[3].weather[0].description}"/>
-                    <TextBlock x:ConnectionId='14' Name="dec4_textblock"
+                <TextBlock x:ConnectionId='14' Name="dec4_textblock"
                                FontSize="22"
                                Foreground="SkyBlue"
                                HorizontalAlignment="Center"
                                Text="{Binding list[4].weather[0].description}"/>
-                    <TextBlock x:ConnectionId='15' Name="dec5_textblock"
+                <TextBlock x:ConnectionId='15' Name="dec5_textblock"
                                FontSize="22"
                                Foreground="SkyBlue"
                                HorizontalAlignment="Center"
                                Text="{Binding list[5].weather[0].description}"/>
-                    <TextBlock x:ConnectionId='16' Name="dec6_textblock"
+                <TextBlock x:ConnectionId='16' Name="dec6_textblock"
                                FontSize="22"
                                Foreground="SkyBlue"
                                HorizontalAlignment="Center"
                                Text="{Binding list[6].weather[0].description}"/>
-                    <TextBlock x:ConnectionId='17' Name="dec7_textblock"
+                <TextBlock x:ConnectionId='17' Name="dec7_textblock"
                                FontSize="22"
                                Foreground="SkyBlue"
                                HorizontalAlignment="Center"
                                Text="{Binding list[7].weather[0].description}"/>
-                </StackPanel>
-                <StackPanel Margin="10,0,0,0">
-                    <TextBlock x:ConnectionId='2' Name="Icon_textblock"
+            </StackPanel>
+            <StackPanel Margin="10,0,0,0">
+                <TextBlock x:ConnectionId='2' Name="Icon_textblock"
                                FontSize="20"
                                Foreground="White"
                                FontWeight="Bold"/>
-                    <Image x:ConnectionId='3' Name="image1_image"
+                <Image x:ConnectionId='3' Name="image1_image"
                            Height="30"
                            Width="30"/>
-                    <Image x:ConnectionId='4' Name="image2_image"
+                <Image x:ConnectionId='4' Name="image2_image"
                            Height="30"
                            Width="30"/>
-                    <Image x:ConnectionId='5' Name="image3_image"
+                <Image x:ConnectionId='5' Name="image3_image"
                            Height="30"
                            Width="30"/>
-                    <Image x:ConnectionId='6' Name="image4_image"
+                <Image x:ConnectionId='6' Name="image4_image"
                            Height="30"
                            Width="30"/>
-                    <Image x:ConnectionId='7' Name="image5_image"
+                <Image x:ConnectionId='7' Name="image5_image"
                            Height="30"
                            Width="30"/>
-                    <Image x:ConnectionId='8' Name="image6_image"
+                <Image x:ConnectionId='8' Name="image6_image"
                            Height="30"
                            Width="30"/>
-                    <Image x:ConnectionId='9' Name="image7_image"
+                <Image x:ConnectionId='9' Name="image7_image"
                            Height="30"
                            Width="30"/>
-                </StackPanel>
             </StackPanel>
         </StackPanel>
-    </Grid> 
+    </StackPanel>
 </Page>
 

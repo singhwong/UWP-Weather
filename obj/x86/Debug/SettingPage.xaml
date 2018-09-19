@@ -9,7 +9,20 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <!--<StackPanel>
+            <ComboBox Name="setting_combobox"
+                      SelectionChanged="setting_combobox_SelectionChanged">
+                <ComboBoxItem Content="Red"/>
+                <ComboBoxItem Content="skyBlue"/>
+                <ComboBoxItem Content="Black"/>
+                <ComboBoxItem Content="Gray"/>
+                <ComboBoxItem Content="lightGray"/>
+                <ComboBoxItem Content="somkeWhite"/>
+                <ComboBoxItem Content="deepBlue"/>
+            </ComboBox>
+            <TextBlock Name="setting_textblock"/>
+        </StackPanel>-->
+        
     </Grid>
 </Page>
 
