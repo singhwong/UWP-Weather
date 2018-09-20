@@ -25,6 +25,9 @@ namespace UsefulWeather
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private bool itemone_bool = false;
+        private bool itemtwo_bool = false;
+        private bool itemthree_bool = false;
         //private const string SettingTheme = "Theme";
         public MainPage()
         {
@@ -48,6 +51,9 @@ namespace UsefulWeather
                 main_frame.Navigate(typeof(HomePage));
                 main_title.Text = "CurrentWeather";
                 back_button.Visibility = Visibility.Collapsed;
+                itemone_bool = true;
+                itemtwo_bool = false;
+                itemthree_bool = false;
             }
             else if (listbox_itemtwo.IsSelected)
             {
@@ -57,6 +63,9 @@ namespace UsefulWeather
                 main_frame.Navigate(typeof(LocationPage));
                 main_title.Text = "LocationWeather";
                 back_button.Visibility = Visibility.Collapsed;
+                itemone_bool = false;
+                itemtwo_bool = true;
+                itemthree_bool = false;
             }
             else if(listbox_itemthree.IsSelected)
             {
@@ -66,6 +75,9 @@ namespace UsefulWeather
                 main_frame.Navigate(typeof(CityPage));
                 main_title.Text = "CityWeather";
                 back_button.Visibility = Visibility.Collapsed;
+                itemone_bool = false;
+                itemtwo_bool = false;
+                itemthree_bool = true;
             }
        
         }
@@ -148,6 +160,22 @@ namespace UsefulWeather
             setting_stackPanel.Visibility = Visibility.Collapsed;
             setting_listbox.SelectedIndex = -1;
             back_button.Visibility = Visibility.Collapsed;
+            if (itemone_bool==true)
+            {
+                main_title.Text = "CurrentWeather"; 
+            }
+            if (itemtwo_bool==true)
+            {
+                main_title.Text = "LocationWeather";
+            }
+            if (itemthree_bool==true)
+            {
+                main_title.Text = "CityWeather";
+            }
+            else
+            {
+                main_title.Text = "CurrentWeather";
+            }
         }
     }
 }

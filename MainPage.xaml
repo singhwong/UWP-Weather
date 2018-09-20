@@ -122,40 +122,45 @@
 
             </SplitView.Pane>
             <SplitView.Content>
-                <StackPanel>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Name="setting_stackPanel"
+                                Orientation="Horizontal">
+                        <TextBlock Text="BackGround Color"
+                                       Foreground="White"
+                                       Margin="100,0,0,0"
+                                       VerticalAlignment="Center"/>
+                        <ComboBox Name="setting_combobox"
+                                      SelectionChanged="setting_combobox_SelectionChanged"
+                                      Margin="30,0,0,0"
+                                      Width="150"
+                                      HorizontalContentAlignment="Center"
+                                      VerticalAlignment="Center">
+                            <ComboBoxItem Content="Red"/>
+                            <ComboBoxItem Content="SkyBlue"/>
+                            <ComboBoxItem Content="Black"
+                                                  IsSelected="True"/>
+                            <ComboBoxItem Content="Gray"/>
+                            <ComboBoxItem Content="LightGray"/>
+                            <ComboBoxItem Content="WhiteSmoke"/>
+                            <ComboBoxItem Content="DeepPink"/>
+                        </ComboBox>
+                    </StackPanel>
                     <ScrollViewer Name="main_scrollViewer"
-                                      HorizontalScrollMode="Auto"
-                                      VerticalScrollMode="Auto"
-                                      HorizontalScrollBarVisibility="Visible">
+                                  HorizontalScrollMode="Auto"
+                                  VerticalScrollMode="Auto"
+                                  Grid.Row="1"
+                                  HorizontalScrollBarVisibility="Visible">
                         <Frame Name="main_frame"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center">
                         </Frame>
 
                     </ScrollViewer>
-                    <StackPanel Name="setting_stackPanel"
-                                VerticalAlignment="Bottom">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="BackGround Color"
-                                       Foreground="White"
-                                       Margin="100,0,0,0"
-                                       VerticalAlignment="Center"/>
-                            <ComboBox Name="setting_combobox"
-                                      SelectionChanged="setting_combobox_SelectionChanged"
-                                      Margin="30,0,0,0"
-                                      Width="150"
-                                      HorizontalContentAlignment="Center"
-                                      VerticalAlignment="Center">
-                                <ComboBoxItem Content="Red"/>
-                                <ComboBoxItem Content="SkyBlue"/>
-                                <ComboBoxItem Content="Black"
-                                                  IsSelected="True"/>
-                                <ComboBoxItem Content="Gray"/>
-                                <ComboBoxItem Content="LightGray"/>
-                                <ComboBoxItem Content="WhiteSmoke"/>
-                                <ComboBoxItem Content="DeepPink"/>
-                            </ComboBox>
-                        </StackPanel>
+                    
                         <!--<ColorPicker x:Name="main_colorPicker"
                                          HorizontalAlignment="Left"
                                          Margin="100,0,0,0"
@@ -165,9 +170,7 @@
                                          IsColorChannelTextInputVisible="False"
                                          IsHexInputVisible="False"
                                          ColorChanged="main_colorPicker_ColorChanged"/>-->
-                    </StackPanel>
-
-                </StackPanel>
+                </Grid>
             </SplitView.Content>
         </SplitView>
     </Grid>
