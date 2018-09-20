@@ -25,13 +25,11 @@ namespace UsefulWeather
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private const string SettingTheme = "Theme";
+        //private const string SettingTheme = "Theme";
         public MainPage()
         {
             this.InitializeComponent();
-            main_frame.Navigate(typeof(HomePage));
-            
-
+                main_frame.Navigate(typeof(HomePage));
         }
 
         private void list_button_Click(object sender, RoutedEventArgs e)

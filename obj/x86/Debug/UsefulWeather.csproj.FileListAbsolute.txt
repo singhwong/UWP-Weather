@@ -311,3 +311,4 @@ C:\Users\wang\source\repos\App1\UsefulWeather\obj\x86\Debug\FxResources.System.S
 C:\Users\wang\source\repos\App1\UsefulWeather\obj\x86\Debug\FxResources.System.Threading.Thread.SR.resw
 C:\Users\wang\source\repos\App1\UsefulWeather\obj\x86\Debug\FxResources.System.Transactions.Local.SR.resw
 C:\Users\wang\source\repos\App1\UsefulWeather\obj\x86\Debug\FxResources.System.ValueTuple.SR.resw
+C:\Users\wang\source\repos\App1\UsefulWeather\obj\x86\Debug\UsefulWeather.csprojAssemblyReference.cache

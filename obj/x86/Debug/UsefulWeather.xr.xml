@@ -131,6 +131,8 @@
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="Name" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="HorizontalContentAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Items" />
       <RootEvent Name="SelectionChanged" />

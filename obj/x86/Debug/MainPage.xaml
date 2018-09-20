@@ -143,6 +143,8 @@
                             <ComboBox x:ConnectionId='15' Name="setting_combobox"
                                                                                           
                                       Margin="30,0,0,0"
+                                      Width="150"
+                                      HorizontalContentAlignment="Center"
                                       VerticalAlignment="Center">
                                 <ComboBoxItem Content="Red"/>
                                 <ComboBoxItem Content="SkyBlue"/>
