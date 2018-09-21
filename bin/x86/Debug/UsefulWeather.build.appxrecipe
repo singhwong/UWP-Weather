@@ -627,6 +627,12 @@
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\CityPage.xbf">
       <PackagePath>CityPage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\DictionaryImage.xbf">
+      <PackagePath>DictionaryImage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\DictionaryTextBlock.xbf">
+      <PackagePath>DictionaryTextBlock.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\HomePage.xbf">
       <PackagePath>HomePage.xbf</PackagePath>
     </AppxPackagedFile>

@@ -312,3 +312,9 @@ C:\Users\wang\source\repos\App1\UsefulWeather\obj\x86\Debug\FxResources.System.T
 C:\Users\wang\source\repos\App1\UsefulWeather\obj\x86\Debug\FxResources.System.Transactions.Local.SR.resw
 C:\Users\wang\source\repos\App1\UsefulWeather\obj\x86\Debug\FxResources.System.ValueTuple.SR.resw
 C:\Users\wang\source\repos\App1\UsefulWeather\obj\x86\Debug\UsefulWeather.csprojAssemblyReference.cache
+C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\DictionaryImage.xbf
+C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\DictionaryTextBlock.xbf
+C:\Users\wang\source\repos\App1\UsefulWeather\obj\x86\Debug\DictionaryImage.xaml
+C:\Users\wang\source\repos\App1\UsefulWeather\obj\x86\Debug\DictionaryTextBlock.xaml
+C:\Users\wang\source\repos\App1\UsefulWeather\obj\x86\Debug\DictionaryImage.xbf
+C:\Users\wang\source\repos\App1\UsefulWeather\obj\x86\Debug\DictionaryTextBlock.xbf

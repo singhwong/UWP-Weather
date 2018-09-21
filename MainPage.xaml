@@ -71,13 +71,15 @@
                              SelectionChanged="main_listbox_SelectionChanged">
                         <ListBoxItem Name="listbox_itemone">
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock FontFamily="Segoe MDL2 Assets"
+                                <TextBlock Name="home_textblock" 
+                                           FontFamily="Segoe MDL2 Assets"
                                            Text="&#xE80F;"
                                            FontSize="25"
                                            Margin="-2,0,0,0"
                                            Foreground="White"
                                            VerticalAlignment="Center"/>
-                                <TextBlock Text="Home"
+                                <TextBlock Name="home_Text" 
+                                           Text="Home"
                                            FontSize="20"
                                            Foreground="White"
                                            Margin="20,0,0,0"/>
@@ -85,13 +87,15 @@
                         </ListBoxItem>
                         <ListBoxItem Name="listbox_itemtwo">
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock FontFamily="Segoe MDL2 Assets"
+                                <TextBlock Name="location_textblock"
+                                           FontFamily="Segoe MDL2 Assets"
                                            Text="&#xE707;"
                                            FontSize="25"
                                            Margin="-2,0,0,0"
                                            Foreground="White"
                                            VerticalAlignment="Center"/>
-                                <TextBlock Text="Location"
+                                <TextBlock Name="location_Text"
+                                           Text="Location"
                                            FontSize="20"
                                            Foreground="White"
                                            Margin="20,0,0,0"/>
@@ -99,16 +103,18 @@
                         </ListBoxItem>
                         <ListBoxItem Name="listbox_itemthree">
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock FontFamily="Segoe MDL2 Assets"
-                                       Text="&#xEC06;"
-                                       FontSize="25"
-                                       Margin="-2,0,0,0"
-                                       Foreground="White"
-                                       VerticalAlignment="Center"/>
-                                <TextBlock Text="City"
-                                       FontSize="20"
-                                       Foreground="White"
-                                       Margin="20,0,0,0"/>
+                                <TextBlock Name="city_textblock" 
+                                           FontFamily="Segoe MDL2 Assets"
+                                           Text="&#xEC06;"
+                                           FontSize="25"
+                                           Margin="-2,0,0,0"
+                                           Foreground="White"
+                                           VerticalAlignment="Center"/>
+                                <TextBlock Name="city_Text" 
+                                           Text="City"
+                                           FontSize="20"
+                                           Foreground="White"
+                                           Margin="20,0,0,0"/>
                             </StackPanel>
                         </ListBoxItem>
 
@@ -118,13 +124,15 @@
                              SelectionChanged="setting_listbox_SelectionChanged">
                         <ListBoxItem Name="listbox_itemSetting">
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock FontFamily="Segoe MDL2 Assets"
+                                <TextBlock Name="setting_textblock"
+                                           FontFamily="Segoe MDL2 Assets"
                                            Text="&#xE713;"
                                            FontSize="25"
                                            Margin="-2,0,0,0"
                                            Foreground="White"
                                            VerticalAlignment="Center"/>
-                                <TextBlock Text="Setting"
+                                <TextBlock Name="setting_Text"
+                                           Text="Setting"
                                            FontSize="20"
                                            Foreground="White"
                                            Margin="20,0,0,0"/>
@@ -140,28 +148,72 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-                    <StackPanel Name="setting_stackPanel"
+                    <StackPanel Name="setting_stackPanel">
+                        <StackPanel Name="backGround_stackPanel"
                                 Orientation="Horizontal">
-                        <TextBlock Text="BackGround Color"
+                            <TextBlock Name="backGround_textblock"
+                                       Text="BackGround Color"
                                        Foreground="White"
                                        Margin="100,0,0,0"
                                        VerticalAlignment="Center"/>
-                        <ComboBox Name="setting_combobox"
-                                      SelectionChanged="setting_combobox_SelectionChanged"
+                            <ComboBox Name="backGround_combobox"
+                                      SelectionChanged="backGround_combobox_SelectionChanged"
                                       Margin="30,0,0,0"
                                       Width="150"
+                                      Background="White"
                                       HorizontalContentAlignment="Center"
                                       VerticalAlignment="Center">
-                            <ComboBoxItem Content="Red"/>
-                            <ComboBoxItem Content="SkyBlue"/>
-                            <ComboBoxItem Content="Black"
-                                                  IsSelected="True"/>
-                            <ComboBoxItem Content="Gray"/>
-                            <ComboBoxItem Content="LightGray"/>
-                            <ComboBoxItem Content="WhiteSmoke"/>
-                            <ComboBoxItem Content="DeepPink"/>
-                        </ComboBox>
+                                <ComboBoxItem Content="Red"/>
+                                <ComboBoxItem Content="SkyBlue"/>
+                                <ComboBoxItem Content="Black"
+                                              IsSelected="True"/>
+                                <ComboBoxItem Content="Gray"/>
+                                <ComboBoxItem Content="LightGray"/>
+                                <ComboBoxItem Content="WhiteSmoke"/>
+                                <ComboBoxItem Content="DeepPink"/>
+                                <ComboBoxItem Content="antiqueWhite"/>
+                                <ComboBoxItem Content="aqua"/>
+                                <ComboBoxItem Content="azure"/>
+                                <ComboBoxItem Content="coral"/>
+                                <ComboBoxItem Content="brown"/>
+                                <ComboBoxItem Content="darkViolet"/>
+                                <ComboBoxItem Content="gold"/>
+                            </ComboBox>
+                        </StackPanel>
+                        <StackPanel Name="foreGround_stackPanel"
+                                    Orientation="Horizontal"
+                                    Margin="0,10,0,0">
+                            <TextBlock Name="foreGround_textblock"
+                                       Text="ForeGround Color"
+                                       Foreground="White"
+                                       Margin="100,0,0,0"
+                                       VerticalAlignment="Center"/>
+                            <ComboBox Name="foreGround_combobox"
+                                      SelectionChanged="foreGround_combobox_SelectionChanged"
+                                      Margin="30,0,0,0"
+                                      Width="150"
+                                      Background="White"
+                                      HorizontalContentAlignment="Center"
+                                      VerticalAlignment="Center">
+                                <ComboBoxItem Content="Red"/>
+                                <ComboBoxItem Content="SkyBlue"/>
+                                <ComboBoxItem Content="Black"/>
+                                <ComboBoxItem Content="Gray"/>
+                                <ComboBoxItem Content="LightGray"/>
+                                <ComboBoxItem Content="WhiteSmoke"
+                                              IsSelected="True"/>
+                                <ComboBoxItem Content="DeepPink"/>
+                                <ComboBoxItem Content="antiqueWhite"/>
+                                <ComboBoxItem Content="aqua"/>
+                                <ComboBoxItem Content="azure"/>
+                                <ComboBoxItem Content="coral"/>
+                                <ComboBoxItem Content="brown"/>
+                                <ComboBoxItem Content="darkViolet"/>
+                                <ComboBoxItem Content="gold"/>
+                            </ComboBox>
+                        </StackPanel>
                     </StackPanel>
+                    
                     <ScrollViewer Name="main_scrollViewer"
                                   HorizontalScrollMode="Auto"
                                   VerticalScrollMode="Auto"

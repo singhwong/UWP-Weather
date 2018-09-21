@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-21T05:12:33.723</Modified>
+      <Modified>2018-09-21T08:16:29.858</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\UsefulWeather.exe">
       <PackagePath>entrypoint\UsefulWeather.exe</PackagePath>
-      <Modified>2018-09-21T05:12:32.750</Modified>
+      <Modified>2018-09-21T08:16:29.349</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.1.7\runtimes\win10-x86\nativeassets\uap10.0.15138\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
@@ -825,31 +825,39 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\UsefulWeather.xr.xml">
       <PackagePath>UsefulWeather.xr.xml</PackagePath>
-      <Modified>2018-09-20T05:38:10.622</Modified>
+      <Modified>2018-09-21T08:16:29.038</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2018-09-21T05:12:32.432</Modified>
+      <Modified>2018-09-21T08:16:29.080</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\CityPage.xbf">
       <PackagePath>CityPage.xbf</PackagePath>
-      <Modified>2018-09-21T05:12:32.433</Modified>
+      <Modified>2018-09-21T08:16:29.081</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\DictionaryImage.xbf">
+      <PackagePath>DictionaryImage.xbf</PackagePath>
+      <Modified>2018-09-21T08:16:29.079</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\DictionaryTextBlock.xbf">
+      <PackagePath>DictionaryTextBlock.xbf</PackagePath>
+      <Modified>2018-09-21T08:16:29.080</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\HomePage.xbf">
       <PackagePath>HomePage.xbf</PackagePath>
-      <Modified>2018-09-21T05:12:32.434</Modified>
+      <Modified>2018-09-21T08:16:29.081</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\LocationPage.xbf">
       <PackagePath>LocationPage.xbf</PackagePath>
-      <Modified>2018-09-21T05:12:32.435</Modified>
+      <Modified>2018-09-21T08:16:29.082</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2018-09-21T05:12:32.436</Modified>
+      <Modified>2018-09-21T08:16:29.082</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\SettingPage.xbf">
       <PackagePath>SettingPage.xbf</PackagePath>
-      <Modified>2018-09-21T05:12:32.436</Modified>
+      <Modified>2018-09-21T08:16:29.082</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -858,11 +866,11 @@
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-21T04:42:03.373</Modified>
+      <Modified>2018-09-21T07:15:51.427</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\Core\UsefulWeather.exe">
       <PackagePath>UsefulWeather.exe</PackagePath>
-      <Modified>2018-09-21T05:12:33.708</Modified>
+      <Modified>2018-09-21T08:16:29.849</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

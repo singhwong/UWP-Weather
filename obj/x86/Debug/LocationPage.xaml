@@ -7,7 +7,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="DictionaryTextBlock.xaml"/>
+                <ResourceDictionary Source="DictionaryImage.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
     <StackPanel>
         <Grid>
             <Grid.RowDefinitions>
@@ -148,33 +155,26 @@
                                Foreground="White"
                                HorizontalAlignment="Center"/>
                 <TextBlock x:ConnectionId='27' Name="time1_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               Text="{Binding list[1].dt_txt}"/>
+                           Style="{StaticResource textblock_style1}"
+                           Text="{Binding list[1].dt_txt}"/>
                 <TextBlock x:ConnectionId='28' Name="time2_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               Text="{Binding list[2].dt_txt}"/>
+                           Style="{StaticResource textblock_style1}"
+                           Text="{Binding list[2].dt_txt}"/>
                 <TextBlock x:ConnectionId='29' Name="time3_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               Text="{Binding list[3].dt_txt}"/>
+                           Style="{StaticResource textblock_style1}"
+                           Text="{Binding list[3].dt_txt}"/>
                 <TextBlock x:ConnectionId='30' Name="time4_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               Text="{Binding list[4].dt_txt}"/>
+                           Style="{StaticResource textblock_style1}"
+                           Text="{Binding list[4].dt_txt}"/>
                 <TextBlock x:ConnectionId='31' Name="time5_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               Text="{Binding list[5].dt_txt}"/>
+                           Style="{StaticResource textblock_style1}"
+                           Text="{Binding list[5].dt_txt}"/>
                 <TextBlock x:ConnectionId='32' Name="time6_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               Text="{Binding list[6].dt_txt}"/>
+                           Style="{StaticResource textblock_style1}"
+                           Text="{Binding list[6].dt_txt}"/>
                 <TextBlock x:ConnectionId='33' Name="time7_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               Text="{Binding list[7].dt_txt}"/>
+                           Style="{StaticResource textblock_style1}"
+                           Text="{Binding list[7].dt_txt}"/>
             </StackPanel>
             <StackPanel Margin="10,0,0,0">
                 <TextBlock x:ConnectionId='18' Name="Temp_textblock"
@@ -182,39 +182,25 @@
                                Foreground="White"
                                FontWeight="Bold"/>
                 <TextBlock x:ConnectionId='19' Name="temp1_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               HorizontalAlignment="Center"
+                               Style="{StaticResource textblock_style1}"
                                Text="{Binding list[1].main.temp}"/>
                 <TextBlock x:ConnectionId='20' Name="temp2_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               HorizontalAlignment="Center"
+                               Style="{StaticResource textblock_style1}"
                                Text="{Binding list[2].main.temp}"/>
                 <TextBlock x:ConnectionId='21' Name="temp3_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               HorizontalAlignment="Center"
+                               Style="{StaticResource textblock_style1}"
                                Text="{Binding list[3].main.temp}"/>
                 <TextBlock x:ConnectionId='22' Name="temp4_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               HorizontalAlignment="Center"
+                               Style="{StaticResource textblock_style1}"
                                Text="{Binding list[4].main.temp}"/>
                 <TextBlock x:ConnectionId='23' Name="temp5_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               HorizontalAlignment="Center"
+                               Style="{StaticResource textblock_style1}"
                                Text="{Binding list[5].main.temp}"/>
                 <TextBlock x:ConnectionId='24' Name="temp6_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               HorizontalAlignment="Center"
+                               Style="{StaticResource textblock_style1}"
                                Text="{Binding list[6].main.temp}"/>
                 <TextBlock x:ConnectionId='25' Name="temp7_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               HorizontalAlignment="Center"
+                               Style="{StaticResource textblock_style1}"
                                Text="{Binding list[7].main.temp}"/>
             </StackPanel>
             <StackPanel Margin="10,0,0,0">
@@ -224,40 +210,26 @@
                                HorizontalAlignment="Center"
                                FontWeight="Bold"/>
                 <TextBlock x:ConnectionId='11' Name="dec1_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               HorizontalAlignment="Center"
-                               Text="{Binding list[1].weather[0].description}"/>
+                           Style="{StaticResource textblock_style1}"
+                           Text="{Binding list[1].weather[0].description}"/>
                 <TextBlock x:ConnectionId='12' Name="dec2_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               HorizontalAlignment="Center"
-                               Text="{Binding list[2].weather[0].description}"/>
+                           Style="{StaticResource textblock_style1}"
+                           Text="{Binding list[2].weather[0].description}"/>
                 <TextBlock x:ConnectionId='13' Name="dec3_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               HorizontalAlignment="Center"
-                               Text="{Binding list[3].weather[0].description}"/>
+                           Style="{StaticResource textblock_style1}"
+                           Text="{Binding list[3].weather[0].description}"/>
                 <TextBlock x:ConnectionId='14' Name="dec4_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               HorizontalAlignment="Center"
-                               Text="{Binding list[4].weather[0].description}"/>
+                           Style="{StaticResource textblock_style1}"
+                           Text="{Binding list[4].weather[0].description}"/>
                 <TextBlock x:ConnectionId='15' Name="dec5_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               HorizontalAlignment="Center"
-                               Text="{Binding list[5].weather[0].description}"/>
+                           Style="{StaticResource textblock_style1}"
+                           Text="{Binding list[5].weather[0].description}"/>
                 <TextBlock x:ConnectionId='16' Name="dec6_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               HorizontalAlignment="Center"
-                               Text="{Binding list[6].weather[0].description}"/>
+                           Style="{StaticResource textblock_style1}"
+                           Text="{Binding list[6].weather[0].description}"/>
                 <TextBlock x:ConnectionId='17' Name="dec7_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               HorizontalAlignment="Center"
-                               Text="{Binding list[7].weather[0].description}"/>
+                           Style="{StaticResource textblock_style1}"
+                           Text="{Binding list[7].weather[0].description}"/>
             </StackPanel>
             <StackPanel Margin="10,0,0,0">
                 <TextBlock x:ConnectionId='2' Name="Icon_textblock"
@@ -265,26 +237,19 @@
                                Foreground="White"
                                FontWeight="Bold"/>
                 <Image x:ConnectionId='3' Name="image1_image"
-                           Height="30"
-                           Width="30"/>
+                       Style="{StaticResource iamge_style}"/>
                 <Image x:ConnectionId='4' Name="image2_image"
-                           Height="30"
-                           Width="30"/>
+                       Style="{StaticResource iamge_style}"/>
                 <Image x:ConnectionId='5' Name="image3_image"
-                           Height="30"
-                           Width="30"/>
+                       Style="{StaticResource iamge_style}"/>
                 <Image x:ConnectionId='6' Name="image4_image"
-                           Height="30"
-                           Width="30"/>
+                       Style="{StaticResource iamge_style}"/>
                 <Image x:ConnectionId='7' Name="image5_image"
-                           Height="30"
-                           Width="30"/>
+                       Style="{StaticResource iamge_style}"/>
                 <Image x:ConnectionId='8' Name="image6_image"
-                           Height="30"
-                           Width="30"/>
+                       Style="{StaticResource iamge_style}"/>
                 <Image x:ConnectionId='9' Name="image7_image"
-                           Height="30"
-                           Width="30"/>
+                       Style="{StaticResource iamge_style}"/>
             </StackPanel>
         </StackPanel>
     </StackPanel>

@@ -7,7 +7,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="DictionaryTextBlock.xaml"/>
+                <ResourceDictionary Source="DictionaryImage.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
     <StackPanel>
         <Grid>
             <Grid.RowDefinitions>
@@ -148,33 +155,26 @@
                                Foreground="White"
                                HorizontalAlignment="Center"/>
                 <TextBlock Name="time1_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               Text="{Binding list[1].dt_txt}"/>
+                           Style="{StaticResource textblock_style1}"
+                           Text="{Binding list[1].dt_txt}"/>
                 <TextBlock Name="time2_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               Text="{Binding list[2].dt_txt}"/>
+                           Style="{StaticResource textblock_style1}"
+                           Text="{Binding list[2].dt_txt}"/>
                 <TextBlock Name="time3_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               Text="{Binding list[3].dt_txt}"/>
+                           Style="{StaticResource textblock_style1}"
+                           Text="{Binding list[3].dt_txt}"/>
                 <TextBlock Name="time4_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               Text="{Binding list[4].dt_txt}"/>
+                           Style="{StaticResource textblock_style1}"
+                           Text="{Binding list[4].dt_txt}"/>
                 <TextBlock Name="time5_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               Text="{Binding list[5].dt_txt}"/>
+                           Style="{StaticResource textblock_style1}"
+                           Text="{Binding list[5].dt_txt}"/>
                 <TextBlock Name="time6_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               Text="{Binding list[6].dt_txt}"/>
+                           Style="{StaticResource textblock_style1}"
+                           Text="{Binding list[6].dt_txt}"/>
                 <TextBlock Name="time7_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               Text="{Binding list[7].dt_txt}"/>
+                           Style="{StaticResource textblock_style1}"
+                           Text="{Binding list[7].dt_txt}"/>
             </StackPanel>
             <StackPanel Margin="10,0,0,0">
                 <TextBlock Name="Temp_textblock"
@@ -182,39 +182,25 @@
                                Foreground="White"
                                FontWeight="Bold"/>
                 <TextBlock Name="temp1_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               HorizontalAlignment="Center"
+                               Style="{StaticResource textblock_style1}"
                                Text="{Binding list[1].main.temp}"/>
                 <TextBlock Name="temp2_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               HorizontalAlignment="Center"
+                               Style="{StaticResource textblock_style1}"
                                Text="{Binding list[2].main.temp}"/>
                 <TextBlock Name="temp3_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               HorizontalAlignment="Center"
+                               Style="{StaticResource textblock_style1}"
                                Text="{Binding list[3].main.temp}"/>
                 <TextBlock Name="temp4_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               HorizontalAlignment="Center"
+                               Style="{StaticResource textblock_style1}"
                                Text="{Binding list[4].main.temp}"/>
                 <TextBlock Name="temp5_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               HorizontalAlignment="Center"
+                               Style="{StaticResource textblock_style1}"
                                Text="{Binding list[5].main.temp}"/>
                 <TextBlock Name="temp6_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               HorizontalAlignment="Center"
+                               Style="{StaticResource textblock_style1}"
                                Text="{Binding list[6].main.temp}"/>
                 <TextBlock Name="temp7_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               HorizontalAlignment="Center"
+                               Style="{StaticResource textblock_style1}"
                                Text="{Binding list[7].main.temp}"/>
             </StackPanel>
             <StackPanel Margin="10,0,0,0">
@@ -224,40 +210,26 @@
                                HorizontalAlignment="Center"
                                FontWeight="Bold"/>
                 <TextBlock Name="dec1_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               HorizontalAlignment="Center"
-                               Text="{Binding list[1].weather[0].description}"/>
+                           Style="{StaticResource textblock_style1}"
+                           Text="{Binding list[1].weather[0].description}"/>
                 <TextBlock Name="dec2_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               HorizontalAlignment="Center"
-                               Text="{Binding list[2].weather[0].description}"/>
+                           Style="{StaticResource textblock_style1}"
+                           Text="{Binding list[2].weather[0].description}"/>
                 <TextBlock Name="dec3_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               HorizontalAlignment="Center"
-                               Text="{Binding list[3].weather[0].description}"/>
+                           Style="{StaticResource textblock_style1}"
+                           Text="{Binding list[3].weather[0].description}"/>
                 <TextBlock Name="dec4_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               HorizontalAlignment="Center"
-                               Text="{Binding list[4].weather[0].description}"/>
+                           Style="{StaticResource textblock_style1}"
+                           Text="{Binding list[4].weather[0].description}"/>
                 <TextBlock Name="dec5_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               HorizontalAlignment="Center"
-                               Text="{Binding list[5].weather[0].description}"/>
+                           Style="{StaticResource textblock_style1}"
+                           Text="{Binding list[5].weather[0].description}"/>
                 <TextBlock Name="dec6_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               HorizontalAlignment="Center"
-                               Text="{Binding list[6].weather[0].description}"/>
+                           Style="{StaticResource textblock_style1}"
+                           Text="{Binding list[6].weather[0].description}"/>
                 <TextBlock Name="dec7_textblock"
-                               FontSize="22"
-                               Foreground="SkyBlue"
-                               HorizontalAlignment="Center"
-                               Text="{Binding list[7].weather[0].description}"/>
+                           Style="{StaticResource textblock_style1}"
+                           Text="{Binding list[7].weather[0].description}"/>
             </StackPanel>
             <StackPanel Margin="10,0,0,0">
                 <TextBlock Name="Icon_textblock"
@@ -265,26 +237,19 @@
                                Foreground="White"
                                FontWeight="Bold"/>
                 <Image Name="image1_image"
-                           Height="30"
-                           Width="30"/>
+                       Style="{StaticResource iamge_style}"/>
                 <Image Name="image2_image"
-                           Height="30"
-                           Width="30"/>
+                       Style="{StaticResource iamge_style}"/>
                 <Image Name="image3_image"
-                           Height="30"
-                           Width="30"/>
+                       Style="{StaticResource iamge_style}"/>
                 <Image Name="image4_image"
-                           Height="30"
-                           Width="30"/>
+                       Style="{StaticResource iamge_style}"/>
                 <Image Name="image5_image"
-                           Height="30"
-                           Width="30"/>
+                       Style="{StaticResource iamge_style}"/>
                 <Image Name="image6_image"
-                           Height="30"
-                           Width="30"/>
+                       Style="{StaticResource iamge_style}"/>
                 <Image Name="image7_image"
-                           Height="30"
-                           Width="30"/>
+                       Style="{StaticResource iamge_style}"/>
             </StackPanel>
         </StackPanel>
     </StackPanel>
