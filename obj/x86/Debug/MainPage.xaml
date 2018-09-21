@@ -15,7 +15,8 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Button x:ConnectionId='3' Name="list_button"
+        <StackPanel Orientation="Horizontal">
+            <Button x:ConnectionId='14' Name="list_button"
                     Height="45"
                     Width="45"
                     FontFamily="Segoe MDL2 Assets"
@@ -24,24 +25,36 @@
                     Background="Gray"
                     Foreground="White"
                                              />
-        <Button x:ConnectionId='4' Name="back_button"
+            <Button x:ConnectionId='15' Name="refresh_button"
+                    Height="45"
+                    Width="45"
+                    FontFamily="Segoe MDL2 Assets"
+                    Content="&#xE72C;"
+                    FontSize="25"
+                    Margin="10,0,0,0"
+                    Background="Gray"
+                    Foreground="White"
+                                                />
+            <Button x:ConnectionId='16' Name="back_button"
                 Height="45"
                 Width="45"
                 FontFamily="Segoe MDL2 Assets"
                 Content="&#xE72B;"
-                Margin="50,0,0,0"
+                Margin="10,0,0,0"
                 Foreground="White"
                 Background="Gray"
                 FontSize="30"
                                          />
-        <TextBlock x:ConnectionId='5' Name="main_title"
+            <TextBlock x:ConnectionId='17' Name="main_title"
                    Text="CurrentWeather"
                    FontSize="30"
-                   Margin="100,0,0,0"
+                   Margin="30,0,0,0"
                    FontWeight="Bold"
                    Foreground="White"
                    VerticalAlignment="Center"/>
-        <SplitView x:ConnectionId='6' Grid.Row="1"
+        </StackPanel>
+       
+        <SplitView x:ConnectionId='3' Grid.Row="1"
                        Name="main_splitview"
                        DisplayMode="CompactInline"
                        CompactPaneLength="45"
@@ -52,11 +65,11 @@
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <ListBox x:ConnectionId='7' Name="main_listbox"
+                    <ListBox x:ConnectionId='4' Name="main_listbox"
                              SelectionMode="Single"
                              Background="Gray"
                                                                              >
-                        <ListBoxItem x:ConnectionId='10' Name="listbox_itemone">
+                        <ListBoxItem x:ConnectionId='7' Name="listbox_itemone">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock FontFamily="Segoe MDL2 Assets"
                                            Text="&#xE80F;"
@@ -70,7 +83,7 @@
                                            Margin="20,0,0,0"/>
                             </StackPanel>
                         </ListBoxItem>
-                        <ListBoxItem x:ConnectionId='11' Name="listbox_itemtwo">
+                        <ListBoxItem x:ConnectionId='8' Name="listbox_itemtwo">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock FontFamily="Segoe MDL2 Assets"
                                            Text="&#xE707;"
@@ -84,7 +97,7 @@
                                            Margin="20,0,0,0"/>
                             </StackPanel>
                         </ListBoxItem>
-                        <ListBoxItem x:ConnectionId='12' Name="listbox_itemthree">
+                        <ListBoxItem x:ConnectionId='9' Name="listbox_itemthree">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock FontFamily="Segoe MDL2 Assets"
                                        Text="&#xEC06;"
@@ -100,10 +113,10 @@
                         </ListBoxItem>
 
                     </ListBox>
-                    <ListBox x:ConnectionId='8' Name="setting_listbox"
+                    <ListBox x:ConnectionId='5' Name="setting_listbox"
                              Grid.Row="1"
                                                                                 >
-                        <ListBoxItem x:ConnectionId='9' Name="listbox_itemSetting">
+                        <ListBoxItem x:ConnectionId='6' Name="listbox_itemSetting">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock FontFamily="Segoe MDL2 Assets"
                                            Text="&#xE713;"
@@ -127,13 +140,13 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-                    <StackPanel x:ConnectionId='13' Name="setting_stackPanel"
+                    <StackPanel x:ConnectionId='10' Name="setting_stackPanel"
                                 Orientation="Horizontal">
                         <TextBlock Text="BackGround Color"
                                        Foreground="White"
                                        Margin="100,0,0,0"
                                        VerticalAlignment="Center"/>
-                        <ComboBox x:ConnectionId='16' Name="setting_combobox"
+                        <ComboBox x:ConnectionId='13' Name="setting_combobox"
                                                                                           
                                       Margin="30,0,0,0"
                                       Width="150"
@@ -149,12 +162,12 @@
                             <ComboBoxItem Content="DeepPink"/>
                         </ComboBox>
                     </StackPanel>
-                    <ScrollViewer x:ConnectionId='14' Name="main_scrollViewer"
+                    <ScrollViewer x:ConnectionId='11' Name="main_scrollViewer"
                                   HorizontalScrollMode="Auto"
                                   VerticalScrollMode="Auto"
                                   Grid.Row="1"
                                   HorizontalScrollBarVisibility="Visible">
-                        <Frame x:ConnectionId='15' Name="main_frame"
+                        <Frame x:ConnectionId='12' Name="main_frame"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center">
                         </Frame>

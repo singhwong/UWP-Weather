@@ -15,7 +15,8 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Button Name="list_button"
+        <StackPanel Orientation="Horizontal">
+            <Button Name="list_button"
                     Height="45"
                     Width="45"
                     FontFamily="Segoe MDL2 Assets"
@@ -24,23 +25,35 @@
                     Background="Gray"
                     Foreground="White"
                     Click="list_button_Click"/>
-        <Button Name="back_button"
+            <Button Name="refresh_button"
+                    Height="45"
+                    Width="45"
+                    FontFamily="Segoe MDL2 Assets"
+                    Content="&#xE72C;"
+                    FontSize="25"
+                    Margin="10,0,0,0"
+                    Background="Gray"
+                    Foreground="White"
+                    Click="refresh_button_Click"/>
+            <Button Name="back_button"
                 Height="45"
                 Width="45"
                 FontFamily="Segoe MDL2 Assets"
                 Content="&#xE72B;"
-                Margin="50,0,0,0"
+                Margin="10,0,0,0"
                 Foreground="White"
                 Background="Gray"
                 FontSize="30"
                 Click="back_button_Click"/>
-        <TextBlock Name="main_title"
+            <TextBlock Name="main_title"
                    Text="CurrentWeather"
                    FontSize="30"
-                   Margin="100,0,0,0"
+                   Margin="30,0,0,0"
                    FontWeight="Bold"
                    Foreground="White"
                    VerticalAlignment="Center"/>
+        </StackPanel>
+       
         <SplitView Grid.Row="1"
                        Name="main_splitview"
                        DisplayMode="CompactInline"
