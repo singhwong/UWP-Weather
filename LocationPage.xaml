@@ -15,6 +15,12 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+  
     <StackPanel>
         <Grid>
             <Grid.RowDefinitions>
@@ -253,4 +259,52 @@
             </StackPanel>
         </StackPanel>
     </StackPanel>
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="1"
+                    Margin="0,30,0,0"
+                    HorizontalAlignment="Center">
+            <Button Name="white_button"
+                    Background="White"
+                    Height="10"
+                    Width="30"
+                    Click="white_button_Click"/>
+            <Button Name="black_button"
+                    Background="Black"
+                    Height="10"
+                    Width="30"
+                    Click="black_button_Click"/>
+            <Button Name="skyblue_button"
+                    Background="SkyBlue"
+                    Height="10"
+                    Width="30"
+                    Click="skyblue_button_Click"/>
+            <Button Name="aliceblue_button"
+                    Background="AliceBlue"
+                    Height="10"
+                    Width="30"
+                    Click="aliceblue_button_Click"/>
+            <Button Name="lightgray_button"
+                    Background="LightGray"
+                    Height="10"
+                    Width="30"
+                    Click="lightgray_button_Click_1"/>
+            <Button Name="lightblue_button"
+                    Background="LightBlue"
+                    Height="10"
+                    Width="30"
+                    Click="lightblue_button_Click"/>
+            <Button Name="lightcoral_button"
+                    Background="LightCoral"
+                    Height="10"
+                    Width="30"
+                    Click="lightcoral_button_Click"/>
+        </StackPanel>
+        <ProgressRing Name="location_progressring"
+                      Height="100"
+                      Width="100"
+                      Grid.RowSpan="2"
+                      Foreground="SkyBlue"
+                      VerticalAlignment="Center"
+                      HorizontalAlignment="Center"/>
+    </Grid>
 </Page>

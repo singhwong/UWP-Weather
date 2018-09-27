@@ -5,6 +5,8 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -24,6 +26,15 @@ namespace UsefulWeather
     /// </summary>
     public sealed partial class LocationPage : Page
     {
+        private SolidColorBrush white = new SolidColorBrush(Colors.White);
+        private SolidColorBrush black = new SolidColorBrush(Colors.Black);
+        private SolidColorBrush skyblue = new SolidColorBrush(Colors.SkyBlue);
+        private SolidColorBrush lightgray = new SolidColorBrush(Colors.LightGray);
+        private SolidColorBrush lightblue = new SolidColorBrush(Colors.LightBlue);
+        private SolidColorBrush aliceblue = new SolidColorBrush(Colors.AliceBlue);
+        private SolidColorBrush lightcoral = new SolidColorBrush(Colors.LightCoral);
+        private ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
+        private string foreground_value;
         public LocationPage()
         {
             this.InitializeComponent();
@@ -31,8 +42,10 @@ namespace UsefulWeather
 
         private async void city_button_Click(object sender, RoutedEventArgs e)
         {
+            LoadForeground();
+            location_progressring.IsActive = true;
             try
-            {
+            {               
                 var lat = Convert.ToDouble(lat_textbox.Text);
                 var lon = Convert.ToDouble(Lon_textbox.Text);
                 RootObject weather = await weatherAPI.GetWeatherByLocation(lat, lon);
@@ -74,6 +87,7 @@ namespace UsefulWeather
 
                 var icon7 = String.Format("ms-appx:///Assets/WeatherIcons/{0}.png", weather.list[7].weather[0].icon);
                 image7_image.Source = new BitmapImage(new Uri(icon7, UriKind.Absolute));
+                
             }
             catch 
             {
@@ -87,7 +101,113 @@ namespace UsefulWeather
                 };
                 ContentDialogResult result = await dia.ShowAsync();
             }
-            
+            location_progressring.IsActive = false;
+        }
+
+        private void white_button_Click(object sender, RoutedEventArgs e)
+        {
+            TextblockForeground(white);
+            localSettings.Values["Foreground"] = "white";
+        }
+
+        private void black_button_Click(object sender, RoutedEventArgs e)
+        {
+            localSettings.Values["Foreground"] = "black";
+            TextblockForeground(black);
+        }
+
+        private void skyblue_button_Click(object sender, RoutedEventArgs e)
+        {
+            TextblockForeground(skyblue);
+            localSettings.Values["Foreground"] = "skyblue";
+        }
+
+        private void aliceblue_button_Click(object sender, RoutedEventArgs e)
+        {
+            TextblockForeground(aliceblue);
+            localSettings.Values["Foreground"] = "aliceblue";
+        }
+
+        private void lightgray_button_Click_1(object sender, RoutedEventArgs e)
+        {
+            TextblockForeground(lightgray);
+            localSettings.Values["Foreground"] = "lightgray";
+        }
+
+        private void lightblue_button_Click(object sender, RoutedEventArgs e)
+        {
+            TextblockForeground(lightblue);
+            localSettings.Values["Foreground"] = "lightblue";
+        }
+
+        private void lightcoral_button_Click(object sender, RoutedEventArgs e)
+        {
+            TextblockForeground(lightcoral);
+            localSettings.Values["Foreground"] = "lightcoral";
+        }
+        private void TextblockForeground(SolidColorBrush color)
+        {
+            country_textblock.Foreground = color;
+            locationname_textblock.Foreground = color;
+            temp_textblock.Foreground = color;
+            C_textblock.Foreground = color;
+            mainDec_textblock.Foreground = color;
+            mainMaxTem_String.Foreground = color;
+            mainMaxTem_textblock.Foreground = color;
+            MaxTempC_textblock.Foreground = color;
+            mainMinTem_String.Foreground = color;
+            mainMinTem_textblock.Foreground = color;
+            MinTempC_textblock.Foreground = color;
+            mainWindSpeed_String.Foreground = color;
+            mainWindSpeed_textblock.Foreground = color;
+            WindSpeedUnit_String.Foreground = color;
+            Time_textblock.Foreground = color;
+            time1_textblock.Foreground = color;
+            time2_textblock.Foreground = color;
+            time3_textblock.Foreground = color;
+            time4_textblock.Foreground = color;
+            time5_textblock.Foreground = color;
+            time6_textblock.Foreground = color;
+            time7_textblock.Foreground = color;
+            Temp_textblock.Foreground = color;
+            temp1_textblock.Foreground = color;
+            temp2_textblock.Foreground = color;
+            temp3_textblock.Foreground = color;
+            temp4_textblock.Foreground = color;
+            temp5_textblock.Foreground = color;
+            temp6_textblock.Foreground = color;
+            temp7_textblock.Foreground = color;
+            Dec_textblock.Foreground = color;
+            dec1_textblock.Foreground = color;
+            dec2_textblock.Foreground = color;
+            dec3_textblock.Foreground = color;
+            dec4_textblock.Foreground = color;
+            dec5_textblock.Foreground = color;
+            dec6_textblock.Foreground = color;
+            dec7_textblock.Foreground = color;
+            Icon_textblock.Foreground = color;
+        }
+        private void LoadForeground()
+        {
+            try
+            {
+                foreground_value = localSettings.Values["Foreground"].ToString();
+            }
+            catch
+            {
+            }
+            switch (foreground_value)
+            {
+                case "white": TextblockForeground(white); break;
+                case "black": TextblockForeground(black); break;
+                case "skyblue": TextblockForeground(skyblue); break;
+                case "aliceblue": TextblockForeground(aliceblue); break;
+                case "lightblue": TextblockForeground(lightblue); break;
+                case "lightgray": TextblockForeground(lightgray); break;
+                case "lightcoral": TextblockForeground(lightcoral); break;
+                default:
+                    break;
+            }
         }
     }
 }

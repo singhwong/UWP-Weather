@@ -42,6 +42,9 @@ namespace UsefulWeather
         private SolidColorBrush brown = new SolidColorBrush(Colors.Brown);
         private SolidColorBrush darkViolet = new SolidColorBrush(Colors.DarkViolet);
         private SolidColorBrush gold = new SolidColorBrush(Colors.Gold);
+        private string background_value;
+        private string foreground_value;
+        private ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
         //private const string SettingTheme = "Theme";
         public MainPage()
         {
@@ -103,19 +106,59 @@ namespace UsefulWeather
             setting_stackPanel.Visibility = Visibility.Collapsed;
             back_button.Visibility = Visibility.Collapsed;
             itemone_bool = true;
-        }
-
-        private void setting_listbox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-            if (listbox_itemSetting.IsSelected)
+            LocalSettings();
+            if (Microsoft.Services.Store.Engagement.StoreServicesFeedbackLauncher.IsSupported())
             {
-                back_button.Visibility = Visibility.Visible;
-                main_listbox.SelectedIndex = -1;
-                main_scrollViewer.Visibility = Visibility.Collapsed;
-                setting_stackPanel.Visibility = Visibility.Visible;
-                main_title.Text = "Setting";
-                refresh_button.Visibility = Visibility.Collapsed;
+                this.listbox_itemfeedback.Visibility = Visibility.Visible;
+            }
+        }
+        private void LocalSettings()
+        {
+            try
+            {
+                background_value = localSettings.Values["Background"].ToString();
+                foreground_value = localSettings.Values["Foreground"].ToString();
+            }
+            catch
+            {
+            }
+            switch (background_value)
+            {
+                case "red": SetBackGround(red); break;
+                case "skyblue": SetBackGround(skyBlue); break;
+                case "black": SetBackGround(black); break;
+                case "gray": SetBackGround(gray); break;
+                case "lightgray": SetBackGround(lightGray); break;
+                case "whitesmoke": SetBackGround(whiteSmoke); break;
+                case "deeppink": SetBackGround(deepPink); break;
+                case "antiquewhite": SetBackGround(antiqueWhite); break;
+                case "aqua": SetBackGround(aqua); break;
+                case "azure": SetBackGround(azure); break;
+                case "coral": SetBackGround(coral); break;
+                case "brown": SetBackGround(brown); break;
+                case "darkviolet": SetBackGround(darkViolet); break;
+                case "gold": SetBackGround(gold); break;
+                default:
+                    break;
+            }
+            switch (foreground_value)
+            {
+                case "red": SetForeGround(red); break;
+                case "skyblue": SetForeGround(skyBlue); break;
+                case "black": SetForeGround(black); break;
+                case "gray": SetForeGround(gray); break;
+                case "lightgray": SetForeGround(lightGray); break;
+                case "whitesmoke": SetForeGround(whiteSmoke); break;
+                case "deeppink": SetForeGround(deepPink); break;
+                case "antiquewhite": SetForeGround(antiqueWhite); break;
+                case "aqua": SetForeGround(aqua); break;
+                case "azure": SetForeGround(azure); break;
+                case "coral": SetForeGround(coral); break;
+                case "brown": SetForeGround(brown); break;
+                case "darkviolet": SetForeGround(darkViolet); break;
+                case "gold": SetForeGround(gold); break;
+                default:
+                    break;
             }
         }
 
@@ -156,20 +199,34 @@ namespace UsefulWeather
             var color_value = selectionvalue.Content;
             switch (color_value)
             {
-                case "Red":SetBackGround(red);break;
-                case "SkyBlue":SetBackGround(skyBlue);break;
-                case "Black":SetBackGround(black);break;
-                case "Gray":SetBackGround(gray);break;
-                case "LightGray":SetBackGround(lightGray);break;
-                case "WhiteSmoke":SetBackGround(whiteSmoke);break;
-                case "DeepPink":SetBackGround(deepPink);break;
-                case "antiqueWhite":SetBackGround(antiqueWhite);break;
-                case "aqua":SetBackGround(aqua);break;
-                case "azure":SetBackGround(azure);break;
-                case "coral":SetBackGround(coral);break;
-                case "brown":SetBackGround(brown);break;
-                case "darkViolet":SetBackGround(darkViolet);break;
-                case "gold":SetBackGround(gold);break;
+                case "Red":SetBackGround(red);
+                    localSettings.Values["Background"] = "red"; break;
+                case "SkyBlue":SetBackGround(skyBlue);
+                    localSettings.Values["Background"] = "skyblue"; break;
+                case "Black":SetBackGround(black);
+                    localSettings.Values["Background"] = "black"; break;
+                case "Gray":SetBackGround(gray);
+                    localSettings.Values["Background"] = "gray"; break;
+                case "LightGray":SetBackGround(lightGray);
+                    localSettings.Values["Background"] = "lightgray"; break;
+                case "WhiteSmoke":SetBackGround(whiteSmoke);
+                    localSettings.Values["Background"] = "whitesmoke"; break;
+                case "DeepPink":SetBackGround(deepPink);
+                    localSettings.Values["Background"] = "deeppink"; break;
+                case "antiqueWhite":SetBackGround(antiqueWhite);
+                    localSettings.Values["Background"] = "antiquewhite"; break;
+                case "aqua":SetBackGround(aqua);
+                    localSettings.Values["Background"] = "aqua"; break;
+                case "azure":SetBackGround(azure);
+                    localSettings.Values["Background"] = "zaure"; break;
+                case "coral":SetBackGround(coral);
+                    localSettings.Values["Background"] = "coral"; break;
+                case "brown":SetBackGround(brown);
+                    localSettings.Values["Background"] = "brown"; break;
+                case "darkViolet":SetBackGround(darkViolet);
+                    localSettings.Values["Background"] = "darkviolet"; break;
+                case "gold":SetBackGround(gold);
+                    localSettings.Values["Background"] = "gold"; break;
                 default: break;
             }
         }
@@ -181,20 +238,34 @@ namespace UsefulWeather
             var color_value = selectionvalue.Content;
             switch (color_value)
             {
-                case "Red":SetForeGround(red);break;
-                case "SkyBlue":SetForeGround(skyBlue);break;
-                case "Black":SetForeGround(black);break;
-                case "Gray":SetForeGround(gray);break;
-                case "LightGray":SetForeGround(lightGray);break;
-                case "WhiteSmoke":SetForeGround(whiteSmoke);break;
-                case "DeepPink":SetForeGround(deepPink);break;
-                case "antiqueWhite":SetForeGround(antiqueWhite);break;
-                case "aqua":SetForeGround(aqua);break;
-                case "azure":SetForeGround(azure);break;
-                case "coral":SetForeGround(coral);break;
-                case "brown":SetForeGround(brown);break;
-                case "darkViolet":SetForeGround(darkViolet);break;
-                case "gold":SetForeGround(gold);break;
+                case "Red":SetForeGround(red);
+                    localSettings.Values["Foreground"] = "red"; break;
+                case "SkyBlue":SetForeGround(skyBlue);
+                    localSettings.Values["Foreground"] = "skyblue"; break;
+                case "Black":SetForeGround(black);
+                    localSettings.Values["Foreground"] = "black"; break;
+                case "Gray":SetForeGround(gray);
+                    localSettings.Values["Foreground"] = "gray"; break;
+                case "LightGray":SetForeGround(lightGray);
+                    localSettings.Values["Foreground"] = "lightgray"; break;
+                case "WhiteSmoke":SetForeGround(whiteSmoke);
+                    localSettings.Values["Foreground"] = "whitesmoke"; break;
+                case "DeepPink":SetForeGround(deepPink);
+                    localSettings.Values["Foreground"] = "deeppink"; break;
+                case "antiqueWhite":SetForeGround(antiqueWhite);
+                    localSettings.Values["Foreground"] = "antiquewhite"; break;
+                case "aqua":SetForeGround(aqua);
+                    localSettings.Values["Foreground"] = "aqua"; break;
+                case "azure":SetForeGround(azure);
+                    localSettings.Values["Foreground"] = "azure"; break;
+                case "coral":SetForeGround(coral);
+                    localSettings.Values["Foreground"] = "coral"; break;
+                case "brown":SetForeGround(brown);
+                    localSettings.Values["Foreground"] = "brown"; break;
+                case "darkViolet":SetForeGround(darkViolet);
+                    localSettings.Values["Foreground"] = "darkviolet"; break;
+                case "gold":SetForeGround(gold);
+                    localSettings.Values["Foreground"] = "gold"; break;
                 default: break;
             }
         }
@@ -215,6 +286,11 @@ namespace UsefulWeather
             setting_Text.Foreground = color;
             backGround_textblock.Foreground = color;
             foreGround_textblock.Foreground = color;
+            aobut_button.Foreground = color;
+            uri_textblock.Foreground = color;
+            github_textblock.Foreground = color;
+            feedback_textblock.Foreground = color;
+            feedback_Text.Foreground = color;
         }
         private void SetBackGround(SolidColorBrush color)
         {
@@ -224,6 +300,37 @@ namespace UsefulWeather
             list_button.Background = color;
             back_button.Background = color;
             refresh_button.Background = color;
+            aobut_button.Background = color;
+        }
+
+        private async void aobut_button_Click(object sender, RoutedEventArgs e)
+        {
+            ContentDialog content = new ContentDialog
+            {
+                Title = "about",
+                Content = "The weather api from github",
+                IsPrimaryButtonEnabled = true,
+                PrimaryButtonText = "OK",
+            };
+            ContentDialogResult result = await content.ShowAsync();
+        }
+
+        private async void setting_listbox_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            if (listbox_itemSetting.IsSelected)
+            {
+                back_button.Visibility = Visibility.Visible;
+                main_listbox.SelectedIndex = -1;
+                main_scrollViewer.Visibility = Visibility.Collapsed;
+                setting_stackPanel.Visibility = Visibility.Visible;
+                main_title.Text = "Setting";
+                refresh_button.Visibility = Visibility.Collapsed;
+            }
+            else if (listbox_itemfeedback.IsSelected)
+            {
+                var launcher = Microsoft.Services.Store.Engagement.StoreServicesFeedbackLauncher.GetDefault();
+                await launcher.LaunchAsync();
+            }
         }
     }
 }

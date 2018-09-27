@@ -10,13 +10,14 @@
                         >
 
     <Grid x:ConnectionId='2' Name="main_grid"
+          Background="Gray"
           VerticalAlignment="Stretch">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
-            <Button x:ConnectionId='27' Name="list_button"
+            <Button x:ConnectionId='33' Name="list_button"
                     Height="45"
                     Width="45"
                     FontFamily="Segoe MDL2 Assets"
@@ -25,7 +26,7 @@
                     Background="Gray"
                     Foreground="White"
                                              />
-            <Button x:ConnectionId='28' Name="refresh_button"
+            <Button x:ConnectionId='34' Name="refresh_button"
                     Height="45"
                     Width="45"
                     FontFamily="Segoe MDL2 Assets"
@@ -35,7 +36,7 @@
                     Background="Gray"
                     Foreground="White"
                                                 />
-            <Button x:ConnectionId='29' Name="back_button"
+            <Button x:ConnectionId='35' Name="back_button"
                 Height="45"
                 Width="45"
                 FontFamily="Segoe MDL2 Assets"
@@ -45,7 +46,7 @@
                 Background="Gray"
                 FontSize="30"
                                          />
-            <TextBlock x:ConnectionId='30' Name="main_title"
+            <TextBlock x:ConnectionId='36' Name="main_title"
                    Text="CurrentWeather"
                    FontSize="30"
                    Margin="30,0,0,0"
@@ -69,48 +70,48 @@
                              SelectionMode="Single"
                              Background="Gray"
                                                                              >
-                        <ListBoxItem x:ConnectionId='9' Name="listbox_itemone">
+                        <ListBoxItem x:ConnectionId='12' Name="listbox_itemone">
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock x:ConnectionId='16' Name="home_textblock" 
+                                <TextBlock x:ConnectionId='19' Name="home_textblock" 
                                            FontFamily="Segoe MDL2 Assets"
                                            Text="&#xE80F;"
                                            FontSize="25"
                                            Margin="-2,0,0,0"
                                            Foreground="White"
                                            VerticalAlignment="Center"/>
-                                <TextBlock x:ConnectionId='17' Name="home_Text" 
+                                <TextBlock x:ConnectionId='20' Name="home_Text" 
                                            Text="Home"
                                            FontSize="20"
                                            Foreground="White"
                                            Margin="20,0,0,0"/>
                             </StackPanel>
                         </ListBoxItem>
-                        <ListBoxItem x:ConnectionId='10' Name="listbox_itemtwo">
+                        <ListBoxItem x:ConnectionId='13' Name="listbox_itemtwo">
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock x:ConnectionId='14' Name="location_textblock"
+                                <TextBlock x:ConnectionId='17' Name="location_textblock"
                                            FontFamily="Segoe MDL2 Assets"
                                            Text="&#xE707;"
                                            FontSize="25"
                                            Margin="-2,0,0,0"
                                            Foreground="White"
                                            VerticalAlignment="Center"/>
-                                <TextBlock x:ConnectionId='15' Name="location_Text"
+                                <TextBlock x:ConnectionId='18' Name="location_Text"
                                            Text="Location"
                                            FontSize="20"
                                            Foreground="White"
                                            Margin="20,0,0,0"/>
                             </StackPanel>
                         </ListBoxItem>
-                        <ListBoxItem x:ConnectionId='11' Name="listbox_itemthree">
+                        <ListBoxItem x:ConnectionId='14' Name="listbox_itemthree">
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock x:ConnectionId='12' Name="city_textblock" 
+                                <TextBlock x:ConnectionId='15' Name="city_textblock" 
                                            FontFamily="Segoe MDL2 Assets"
                                            Text="&#xEC06;"
                                            FontSize="25"
                                            Margin="-2,0,0,0"
                                            Foreground="White"
                                            VerticalAlignment="Center"/>
-                                <TextBlock x:ConnectionId='13' Name="city_Text" 
+                                <TextBlock x:ConnectionId='16' Name="city_Text" 
                                            Text="City"
                                            FontSize="20"
                                            Foreground="White"
@@ -121,17 +122,35 @@
                     </ListBox>
                     <ListBox x:ConnectionId='5' Name="setting_listbox"
                              Grid.Row="1"
-                                                                                >
-                        <ListBoxItem x:ConnectionId='6' Name="listbox_itemSetting">
+                             Background="Gray"
+                                                            >
+                        <ListBoxItem x:ConnectionId='6' Name="listbox_itemfeedback"
+                                     Visibility="Collapsed">
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock x:ConnectionId='7' Name="setting_textblock"
+                                <TextBlock x:ConnectionId='10' Name="feedback_textblock"
+                                           FontFamily="Segoe MDL2 Assets"
+                                           Text="&#xED15;"
+                                           FontSize="25"
+                                           Margin="-2,0,0,0"
+                                           Foreground="White"
+                                           VerticalAlignment="Center"/>
+                                <TextBlock x:ConnectionId='11' Name="feedback_Text"
+                                           Text="Feedback"
+                                           FontSize="20"
+                                           Foreground="White"
+                                           Margin="20,0,0,0"/>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem x:ConnectionId='7' Name="listbox_itemSetting">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock x:ConnectionId='8' Name="setting_textblock"
                                            FontFamily="Segoe MDL2 Assets"
                                            Text="&#xE713;"
                                            FontSize="25"
                                            Margin="-2,0,0,0"
                                            Foreground="White"
                                            VerticalAlignment="Center"/>
-                                <TextBlock x:ConnectionId='8' Name="setting_Text"
+                                <TextBlock x:ConnectionId='9' Name="setting_Text"
                                            Text="Setting"
                                            FontSize="20"
                                            Foreground="White"
@@ -148,15 +167,16 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-                    <StackPanel x:ConnectionId='18' Name="setting_stackPanel">
-                        <StackPanel x:ConnectionId='21' Name="backGround_stackPanel"
+                    <StackPanel x:ConnectionId='21' Name="setting_stackPanel"
+                                HorizontalAlignment="Center">
+                        <StackPanel x:ConnectionId='24' Name="backGround_stackPanel"
                                 Orientation="Horizontal">
-                            <TextBlock x:ConnectionId='25' Name="backGround_textblock"
+                            <TextBlock x:ConnectionId='31' Name="backGround_textblock"
                                        Text="BackGround Color"
                                        Foreground="White"
                                        Margin="100,0,0,0"
                                        VerticalAlignment="Center"/>
-                            <ComboBox x:ConnectionId='26' Name="backGround_combobox"
+                            <ComboBox x:ConnectionId='32' Name="backGround_combobox"
                                                                                              
                                       Margin="30,0,0,0"
                                       Width="150"
@@ -165,8 +185,7 @@
                                       VerticalAlignment="Center">
                                 <ComboBoxItem Content="Red"/>
                                 <ComboBoxItem Content="SkyBlue"/>
-                                <ComboBoxItem Content="Black"
-                                              IsSelected="True"/>
+                                <ComboBoxItem Content="Black"/>
                                 <ComboBoxItem Content="Gray"/>
                                 <ComboBoxItem Content="LightGray"/>
                                 <ComboBoxItem Content="WhiteSmoke"/>
@@ -180,15 +199,15 @@
                                 <ComboBoxItem Content="gold"/>
                             </ComboBox>
                         </StackPanel>
-                        <StackPanel x:ConnectionId='22' Name="foreGround_stackPanel"
+                        <StackPanel x:ConnectionId='25' Name="foreGround_stackPanel"
                                     Orientation="Horizontal"
                                     Margin="0,10,0,0">
-                            <TextBlock x:ConnectionId='23' Name="foreGround_textblock"
+                            <TextBlock x:ConnectionId='29' Name="foreGround_textblock"
                                        Text="ForeGround Color"
                                        Foreground="White"
                                        Margin="100,0,0,0"
                                        VerticalAlignment="Center"/>
-                            <ComboBox x:ConnectionId='24' Name="foreGround_combobox"
+                            <ComboBox x:ConnectionId='30' Name="foreGround_combobox"
                                                                                              
                                       Margin="30,0,0,0"
                                       Width="150"
@@ -200,8 +219,7 @@
                                 <ComboBoxItem Content="Black"/>
                                 <ComboBoxItem Content="Gray"/>
                                 <ComboBoxItem Content="LightGray"/>
-                                <ComboBoxItem Content="WhiteSmoke"
-                                              IsSelected="True"/>
+                                <ComboBoxItem Content="WhiteSmoke"/>
                                 <ComboBoxItem Content="DeepPink"/>
                                 <ComboBoxItem Content="antiqueWhite"/>
                                 <ComboBoxItem Content="aqua"/>
@@ -212,14 +230,34 @@
                                 <ComboBoxItem Content="gold"/>
                             </ComboBox>
                         </StackPanel>
+                        <Button x:ConnectionId='26' Name="aobut_button"
+                                Height='50'
+                                Width="100"
+                                FontSize="30"
+                                Content="About"
+                                Foreground="WhiteSmoke"
+                                Background="Gray"
+                                HorizontalAlignment="Center"
+                                                          />
+                        <TextBlock x:ConnectionId='27' Name="uri_textblock"
+                                   Text="Project Uri:"
+                                   FontSize="30"
+                                   Foreground="White"
+                                   HorizontalAlignment="Center"/>
+                        <TextBlock x:ConnectionId='28' Name="github_textblock"
+                                   Text="https://github.com/singhwong/UWP-Weather"
+                                   FontSize="20"
+                                   Foreground="White"
+                                   IsTextSelectionEnabled="True"
+                                   HorizontalAlignment="Center"/>
                     </StackPanel>
                     
-                    <ScrollViewer x:ConnectionId='19' Name="main_scrollViewer"
+                    <ScrollViewer x:ConnectionId='22' Name="main_scrollViewer"
                                   HorizontalScrollMode="Auto"
                                   VerticalScrollMode="Auto"
                                   Grid.Row="1"
                                   HorizontalScrollBarVisibility="Visible">
-                        <Frame x:ConnectionId='20' Name="main_frame"
+                        <Frame x:ConnectionId='23' Name="main_frame"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center">
                         </Frame>

@@ -198,6 +198,12 @@
           "ref/uap10.0.15138/netstandard.dll": {}
         }
       },
+      "Microsoft.Services.Store.Engagement/10.1711.28001": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Services.Store.Engagement.targets": {}
+        }
+      },
       "NETStandard.Library/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -482,6 +488,12 @@
           "ref/uap10.0.15138/WindowsBase.dll": {},
           "ref/uap10.0.15138/mscorlib.dll": {},
           "ref/uap10.0.15138/netstandard.dll": {}
+        }
+      },
+      "Microsoft.Services.Store.Engagement/10.1711.28001": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Services.Store.Engagement.targets": {}
         }
       },
       "NETStandard.Library/2.0.3": {
@@ -944,6 +956,12 @@
           "ref/uap10.0.15138/netstandard.dll": {}
         }
       },
+      "Microsoft.Services.Store.Engagement/10.1711.28001": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Services.Store.Engagement.targets": {}
+        }
+      },
       "NETStandard.Library/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -1404,6 +1422,12 @@
           "ref/uap10.0.15138/netstandard.dll": {}
         }
       },
+      "Microsoft.Services.Store.Engagement/10.1711.28001": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Services.Store.Engagement.targets": {}
+        }
+      },
       "NETStandard.Library/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -1688,6 +1712,12 @@
           "ref/uap10.0.15138/WindowsBase.dll": {},
           "ref/uap10.0.15138/mscorlib.dll": {},
           "ref/uap10.0.15138/netstandard.dll": {}
+        }
+      },
+      "Microsoft.Services.Store.Engagement/10.1711.28001": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Services.Store.Engagement.targets": {}
         }
       },
       "NETStandard.Library/2.0.3": {
@@ -2148,6 +2178,12 @@
           "ref/uap10.0.15138/WindowsBase.dll": {},
           "ref/uap10.0.15138/mscorlib.dll": {},
           "ref/uap10.0.15138/netstandard.dll": {}
+        }
+      },
+      "Microsoft.Services.Store.Engagement/10.1711.28001": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Services.Store.Engagement.targets": {}
         }
       },
       "NETStandard.Library/2.0.3": {
@@ -2611,6 +2647,12 @@
           "ref/uap10.0.15138/netstandard.dll": {}
         }
       },
+      "Microsoft.Services.Store.Engagement/10.1711.28001": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Services.Store.Engagement.targets": {}
+        }
+      },
       "NETStandard.Library/2.0.3": {
         "type": "package",
         "dependencies": {
@@ -3069,6 +3111,12 @@
           "ref/uap10.0.15138/WindowsBase.dll": {},
           "ref/uap10.0.15138/mscorlib.dll": {},
           "ref/uap10.0.15138/netstandard.dll": {}
+        }
+      },
+      "Microsoft.Services.Store.Engagement/10.1711.28001": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Services.Store.Engagement.targets": {}
         }
       },
       "NETStandard.Library/2.0.3": {
@@ -3703,6 +3751,25 @@
         "ref/uap10.0.15138/mscorlib.dll",
         "ref/uap10.0.15138/netstandard.dll",
         "runtime.json"
+      ]
+    },
+    "Microsoft.Services.Store.Engagement/10.1711.28001": {
+      "sha512": "WOlPS1X+zj9V3JRUAtrnilmTIVOqKdmAr8zOgl524NZxbzdxRrU3nK9UnmpscMEO7a9pn7B6dzL+07LaN/IE6w==",
+      "type": "package",
+      "path": "microsoft.services.store.engagement/10.1711.28001",
+      "files": [
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Services.Store.Engagement/10.0/Appx/ARM/Microsoft.Services.Store.Engagement.ARM.10.0.appx",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Services.Store.Engagement/10.0/Appx/x64/Microsoft.Services.Store.Engagement.x64.10.0.appx",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Services.Store.Engagement/10.0/Appx/x86/Microsoft.Services.Store.Engagement.x86.10.0.appx",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Services.Store.Engagement/10.0/Extension.vsixmanifest",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Services.Store.Engagement/10.0/License.rtf",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Services.Store.Engagement/10.0/Redist.txt",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Services.Store.Engagement/10.0/References/CommonConfiguration/neutral/Microsoft.Services.Store.Engagement.winmd",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Services.Store.Engagement/10.0/References/CommonConfiguration/neutral/en/Microsoft.Services.Store.Engagement.xml",
+        "SDK/Windows Kits/10/ExtensionSDKs/Microsoft.Services.Store.Engagement/10.0/SDKManifest.xml",
+        "build/Microsoft.Services.Store.Engagement.targets",
+        "microsoft.services.store.engagement.10.1711.28001.nupkg.sha512",
+        "microsoft.services.store.engagement.nuspec"
       ]
     },
     "NETStandard.Library/2.0.3": {
@@ -7000,7 +7067,8 @@
   },
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.16299": [
-      "Microsoft.NETCore.UniversalWindowsPlatform >= 6.1.7"
+      "Microsoft.NETCore.UniversalWindowsPlatform >= 6.1.7",
+      "Microsoft.Services.Store.Engagement >= 10.1711.28001"
     ]
   },
   "packageFolders": {
@@ -7010,11 +7078,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wang\\source\\repos\\App1\\UsefulWeather\\UsefulWeather.csproj",
+      "projectUniqueName": "C:\\Users\\wang\\source\\repos\\UWP-Weather\\UsefulWeather.csproj",
       "projectName": "UsefulWeather",
-      "projectPath": "C:\\Users\\wang\\source\\repos\\App1\\UsefulWeather\\UsefulWeather.csproj",
+      "projectPath": "C:\\Users\\wang\\source\\repos\\UWP-Weather\\UsefulWeather.csproj",
       "packagesPath": "C:\\Users\\wang\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wang\\source\\repos\\App1\\UsefulWeather\\obj\\",
+      "outputPath": "C:\\Users\\wang\\source\\repos\\UWP-Weather\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -7043,6 +7111,10 @@
           "Microsoft.NETCore.UniversalWindowsPlatform": {
             "target": "Package",
             "version": "[6.1.7, )"
+          },
+          "Microsoft.Services.Store.Engagement": {
+            "target": "Package",
+            "version": "[10.1711.28001, )"
           }
         },
         "imports": [

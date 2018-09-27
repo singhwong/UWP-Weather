@@ -10,6 +10,7 @@
     Loaded="Page_Loaded">
 
     <Grid Name="main_grid"
+          Background="Gray"
           VerticalAlignment="Stretch">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -121,7 +122,25 @@
                     </ListBox>
                     <ListBox Name="setting_listbox"
                              Grid.Row="1"
-                             SelectionChanged="setting_listbox_SelectionChanged">
+                             Background="Gray"
+                             Tapped="setting_listbox_Tapped">
+                        <ListBoxItem Name="listbox_itemfeedback"
+                                     Visibility="Collapsed">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Name="feedback_textblock"
+                                           FontFamily="Segoe MDL2 Assets"
+                                           Text="&#xED15;"
+                                           FontSize="25"
+                                           Margin="-2,0,0,0"
+                                           Foreground="White"
+                                           VerticalAlignment="Center"/>
+                                <TextBlock Name="feedback_Text"
+                                           Text="Feedback"
+                                           FontSize="20"
+                                           Foreground="White"
+                                           Margin="20,0,0,0"/>
+                            </StackPanel>
+                        </ListBoxItem>
                         <ListBoxItem Name="listbox_itemSetting">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Name="setting_textblock"
@@ -148,7 +167,8 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-                    <StackPanel Name="setting_stackPanel">
+                    <StackPanel Name="setting_stackPanel"
+                                HorizontalAlignment="Center">
                         <StackPanel Name="backGround_stackPanel"
                                 Orientation="Horizontal">
                             <TextBlock Name="backGround_textblock"
@@ -165,8 +185,7 @@
                                       VerticalAlignment="Center">
                                 <ComboBoxItem Content="Red"/>
                                 <ComboBoxItem Content="SkyBlue"/>
-                                <ComboBoxItem Content="Black"
-                                              IsSelected="True"/>
+                                <ComboBoxItem Content="Black"/>
                                 <ComboBoxItem Content="Gray"/>
                                 <ComboBoxItem Content="LightGray"/>
                                 <ComboBoxItem Content="WhiteSmoke"/>
@@ -200,8 +219,7 @@
                                 <ComboBoxItem Content="Black"/>
                                 <ComboBoxItem Content="Gray"/>
                                 <ComboBoxItem Content="LightGray"/>
-                                <ComboBoxItem Content="WhiteSmoke"
-                                              IsSelected="True"/>
+                                <ComboBoxItem Content="WhiteSmoke"/>
                                 <ComboBoxItem Content="DeepPink"/>
                                 <ComboBoxItem Content="antiqueWhite"/>
                                 <ComboBoxItem Content="aqua"/>
@@ -212,6 +230,26 @@
                                 <ComboBoxItem Content="gold"/>
                             </ComboBox>
                         </StackPanel>
+                        <Button Name="aobut_button"
+                                Height='50'
+                                Width="100"
+                                FontSize="30"
+                                Content="About"
+                                Foreground="WhiteSmoke"
+                                Background="Gray"
+                                HorizontalAlignment="Center"
+                                Click="aobut_button_Click"/>
+                        <TextBlock Name="uri_textblock"
+                                   Text="Project Uri:"
+                                   FontSize="30"
+                                   Foreground="White"
+                                   HorizontalAlignment="Center"/>
+                        <TextBlock Name="github_textblock"
+                                   Text="https://github.com/singhwong/UWP-Weather"
+                                   FontSize="20"
+                                   Foreground="White"
+                                   IsTextSelectionEnabled="True"
+                                   HorizontalAlignment="Center"/>
                     </StackPanel>
                     
                     <ScrollViewer Name="main_scrollViewer"

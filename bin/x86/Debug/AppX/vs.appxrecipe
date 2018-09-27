@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>ba762727-160c-4510-954c-c61ecc0f4584</PackageIdentityName>
     <PackageIdentityPublisher>CN=wang</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\wang\source\repos\App1\UsefulWeather\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\wang\source\repos\UWP-Weather\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,8 +18,8 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>8C6BBD8A11365DDE8ED284DC52170CEC72E259F266EB5E7D5E3385467EC89616</RegisteredManifestChecksum>
+    <LayoutDir>C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>BE2B734D0CDD22EED9EE93060E3C020E6D1F6FCEB13D247D04C3330DAB446CC4</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>ba762727-160c-4510-954c-c61ecc0f4584_1.0.0.0_x86__f0ft2qc6perkc</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>ba762727-160c-4510-954c-c61ecc0f4584_f0ft2qc6perkc!App</RegisteredUserModeAppID>
     <RegisteredPackageID>ba762727-160c-4510-954c-c61ecc0f4584</RegisteredPackageID>
@@ -28,16 +28,16 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-21T08:16:29.858</Modified>
+      <Modified>2018-09-27T09:27:21.616</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\UsefulWeather.exe">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\UsefulWeather.exe">
       <PackagePath>entrypoint\UsefulWeather.exe</PackagePath>
-      <Modified>2018-09-21T08:16:29.349</Modified>
+      <Modified>2018-09-27T09:27:20.546</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.1.7\runtimes\win10-x86\nativeassets\uap10.0.15138\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
@@ -695,182 +695,186 @@
       <PackagePath>netstandard.dll</PackagePath>
       <Modified>2018-07-20T02:48:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Assets\SplashScreen.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-14T03:54:51.124</Modified>
+      <Modified>2018-09-27T03:06:13.089</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Assets\Square150x150Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Assets\Square150x150Logo.scale-400.png">
       <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-14T03:54:51.035</Modified>
+      <Modified>2018-09-27T03:06:13.094</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Assets\WeatherIcons.02d.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons.02d.scale-200.png">
       <PackagePath>Assets\WeatherIcons.02d.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-14T03:54:51.041</Modified>
+      <Modified>2018-09-27T03:06:13.104</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Assets\WeatherIcons.02d.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons.02d.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\WeatherIcons.02d.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-14T03:54:51.047</Modified>
+      <Modified>2018-09-27T03:06:13.107</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Assets\WeatherIcons\01d.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\01d.png">
       <PackagePath>Assets\WeatherIcons\01d.png</PackagePath>
-      <Modified>2018-09-17T01:22:45.322</Modified>
+      <Modified>2018-09-27T03:06:13.111</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Assets\WeatherIcons\01n.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\01n.png">
       <PackagePath>Assets\WeatherIcons\01n.png</PackagePath>
-      <Modified>2018-09-17T01:22:45.328</Modified>
+      <Modified>2018-09-27T03:06:13.114</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Assets\WeatherIcons\02d.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\02d.png">
       <PackagePath>Assets\WeatherIcons\02d.png</PackagePath>
-      <Modified>2018-09-17T01:22:45.335</Modified>
+      <Modified>2018-09-27T03:06:13.117</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Assets\WeatherIcons\02n.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\02n.png">
       <PackagePath>Assets\WeatherIcons\02n.png</PackagePath>
-      <Modified>2018-09-17T01:22:45.343</Modified>
+      <Modified>2018-09-27T03:06:13.119</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Assets\WeatherIcons\03d.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\03d.png">
       <PackagePath>Assets\WeatherIcons\03d.png</PackagePath>
-      <Modified>2018-09-17T01:22:45.350</Modified>
+      <Modified>2018-09-27T03:06:13.122</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Assets\WeatherIcons\03n.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\03n.png">
       <PackagePath>Assets\WeatherIcons\03n.png</PackagePath>
-      <Modified>2018-09-17T01:22:45.357</Modified>
+      <Modified>2018-09-27T03:06:13.125</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Assets\WeatherIcons\04d.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\04d.png">
       <PackagePath>Assets\WeatherIcons\04d.png</PackagePath>
-      <Modified>2018-09-17T01:22:45.363</Modified>
+      <Modified>2018-09-27T03:06:13.127</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Assets\WeatherIcons\04n.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\04n.png">
       <PackagePath>Assets\WeatherIcons\04n.png</PackagePath>
-      <Modified>2018-09-17T01:22:45.371</Modified>
+      <Modified>2018-09-27T03:06:13.131</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Assets\WeatherIcons\09d.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\09d.png">
       <PackagePath>Assets\WeatherIcons\09d.png</PackagePath>
-      <Modified>2018-09-17T01:22:45.378</Modified>
+      <Modified>2018-09-27T03:06:13.133</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Assets\WeatherIcons\09n.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\09n.png">
       <PackagePath>Assets\WeatherIcons\09n.png</PackagePath>
-      <Modified>2018-09-17T01:22:45.385</Modified>
+      <Modified>2018-09-27T03:06:13.137</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Assets\WeatherIcons\10d.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\10d.png">
       <PackagePath>Assets\WeatherIcons\10d.png</PackagePath>
-      <Modified>2018-09-17T01:22:45.392</Modified>
+      <Modified>2018-09-27T03:06:13.141</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Assets\WeatherIcons\10n.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\10n.png">
       <PackagePath>Assets\WeatherIcons\10n.png</PackagePath>
-      <Modified>2018-09-17T01:22:45.399</Modified>
+      <Modified>2018-09-27T03:06:13.144</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Assets\WeatherIcons\11d.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\11d.png">
       <PackagePath>Assets\WeatherIcons\11d.png</PackagePath>
-      <Modified>2018-09-17T01:22:45.406</Modified>
+      <Modified>2018-09-27T03:06:13.147</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Assets\WeatherIcons\11n.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\11n.png">
       <PackagePath>Assets\WeatherIcons\11n.png</PackagePath>
-      <Modified>2018-09-17T01:22:45.412</Modified>
+      <Modified>2018-09-27T03:06:13.150</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Assets\WeatherIcons\13d.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\13d.png">
       <PackagePath>Assets\WeatherIcons\13d.png</PackagePath>
-      <Modified>2018-09-17T01:22:45.418</Modified>
+      <Modified>2018-09-27T03:06:13.153</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Assets\WeatherIcons\13n.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\13n.png">
       <PackagePath>Assets\WeatherIcons\13n.png</PackagePath>
-      <Modified>2018-09-17T01:22:45.425</Modified>
+      <Modified>2018-09-27T03:06:13.155</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Assets\WeatherIcons\50d.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\50d.png">
       <PackagePath>Assets\WeatherIcons\50d.png</PackagePath>
-      <Modified>2018-09-17T01:22:45.431</Modified>
+      <Modified>2018-09-27T03:06:13.158</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Assets\WeatherIcons\50n.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\50n.png">
       <PackagePath>Assets\WeatherIcons\50n.png</PackagePath>
-      <Modified>2018-09-17T01:22:45.438</Modified>
+      <Modified>2018-09-27T03:06:13.160</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2018-09-07T03:06:40.387</Modified>
+      <Modified>2018-09-27T03:06:13.084</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-14T03:54:51.124</Modified>
+      <Modified>2018-09-27T03:06:13.086</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-14T03:54:51.030</Modified>
+      <Modified>2018-09-27T03:06:13.092</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
-      <Modified>2018-09-07T03:06:40.387</Modified>
+      <Modified>2018-09-27T03:06:13.097</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
-      <Modified>2018-09-07T03:06:40.387</Modified>
+      <Modified>2018-09-27T03:06:13.099</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-07T03:06:40.387</Modified>
+      <Modified>2018-09-27T03:06:13.102</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-07T03:06:40.387</Modified>
+      <Modified>2018-09-27T03:06:13.162</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2018-09-17T00:58:40.871</Modified>
+      <Modified>2018-09-27T03:06:13.198</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\UsefulWeather.xr.xml">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\UsefulWeather.xr.xml">
       <PackagePath>UsefulWeather.xr.xml</PackagePath>
-      <Modified>2018-09-21T08:16:29.038</Modified>
+      <Modified>2018-09-27T09:27:20.168</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2018-09-21T08:16:29.080</Modified>
+      <Modified>2018-09-27T09:27:20.256</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\CityPage.xbf">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\CityPage.xbf">
       <PackagePath>CityPage.xbf</PackagePath>
-      <Modified>2018-09-21T08:16:29.081</Modified>
+      <Modified>2018-09-27T09:27:20.257</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\DictionaryImage.xbf">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\DictionaryImage.xbf">
       <PackagePath>DictionaryImage.xbf</PackagePath>
-      <Modified>2018-09-21T08:16:29.079</Modified>
+      <Modified>2018-09-27T09:27:20.254</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\DictionaryTextBlock.xbf">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\DictionaryTextBlock.xbf">
       <PackagePath>DictionaryTextBlock.xbf</PackagePath>
-      <Modified>2018-09-21T08:16:29.080</Modified>
+      <Modified>2018-09-27T09:27:20.255</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\HomePage.xbf">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\HomePage.xbf">
       <PackagePath>HomePage.xbf</PackagePath>
-      <Modified>2018-09-21T08:16:29.081</Modified>
+      <Modified>2018-09-27T09:27:20.257</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\LocationPage.xbf">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\LocationPage.xbf">
       <PackagePath>LocationPage.xbf</PackagePath>
-      <Modified>2018-09-21T08:16:29.082</Modified>
+      <Modified>2018-09-27T09:27:20.258</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2018-09-21T08:16:29.082</Modified>
+      <Modified>2018-09-27T09:27:20.259</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\SettingPage.xbf">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\SettingPage.xbf">
       <PackagePath>SettingPage.xbf</PackagePath>
-      <Modified>2018-09-21T08:16:29.082</Modified>
+      <Modified>2018-09-27T09:27:20.259</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.17134.0\\redist\Debug\x86\ucrtbased.dll">
+      <PackagePath>ucrtbased.dll</PackagePath>
+      <Modified>2018-04-19T16:05:16.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2018-04-19T14:01:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-21T07:15:51.427</Modified>
+      <Modified>2018-09-27T08:22:22.527</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wang\source\repos\App1\UsefulWeather\bin\x86\Debug\Core\UsefulWeather.exe">
+    <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\Core\UsefulWeather.exe">
       <PackagePath>UsefulWeather.exe</PackagePath>
-      <Modified>2018-09-21T08:16:29.849</Modified>
+      <Modified>2018-09-27T09:27:21.600</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
@@ -900,6 +904,30 @@
       <AppxLocation>C:\Program Files\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.1.2\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.1.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\wang\.nuget\packages\microsoft.services.store.engagement\10.1711.28001\SDK\Windows Kits\10\ExtensionSDKs\Microsoft.Services.Store.Engagement\10.0\">
+      <Name>Microsoft.Services.Store.Engagement</Name>
+      <Version>10.0.17112.0</Version>
+      <Architecture>ARM</Architecture>
+      <FrameworkIdentity>Name=Microsoft.Services.Store.Engagement, MinVersion=10.0.17112.0, Publisher=%27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\wang\.nuget\packages\microsoft.services.store.engagement\10.1711.28001\SDK\Windows Kits\10\ExtensionSDKs\Microsoft.Services.Store.Engagement\10.0\.\AppX\ARM\Microsoft.Services.Store.Engagement.ARM.10.0.appx</AppxLocation>
+      <MoreInfo>http://aka.ms/store-em-docs</MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\wang\.nuget\packages\microsoft.services.store.engagement\10.1711.28001\SDK\Windows Kits\10\ExtensionSDKs\Microsoft.Services.Store.Engagement\10.0\">
+      <Name>Microsoft.Services.Store.Engagement</Name>
+      <Version>10.0.17112.0</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name=Microsoft.Services.Store.Engagement, MinVersion=10.0.17112.0, Publisher=%27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\wang\.nuget\packages\microsoft.services.store.engagement\10.1711.28001\SDK\Windows Kits\10\ExtensionSDKs\Microsoft.Services.Store.Engagement\10.0\.\AppX\x64\Microsoft.Services.Store.Engagement.x64.10.0.appx</AppxLocation>
+      <MoreInfo>http://aka.ms/store-em-docs</MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\wang\.nuget\packages\microsoft.services.store.engagement\10.1711.28001\SDK\Windows Kits\10\ExtensionSDKs\Microsoft.Services.Store.Engagement\10.0\">
+      <Name>Microsoft.Services.Store.Engagement</Name>
+      <Version>10.0.17112.0</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name=Microsoft.Services.Store.Engagement, MinVersion=10.0.17112.0, Publisher=%27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\wang\.nuget\packages\microsoft.services.store.engagement\10.1711.28001\SDK\Windows Kits\10\ExtensionSDKs\Microsoft.Services.Store.Engagement\10.0\.\AppX\x86\Microsoft.Services.Store.Engagement.x86.10.0.appx</AppxLocation>
+      <MoreInfo>http://aka.ms/store-em-docs</MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>

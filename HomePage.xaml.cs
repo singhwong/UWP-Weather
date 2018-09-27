@@ -5,6 +5,8 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
+using Windows.UI;
 using Windows.UI.Notifications;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -25,6 +27,15 @@ namespace UsefulWeather
     /// </summary>
     public sealed partial class HomePage : Page
     {
+        private SolidColorBrush white = new SolidColorBrush(Colors.White);
+        private SolidColorBrush black = new SolidColorBrush(Colors.Black);
+        private SolidColorBrush skyblue = new SolidColorBrush(Colors.SkyBlue);
+        private SolidColorBrush lightgray = new SolidColorBrush(Colors.LightGray);
+        private SolidColorBrush lightblue = new SolidColorBrush(Colors.LightBlue);
+        private SolidColorBrush aliceblue = new SolidColorBrush(Colors.AliceBlue);
+        private SolidColorBrush lightcoral = new SolidColorBrush(Colors.LightCoral);
+        private ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
+        private string foreground_value;
         public HomePage()
         {
             this.InitializeComponent();
@@ -32,6 +43,8 @@ namespace UsefulWeather
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            LoadForeground();
+            home_progressring.IsActive = true;
             try
             {
                 var position = await LocationWeather.GetPosition();
@@ -79,13 +92,16 @@ namespace UsefulWeather
             {
                 ContentDialog cd = new ContentDialog
                 {
-                    Title = "NetWork Error",
-                    Content = "Unable to connect to the internet",
+                    Title = "Connection Error",
+                    Content = "Unable to connect to the internet\nOr In the computer Settings," +
+                    "You need to open access permission to the current position",
                     IsPrimaryButtonEnabled = true,
                     PrimaryButtonText = "OK",
                 };
                 ContentDialogResult result = await cd.ShowAsync();
             }
+            home_progressring.IsActive = false;
+            
         }
         private void ShowMessage()
         {
@@ -97,6 +113,112 @@ namespace UsefulWeather
             tileAttributes[3].AppendChild(tileXml.CreateTextNode(mainWindSpeed_textblock.Text + "km/h"));
             var tileNotification = new TileNotification(tileXml);
             TileUpdateManager.CreateTileUpdaterForApplication().Update(tileNotification);
+        }
+
+        private void white_button_Click(object sender, RoutedEventArgs e)
+        {
+            TextblockForeground(white);
+            localSettings.Values["Foreground"] = "white";
+        }
+
+        private void black_button_Click(object sender, RoutedEventArgs e)
+        {
+            localSettings.Values["Foreground"] = "black";
+            TextblockForeground(black);
+        }
+
+        private void skyblue_button_Click(object sender, RoutedEventArgs e)
+        {
+            TextblockForeground(skyblue);
+            localSettings.Values["Foreground"] = "skyblue";
+        }
+        private void TextblockForeground(SolidColorBrush color)
+        {
+            country_textblock.Foreground = color;
+            cityname_textblock.Foreground = color;
+            temp_textblock.Foreground = color;
+            C_textblock.Foreground = color;
+            mainDec_textblock.Foreground = color;
+            mainMaxTem_String.Foreground = color;
+            mainMaxTem_textblock.Foreground = color;
+            MaxTempC_textblock.Foreground = color;
+            mainMinTem_String.Foreground = color;
+            mainMinTem_textblock.Foreground = color;
+            MinTempC_textblock.Foreground = color;
+            mainWindSpeed_String.Foreground = color;
+            mainWindSpeed_textblock.Foreground = color;
+            WindSpeedUnit_String.Foreground = color;
+            Time_textblock.Foreground = color;
+            time1_textblock.Foreground = color;
+            time2_textblock.Foreground = color;
+            time3_textblock.Foreground = color;
+            time4_textblock.Foreground = color;
+            time5_textblock.Foreground = color;
+            time6_textblock.Foreground = color;
+            time7_textblock.Foreground = color;
+            Temp_textblock.Foreground = color;
+            temp1_textblock.Foreground = color;
+            temp2_textblock.Foreground = color;
+            temp3_textblock.Foreground = color;
+            temp4_textblock.Foreground = color;
+            temp5_textblock.Foreground = color;
+            temp6_textblock.Foreground = color;
+            temp7_textblock.Foreground = color;
+            Dec_textblock.Foreground = color;
+            dec1_textblock.Foreground = color;
+            dec2_textblock.Foreground = color;
+            dec3_textblock.Foreground = color;
+            dec4_textblock.Foreground = color;
+            dec5_textblock.Foreground = color;
+            dec6_textblock.Foreground = color;
+            dec7_textblock.Foreground = color;
+            Icon_textblock.Foreground = color;           
+        }
+        private void LoadForeground()
+        {
+            try
+            {
+                foreground_value = localSettings.Values["Foreground"].ToString();
+            }
+            catch
+            {
+            }
+            switch (foreground_value)
+            {
+                case "white":TextblockForeground(white);break;
+                case "black":TextblockForeground(black);break;
+                case "skyblue":TextblockForeground(skyblue);break;
+                case "aliceblue":TextblockForeground(aliceblue);break;
+                case "lightblue": TextblockForeground(lightblue); break;
+                case "lightgray": TextblockForeground(lightgray); break;
+                case "lightcoral": TextblockForeground(lightcoral); break;
+                default:
+                    break;
+            }
+        }
+
+        private void aliceblue_button_Click(object sender, RoutedEventArgs e)
+        {
+            TextblockForeground(aliceblue);
+            localSettings.Values["Foreground"] = "aliceblue";
+        }
+
+        private void lightgray_button_Click_1(object sender, RoutedEventArgs e)
+        {
+            TextblockForeground(lightgray);
+            localSettings.Values["Foreground"] = "lightgray";
+        }
+
+        private void lightblue_button_Click(object sender, RoutedEventArgs e)
+        {
+            TextblockForeground(lightblue);
+            localSettings.Values["Foreground"] = "lightblue";
+        }
+
+        private void lightcoral_button_Click(object sender, RoutedEventArgs e)
+        {
+            TextblockForeground(lightcoral);
+            localSettings.Values["Foreground"] = "lightcoral";
         }
     }
 }
