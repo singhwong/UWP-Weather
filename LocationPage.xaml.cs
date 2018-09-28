@@ -70,6 +70,8 @@ namespace UsefulWeather
                 WindSpeedUnit_String.Text = "km/h";
                 MaxTempC_textblock.Text = "°C";
                 MinTempC_textblock.Text = "°C";
+                lat_textString.Text = "Latitude: ";
+                lon_textString.Text = "Longitude: ";
 
                 var icon = String.Format("ms-appx:///Assets/WeatherIcons/{0}.png", weather.list[0].weather[0].icon);
                 main_Image.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
@@ -154,6 +156,10 @@ namespace UsefulWeather
             Icon_textblock.Foreground = color;
             latitude_textblock.Foreground = color;
             longitude_textblock.Foreground = color;
+            lat_textString.Foreground = color;
+            lat_textblock.Foreground = color;
+            lon_textString.Foreground = color;
+            lon_textblock.Foreground = color;
         }
         private void LoadForeground()
         {

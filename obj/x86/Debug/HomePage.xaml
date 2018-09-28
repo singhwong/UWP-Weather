@@ -64,7 +64,6 @@
                            RelativePanel.Below="mainDec_textblock"/>
                 <TextBlock x:ConnectionId='41' Name="mainMaxTem_textblock"
                            FontSize="20"
-                           FontWeight="Bold"
                            Foreground="LightBlue"
                            RelativePanel.RightOf="mainMaxTem_String"
                            RelativePanel.Below="mainDec_textblock"
@@ -72,7 +71,6 @@
                            Text="{Binding list[0].main.temp_max}"/>
                 <TextBlock x:ConnectionId='42' Name="MaxTempC_textblock"
                            FontSize="20"
-                           FontWeight="Bold"
                            Foreground="White"
                            RelativePanel.RightOf="mainMaxTem_textblock"
                            RelativePanel.Below="mainDec_textblock"/>
@@ -82,7 +80,6 @@
                            RelativePanel.Below="mainMaxTem_String"/>
                 <TextBlock x:ConnectionId='44' Name="mainMinTem_textblock"
                            FontSize="20"
-                           FontWeight="Bold"
                            Foreground="LightBlue"
                            Margin="10,0,0,0"
                            RelativePanel.RightOf="mainMinTem_String"
@@ -90,7 +87,6 @@
                            Text="{Binding list[0].main.temp_min}"/>
                 <TextBlock x:ConnectionId='45' Name="MinTempC_textblock"
                            FontSize="20"
-                           FontWeight="Bold"
                            Foreground="White"
                            RelativePanel.RightOf="mainMinTem_textblock"
                            RelativePanel.Below="mainMaxTem_String"/>
@@ -100,7 +96,6 @@
                            RelativePanel.Below="mainMinTem_String"/>
                 <TextBlock x:ConnectionId='47' Name="mainWindSpeed_textblock"
                            FontSize="20"
-                           FontWeight="Bold"
                            Foreground="LightBlue"
                            RelativePanel.Below="mainMinTem_textblock"
                            RelativePanel.RightOf="mainWindSpeed_String"
@@ -111,22 +106,33 @@
                            Foreground="White"
                            RelativePanel.Below="mainMinTem_String"
                            RelativePanel.RightOf="mainWindSpeed_textblock"/>
-                <TextBlock x:ConnectionId='49' Name="lat_textblock"
+                <TextBlock x:ConnectionId='49' Name="lat_textString"
                            FontSize="20"
                            Foreground="White"
                            RelativePanel.Below="WindSpeedUnit_String"
-                           RelativePanel.AlignLeftWithPanel="True"
+                           RelativePanel.AlignLeftWithPanel="True"/>
+                <TextBlock x:ConnectionId='50' Name="lat_textblock"
+                           FontSize="20"
+                           Foreground="LightBlue"
+                           RelativePanel.Below="WindSpeedUnit_String"
+                           RelativePanel.RightOf="lat_textString"
+                           Margin="10,0,0,0"
                            IsTextSelectionEnabled="True"
                            Text="{Binding city.coord.lat}"/>
-                <TextBlock x:ConnectionId='50' Name="lon_textblock"
+                <TextBlock x:ConnectionId='51' Name="lon_textString"
                            FontSize="20"
                            Foreground="White"
-                           RelativePanel.Below="WindSpeedUnit_String"
-                           RelativePanel.RightOf="lat_textblock"
+                           RelativePanel.Below="lat_textblock"
+                           RelativePanel.AlignLeftWithPanel="True"/>
+                <TextBlock x:ConnectionId='52' Name="lon_textblock"
+                           FontSize="20"
+                           Foreground="LightBlue"
+                           RelativePanel.Below="lat_textblock"
+                           RelativePanel.RightOf="lon_textString"
                            Margin="10,0,0,0"
                            IsTextSelectionEnabled="True"
                            Text="{Binding city.coord.lon}"/>
-                <Image x:ConnectionId='51' Name="main_Image"
+                <Image x:ConnectionId='53' Name="main_Image"
                        Height="200"
                        Width="200"
                        RelativePanel.AlignVerticalCenterWithPanel="True"

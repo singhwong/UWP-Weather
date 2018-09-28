@@ -69,7 +69,8 @@ namespace UsefulWeather
                 WindSpeedUnit_String.Text = "km/h";
                 MaxTempC_textblock.Text = "°C";
                 MinTempC_textblock.Text = "°C";
-
+                lat_textString.Text = "Latitude: ";
+                lon_textString.Text = "Longitude: ";
                 ShowMessage();
                 var icon = String.Format("ms-appx:///Assets/WeatherIcons/{0}.png", weather.list[0].weather[0].icon);
                 main_Image.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
@@ -100,8 +101,9 @@ namespace UsefulWeather
                 ContentDialog cd = new ContentDialog
                 {
                     Title = "Connection Error",
-                    Content = "Unable to connect to the internet\nOr In the computer Settings," +
-                    "You need to open access permission to the current position",
+                    Content = "Unable to connect to the internet.\nOr In the computer Settings," +
+                    "you need to open access permission to the current position.\n" +
+                    "If still no data, you can try a few times more.",
                     IsPrimaryButtonEnabled = true,
                     PrimaryButtonText = "OK",
                 };
@@ -162,7 +164,11 @@ namespace UsefulWeather
             dec5_textblock.Foreground = color;
             dec6_textblock.Foreground = color;
             dec7_textblock.Foreground = color;
-            Icon_textblock.Foreground = color;           
+            Icon_textblock.Foreground = color;
+            lat_textString.Foreground = color;
+            lat_textblock.Foreground = color;
+            lon_textString.Foreground = color;
+            lon_textblock.Foreground = color;
         }
         private void LoadForeground()
         {

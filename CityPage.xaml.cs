@@ -60,12 +60,14 @@ namespace UsefulWeather
                 Dec_textblock.Text = "Description";
                 Icon_textblock.Text = "Icon";
                 cityname_textbox.Text = "";
-                //mainMaxTem_String.Text = "Max Temp:";
-                //mainMinTem_String.Text = "Min Temp:";
-                //mainWindSpeed_String.Text = "Wind Speed:";
-                //WindSpeedUnit_String.Text = "km/h";
-                //MaxTempC_textblock.Text = "°C";
-                //MinTempC_textblock.Text = "°C";
+                mainMaxTem_String.Text = "Max Temp:";
+                mainMinTem_String.Text = "Min Temp:";
+                mainWindSpeed_String.Text = "Wind Speed:";
+                WindSpeedUnit_String.Text = "km/h";
+                MaxTempC_textblock.Text = "°C";
+                MinTempC_textblock.Text = "°C";
+                lat_textString.Text = "Latitude: ";
+                lon_textString.Text = "Longitude: ";
 
                 var icon = String.Format("ms-appx:///Assets/WeatherIcons/{0}.png", weather.list[0].weather[0].icon);
                 main_Image.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
@@ -114,15 +116,15 @@ namespace UsefulWeather
             temp_textblock.Foreground = color;
             C_textblock.Foreground = color;
             mainDec_textblock.Foreground = color;
-            //mainMaxTem_String.Foreground = color;
-            //mainMaxTem_textblock.Foreground = color;
-            //MaxTempC_textblock.Foreground = color;
-            //mainMinTem_String.Foreground = color;
-            //mainMinTem_textblock.Foreground = color;
-            //MinTempC_textblock.Foreground = color;
-            //mainWindSpeed_String.Foreground = color;
-            //mainWindSpeed_textblock.Foreground = color;
-            //WindSpeedUnit_String.Foreground = color;
+            mainMaxTem_String.Foreground = color;
+            mainMaxTem_textblock.Foreground = color;
+            MaxTempC_textblock.Foreground = color;
+            mainMinTem_String.Foreground = color;
+            mainMinTem_textblock.Foreground = color;
+            MinTempC_textblock.Foreground = color;
+            mainWindSpeed_String.Foreground = color;
+            mainWindSpeed_textblock.Foreground = color;
+            WindSpeedUnit_String.Foreground = color;
             Time_textblock.Foreground = color;
             time1_textblock.Foreground = color;
             time2_textblock.Foreground = color;
@@ -149,6 +151,10 @@ namespace UsefulWeather
             dec7_textblock.Foreground = color;
             Icon_textblock.Foreground = color;
             inputcityname_textblock.Foreground = color;
+            lat_textString.Foreground = color;
+            lat_textblock.Foreground = color;
+            lon_textString.Foreground = color;
+            lon_textblock.Foreground = color;
         }
         private void LoadForeground()
         {

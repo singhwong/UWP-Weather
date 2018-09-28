@@ -8,8 +8,6 @@
     <RootPropertyPathName Name="temp" />
     <RootPropertyPathName Name="dt_txt" />
     <RootPropertyPathName Name="city" />
-    <RootPropertyPathName Name="name" />
-    <RootPropertyPathName Name="country" />
     <RootPropertyPathName Name="coord" />
     <RootPropertyPathName Name="lon" />
     <RootPropertyPathName Name="lat" />
@@ -17,6 +15,8 @@
     <RootPropertyPathName Name="speed" />
     <RootPropertyPathName Name="temp_min" />
     <RootPropertyPathName Name="temp_max" />
+    <RootPropertyPathName Name="name" />
+    <RootPropertyPathName Name="country" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -87,9 +87,9 @@
       <RootProperty Name="Style" />
       <RootProperty Name="Text" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="IsTextSelectionEnabled" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="FontStyle" />
-      <RootProperty Name="IsTextSelectionEnabled" />
       <RootProperty Name="FontFamily" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">

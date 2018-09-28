@@ -348,8 +348,8 @@ namespace UsefulWeather
             ContentDialog content = new ContentDialog
             {
                 Title = "about",
-                Content = "The weather api from github\n" +
-                "Perhaps because of the weather api, the data is not accurate, for reference only",
+                Content = "The weather api from github.\n" +
+                "Perhaps because of the weather api, the data is not accurate, for reference only.",
                 IsPrimaryButtonEnabled = true,
                 PrimaryButtonText = "OK",
             };
