@@ -6,7 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Loaded="Page_Loaded">
     <Page.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -20,39 +21,41 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-  
-    <StackPanel>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <TextBlock Text="Latitude"
+
+        <StackPanel>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Name="latitude_textblock" 
+                           Text="Latitude"
                            FontSize="20"
                            Foreground="White"
                            VerticalAlignment="Center"/>
-            <TextBlock Text="Longitude"
+                <TextBlock Name="longitude_textblock"
+                           Text="Longitude"
                            FontSize="20"
                            Grid.Row="1"
                            Foreground="White"
                            VerticalAlignment="Center"/>
-            <TextBox Name="lat_textbox"
+                <TextBox Name="lat_textbox"
                          Width="100"
                          Margin="10"
                          Background="White"
                          Grid.Column="1"/>
-            <TextBox Name="Lon_textbox"
+                <TextBox Name="Lon_textbox"
                          Width="100"
                          Background="White"
                          Grid.Row="1"
                          Margin="10"
                          Grid.Column="1"/>
-            <Button Name="city_button"                      
+                <Button Name="city_button"                      
                         Grid.RowSpan="2"
                         Grid.Column="2"
                         Width="110"
@@ -60,22 +63,22 @@
                         Background="Pink"
                         Content="Get Weather"
                         Click="city_button_Click"/>
-        </Grid>
-        <RelativePanel>
-            <TextBlock Name="country_textblock"
+            </Grid>
+            <RelativePanel>
+                <TextBlock Name="country_textblock"
                        FontSize="30"
                        Foreground="LightBlue"
                        FontWeight="Bold"
                        RelativePanel.AlignTopWithPanel="True"
                        Text="{Binding city.country}"/>
-            <TextBlock Name="locationname_textblock"
+                <TextBlock Name="locationname_textblock"
                            FontSize="30"
                            Foreground="LightBlue"
                            FontWeight="Bold"
                            RelativePanel.Below="country_textblock"
                            RelativePanel.AlignLeftWithPanel="True"                          
                            Text="{Binding city.name}"/>
-            <TextBlock Name="temp_textblock"
+                <TextBlock Name="temp_textblock"
                            FontSize="30"
                            FontWeight="Bold"
                            Foreground="LightBlue"
@@ -83,22 +86,22 @@
                            RelativePanel.RightOf="locationname_textblock"
                            Margin="30,0,0,0"                          
                            Text="{Binding list[0].main.temp}"/>
-            <TextBlock Name="C_textblock"
+                <TextBlock Name="C_textblock"
                            FontSize="30"
                            FontWeight="Bold"
                            Foreground="White"
                            RelativePanel.Below="country_textblock"
                            RelativePanel.RightOf="temp_textblock"/>
-            <TextBlock Name="mainDec_textblock"
+                <TextBlock Name="mainDec_textblock"
                            FontSize="30"
                            Foreground="LightBlue"
                            RelativePanel.Below="locationname_textblock"                       
                            Text="{Binding list[0].weather[0].description}"/>
-            <TextBlock Name="mainMaxTem_String"
+                <TextBlock Name="mainMaxTem_String"
                            FontSize="20"
                            Foreground="White"
                            RelativePanel.Below="mainDec_textblock"/>
-            <TextBlock Name="mainMaxTem_textblock"
+                <TextBlock Name="mainMaxTem_textblock"
                            FontSize="20"
                            FontWeight="Bold"
                            Foreground="LightBlue"
@@ -106,17 +109,17 @@
                            RelativePanel.Below="mainDec_textblock"
                            Margin="10,0,0,0"
                            Text="{Binding list[0].main.temp_max}"/>
-            <TextBlock Name="MaxTempC_textblock"
+                <TextBlock Name="MaxTempC_textblock"
                            FontSize="20"
                            FontWeight="Bold"
                            Foreground="White"
                            RelativePanel.RightOf="mainMaxTem_textblock"
                            RelativePanel.Below="mainDec_textblock"/>
-            <TextBlock Name="mainMinTem_String"
+                <TextBlock Name="mainMinTem_String"
                            FontSize="20"
                            Foreground="White"
                            RelativePanel.Below="mainMaxTem_String"/>
-            <TextBlock Name="mainMinTem_textblock"
+                <TextBlock Name="mainMinTem_textblock"
                            FontSize="20"
                            FontWeight="Bold"
                            Foreground="LightBlue"
@@ -124,17 +127,17 @@
                            RelativePanel.RightOf="mainMinTem_String"
                            RelativePanel.Below="mainMaxTem_String"
                            Text="{Binding list[0].main.temp_min}"/>
-            <TextBlock Name="MinTempC_textblock"
+                <TextBlock Name="MinTempC_textblock"
                            FontSize="20"
                            FontWeight="Bold"
                            Foreground="White"
                            RelativePanel.RightOf="mainMinTem_textblock"
                            RelativePanel.Below="mainMaxTem_String"/>
-            <TextBlock Name="mainWindSpeed_String"
+                <TextBlock Name="mainWindSpeed_String"
                            FontSize="20"
                            Foreground="White"
                            RelativePanel.Below="mainMinTem_String"/>
-            <TextBlock Name="mainWindSpeed_textblock"
+                <TextBlock Name="mainWindSpeed_textblock"
                            FontSize="20"
                            FontWeight="Bold"
                            Foreground="LightBlue"
@@ -142,162 +145,122 @@
                            RelativePanel.RightOf="mainWindSpeed_String"
                            Margin="10,0,0,0"
                            Text="{Binding list[0].wind.speed}"/>
-            <TextBlock Name="WindSpeedUnit_String"
+                <TextBlock Name="WindSpeedUnit_String"
                            FontSize="20"
                            Foreground="White"
                            RelativePanel.Below="mainMinTem_String"
                            RelativePanel.RightOf="mainWindSpeed_textblock"/>
-            <Image Name="main_Image"
+                <Image Name="main_Image"
                        Height="200"
                        Width="200"
                        RelativePanel.AlignVerticalCenterWithPanel="True"
                        RelativePanel.AlignRightWithPanel="True"/>
-        </RelativePanel>
-        <StackPanel Orientation="Horizontal">
-            <StackPanel>
-                <TextBlock Name="Time_textblock"
+            </RelativePanel>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <TextBlock Name="Time_textblock"
                                FontSize="20"
                                FontWeight="Bold"
                                Foreground="White"
                                HorizontalAlignment="Center"/>
-                <TextBlock Name="time1_textblock"
+                    <TextBlock Name="time1_textblock"
                            Style="{StaticResource textblock_style1}"
                            Text="{Binding list[1].dt_txt}"/>
-                <TextBlock Name="time2_textblock"
+                    <TextBlock Name="time2_textblock"
                            Style="{StaticResource textblock_style1}"
                            Text="{Binding list[2].dt_txt}"/>
-                <TextBlock Name="time3_textblock"
+                    <TextBlock Name="time3_textblock"
                            Style="{StaticResource textblock_style1}"
                            Text="{Binding list[3].dt_txt}"/>
-                <TextBlock Name="time4_textblock"
+                    <TextBlock Name="time4_textblock"
                            Style="{StaticResource textblock_style1}"
                            Text="{Binding list[4].dt_txt}"/>
-                <TextBlock Name="time5_textblock"
+                    <TextBlock Name="time5_textblock"
                            Style="{StaticResource textblock_style1}"
                            Text="{Binding list[5].dt_txt}"/>
-                <TextBlock Name="time6_textblock"
+                    <TextBlock Name="time6_textblock"
                            Style="{StaticResource textblock_style1}"
                            Text="{Binding list[6].dt_txt}"/>
-                <TextBlock Name="time7_textblock"
+                    <TextBlock Name="time7_textblock"
                            Style="{StaticResource textblock_style1}"
                            Text="{Binding list[7].dt_txt}"/>
-            </StackPanel>
-            <StackPanel Margin="10,0,0,0">
-                <TextBlock Name="Temp_textblock"
+                </StackPanel>
+                <StackPanel Margin="10,0,0,0">
+                    <TextBlock Name="Temp_textblock"
                                FontSize="20"
                                Foreground="White"
                                FontWeight="Bold"/>
-                <TextBlock Name="temp1_textblock"
+                    <TextBlock Name="temp1_textblock"
                                Style="{StaticResource textblock_style1}"
                                Text="{Binding list[1].main.temp}"/>
-                <TextBlock Name="temp2_textblock"
+                    <TextBlock Name="temp2_textblock"
                                Style="{StaticResource textblock_style1}"
                                Text="{Binding list[2].main.temp}"/>
-                <TextBlock Name="temp3_textblock"
+                    <TextBlock Name="temp3_textblock"
                                Style="{StaticResource textblock_style1}"
                                Text="{Binding list[3].main.temp}"/>
-                <TextBlock Name="temp4_textblock"
+                    <TextBlock Name="temp4_textblock"
                                Style="{StaticResource textblock_style1}"
                                Text="{Binding list[4].main.temp}"/>
-                <TextBlock Name="temp5_textblock"
+                    <TextBlock Name="temp5_textblock"
                                Style="{StaticResource textblock_style1}"
                                Text="{Binding list[5].main.temp}"/>
-                <TextBlock Name="temp6_textblock"
+                    <TextBlock Name="temp6_textblock"
                                Style="{StaticResource textblock_style1}"
                                Text="{Binding list[6].main.temp}"/>
-                <TextBlock Name="temp7_textblock"
+                    <TextBlock Name="temp7_textblock"
                                Style="{StaticResource textblock_style1}"
                                Text="{Binding list[7].main.temp}"/>
-            </StackPanel>
-            <StackPanel Margin="10,0,0,0">
-                <TextBlock Name="Dec_textblock"
+                </StackPanel>
+                <StackPanel Margin="10,0,0,0">
+                    <TextBlock Name="Dec_textblock"
                                FontSize="22"
                                Foreground="White"
                                HorizontalAlignment="Center"
                                FontWeight="Bold"/>
-                <TextBlock Name="dec1_textblock"
+                    <TextBlock Name="dec1_textblock"
                            Style="{StaticResource textblock_style1}"
                            Text="{Binding list[1].weather[0].description}"/>
-                <TextBlock Name="dec2_textblock"
+                    <TextBlock Name="dec2_textblock"
                            Style="{StaticResource textblock_style1}"
                            Text="{Binding list[2].weather[0].description}"/>
-                <TextBlock Name="dec3_textblock"
+                    <TextBlock Name="dec3_textblock"
                            Style="{StaticResource textblock_style1}"
                            Text="{Binding list[3].weather[0].description}"/>
-                <TextBlock Name="dec4_textblock"
+                    <TextBlock Name="dec4_textblock"
                            Style="{StaticResource textblock_style1}"
                            Text="{Binding list[4].weather[0].description}"/>
-                <TextBlock Name="dec5_textblock"
+                    <TextBlock Name="dec5_textblock"
                            Style="{StaticResource textblock_style1}"
                            Text="{Binding list[5].weather[0].description}"/>
-                <TextBlock Name="dec6_textblock"
+                    <TextBlock Name="dec6_textblock"
                            Style="{StaticResource textblock_style1}"
                            Text="{Binding list[6].weather[0].description}"/>
-                <TextBlock Name="dec7_textblock"
+                    <TextBlock Name="dec7_textblock"
                            Style="{StaticResource textblock_style1}"
                            Text="{Binding list[7].weather[0].description}"/>
-            </StackPanel>
-            <StackPanel Margin="10,0,0,0">
-                <TextBlock Name="Icon_textblock"
+                </StackPanel>
+                <StackPanel Margin="10,0,0,0">
+                    <TextBlock Name="Icon_textblock"
                                FontSize="20"
                                Foreground="White"
                                FontWeight="Bold"/>
-                <Image Name="image1_image"
+                    <Image Name="image1_image"
                        Style="{StaticResource iamge_style}"/>
-                <Image Name="image2_image"
+                    <Image Name="image2_image"
                        Style="{StaticResource iamge_style}"/>
-                <Image Name="image3_image"
+                    <Image Name="image3_image"
                        Style="{StaticResource iamge_style}"/>
-                <Image Name="image4_image"
+                    <Image Name="image4_image"
                        Style="{StaticResource iamge_style}"/>
-                <Image Name="image5_image"
+                    <Image Name="image5_image"
                        Style="{StaticResource iamge_style}"/>
-                <Image Name="image6_image"
+                    <Image Name="image6_image"
                        Style="{StaticResource iamge_style}"/>
-                <Image Name="image7_image"
+                    <Image Name="image7_image"
                        Style="{StaticResource iamge_style}"/>
+                </StackPanel>
             </StackPanel>
-        </StackPanel>
-    </StackPanel>
-        <StackPanel Orientation="Horizontal"
-                    Grid.Row="1"
-                    Margin="0,30,0,0"
-                    HorizontalAlignment="Center">
-            <Button Name="white_button"
-                    Background="White"
-                    Height="10"
-                    Width="30"
-                    Click="white_button_Click"/>
-            <Button Name="black_button"
-                    Background="Black"
-                    Height="10"
-                    Width="30"
-                    Click="black_button_Click"/>
-            <Button Name="skyblue_button"
-                    Background="SkyBlue"
-                    Height="10"
-                    Width="30"
-                    Click="skyblue_button_Click"/>
-            <Button Name="aliceblue_button"
-                    Background="AliceBlue"
-                    Height="10"
-                    Width="30"
-                    Click="aliceblue_button_Click"/>
-            <Button Name="lightgray_button"
-                    Background="LightGray"
-                    Height="10"
-                    Width="30"
-                    Click="lightgray_button_Click_1"/>
-            <Button Name="lightblue_button"
-                    Background="LightBlue"
-                    Height="10"
-                    Width="30"
-                    Click="lightblue_button_Click"/>
-            <Button Name="lightcoral_button"
-                    Background="LightCoral"
-                    Height="10"
-                    Width="30"
-                    Click="lightcoral_button_Click"/>
         </StackPanel>
         <ProgressRing Name="location_progressring"
                       Height="100"

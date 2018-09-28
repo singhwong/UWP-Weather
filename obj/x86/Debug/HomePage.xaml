@@ -21,24 +21,24 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-    
-    <StackPanel>
-        
-        <RelativePanel>
-            <TextBlock x:ConnectionId='42' Name="country_textblock"
+
+        <StackPanel>
+
+            <RelativePanel>
+                <TextBlock x:ConnectionId='35' Name="country_textblock"
                        FontSize="30"
                        Foreground="LightBlue"
                        FontWeight="Bold"
                        RelativePanel.AlignTopWithPanel="True"
                        Text="{Binding city.country}"/>
-            <TextBlock x:ConnectionId='43' Name="cityname_textblock"
+                <TextBlock x:ConnectionId='36' Name="cityname_textblock"
                            FontSize="30"
                            Foreground="LightBlue"
                            FontWeight="Bold"
                            RelativePanel.Below="country_textblock"
                            RelativePanel.AlignLeftWithPanel="True"                          
                            Text="{Binding city.name}"/>
-            <TextBlock x:ConnectionId='44' Name="temp_textblock"
+                <TextBlock x:ConnectionId='37' Name="temp_textblock"
                            FontSize="30"
                            FontWeight="Bold"
                            Foreground="LightBlue"
@@ -46,23 +46,23 @@
                            RelativePanel.RightOf="cityname_textblock"
                            Margin="30,0,0,0"                          
                            Text="{Binding list[0].main.temp}"/>
-            <TextBlock x:ConnectionId='45' Name="C_textblock"
+                <TextBlock x:ConnectionId='38' Name="C_textblock"
                            FontSize="30"
                            FontWeight="Bold"
                            Foreground="White"
                            RelativePanel.Below="country_textblock"
                            RelativePanel.RightOf="temp_textblock"/>
-            <TextBlock x:ConnectionId='46' Name="mainDec_textblock"
+                <TextBlock x:ConnectionId='39' Name="mainDec_textblock"
                            FontSize="30"
                            FontWeight="Bold"
                            Foreground="LightBlue"
                            RelativePanel.Below="cityname_textblock"                       
                            Text="{Binding list[0].weather[0].description}"/>
-            <TextBlock x:ConnectionId='47' Name="mainMaxTem_String"
+                <TextBlock x:ConnectionId='40' Name="mainMaxTem_String"
                            FontSize="20"
                            Foreground="White"
                            RelativePanel.Below="mainDec_textblock"/>
-            <TextBlock x:ConnectionId='48' Name="mainMaxTem_textblock"
+                <TextBlock x:ConnectionId='41' Name="mainMaxTem_textblock"
                            FontSize="20"
                            FontWeight="Bold"
                            Foreground="LightBlue"
@@ -70,17 +70,17 @@
                            RelativePanel.Below="mainDec_textblock"
                            Margin="10,0,0,0"
                            Text="{Binding list[0].main.temp_max}"/>
-            <TextBlock x:ConnectionId='49' Name="MaxTempC_textblock"
+                <TextBlock x:ConnectionId='42' Name="MaxTempC_textblock"
                            FontSize="20"
                            FontWeight="Bold"
                            Foreground="White"
                            RelativePanel.RightOf="mainMaxTem_textblock"
                            RelativePanel.Below="mainDec_textblock"/>
-            <TextBlock x:ConnectionId='50' Name="mainMinTem_String"
+                <TextBlock x:ConnectionId='43' Name="mainMinTem_String"
                            FontSize="20"
                            Foreground="White"
                            RelativePanel.Below="mainMaxTem_String"/>
-            <TextBlock x:ConnectionId='51' Name="mainMinTem_textblock"
+                <TextBlock x:ConnectionId='44' Name="mainMinTem_textblock"
                            FontSize="20"
                            FontWeight="Bold"
                            Foreground="LightBlue"
@@ -88,17 +88,17 @@
                            RelativePanel.RightOf="mainMinTem_String"
                            RelativePanel.Below="mainMaxTem_String"
                            Text="{Binding list[0].main.temp_min}"/>
-            <TextBlock x:ConnectionId='52' Name="MinTempC_textblock"
+                <TextBlock x:ConnectionId='45' Name="MinTempC_textblock"
                            FontSize="20"
                            FontWeight="Bold"
                            Foreground="White"
                            RelativePanel.RightOf="mainMinTem_textblock"
                            RelativePanel.Below="mainMaxTem_String"/>
-            <TextBlock x:ConnectionId='53' Name="mainWindSpeed_String"
+                <TextBlock x:ConnectionId='46' Name="mainWindSpeed_String"
                            FontSize="20"
                            Foreground="White"
                            RelativePanel.Below="mainMinTem_String"/>
-            <TextBlock x:ConnectionId='54' Name="mainWindSpeed_textblock"
+                <TextBlock x:ConnectionId='47' Name="mainWindSpeed_textblock"
                            FontSize="20"
                            FontWeight="Bold"
                            Foreground="LightBlue"
@@ -106,162 +106,137 @@
                            RelativePanel.RightOf="mainWindSpeed_String"
                            Margin="10,0,0,0"
                            Text="{Binding list[0].wind.speed}"/>
-            <TextBlock x:ConnectionId='55' Name="WindSpeedUnit_String"
+                <TextBlock x:ConnectionId='48' Name="WindSpeedUnit_String"
                            FontSize="20"
                            Foreground="White"
                            RelativePanel.Below="mainMinTem_String"
                            RelativePanel.RightOf="mainWindSpeed_textblock"/>
-            <Image x:ConnectionId='56' Name="main_Image"
+                <TextBlock x:ConnectionId='49' Name="lat_textblock"
+                           FontSize="20"
+                           Foreground="White"
+                           RelativePanel.Below="WindSpeedUnit_String"
+                           RelativePanel.AlignLeftWithPanel="True"
+                           IsTextSelectionEnabled="True"
+                           Text="{Binding city.coord.lat}"/>
+                <TextBlock x:ConnectionId='50' Name="lon_textblock"
+                           FontSize="20"
+                           Foreground="White"
+                           RelativePanel.Below="WindSpeedUnit_String"
+                           RelativePanel.RightOf="lat_textblock"
+                           Margin="10,0,0,0"
+                           IsTextSelectionEnabled="True"
+                           Text="{Binding city.coord.lon}"/>
+                <Image x:ConnectionId='51' Name="main_Image"
                        Height="200"
                        Width="200"
                        RelativePanel.AlignVerticalCenterWithPanel="True"
                        RelativePanel.AlignRightWithPanel="True"/>
-        </RelativePanel>
-        <StackPanel Orientation="Horizontal">
-            <StackPanel>
-                <TextBlock x:ConnectionId='34' Name="Time_textblock"
+            </RelativePanel>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <TextBlock x:ConnectionId='27' Name="Time_textblock"
                            FontSize="20"
                            Foreground="White"
                            FontWeight="Bold"
                            HorizontalAlignment="Center"/>
-                <TextBlock x:ConnectionId='35' Name="time1_textblock"
+                    <TextBlock x:ConnectionId='28' Name="time1_textblock"
                            Style="{StaticResource textblock_style1}"
                            Text="{Binding list[1].dt_txt}"/>
-                <TextBlock x:ConnectionId='36' Name="time2_textblock"
+                    <TextBlock x:ConnectionId='29' Name="time2_textblock"
                            Style="{StaticResource textblock_style1}"
                            Text="{Binding list[2].dt_txt}"/>
-                <TextBlock x:ConnectionId='37' Name="time3_textblock"
+                    <TextBlock x:ConnectionId='30' Name="time3_textblock"
                            Style="{StaticResource textblock_style1}"
                            Text="{Binding list[3].dt_txt}"/>
-                <TextBlock x:ConnectionId='38' Name="time4_textblock"
+                    <TextBlock x:ConnectionId='31' Name="time4_textblock"
                            Style="{StaticResource textblock_style1}"
                            Text="{Binding list[4].dt_txt}"/>
-                <TextBlock x:ConnectionId='39' Name="time5_textblock"
+                    <TextBlock x:ConnectionId='32' Name="time5_textblock"
                            Style="{StaticResource textblock_style1}"
                            Text="{Binding list[5].dt_txt}"/>
-                <TextBlock x:ConnectionId='40' Name="time6_textblock"
+                    <TextBlock x:ConnectionId='33' Name="time6_textblock"
                            Style="{StaticResource textblock_style1}"
                            Text="{Binding list[6].dt_txt}"/>
-                <TextBlock x:ConnectionId='41' Name="time7_textblock"
+                    <TextBlock x:ConnectionId='34' Name="time7_textblock"
                            Style="{StaticResource textblock_style1}"
                            Text="{Binding list[7].dt_txt}"/>
-            </StackPanel>
-            <StackPanel Margin="10,0,0,0">
-                <TextBlock x:ConnectionId='26' Name="Temp_textblock"
+                </StackPanel>
+                <StackPanel Margin="10,0,0,0">
+                    <TextBlock x:ConnectionId='19' Name="Temp_textblock"
                                FontSize="20"
                                Foreground="White"
                                FontWeight="Bold"/>
-                <TextBlock x:ConnectionId='27' Name="temp1_textblock"
+                    <TextBlock x:ConnectionId='20' Name="temp1_textblock"
                                Style="{StaticResource textblock_style1}"
                                Text="{Binding list[1].main.temp}"/>
-                <TextBlock x:ConnectionId='28' Name="temp2_textblock"
+                    <TextBlock x:ConnectionId='21' Name="temp2_textblock"
                                Style="{StaticResource textblock_style1}"
                                Text="{Binding list[2].main.temp}"/>
-                <TextBlock x:ConnectionId='29' Name="temp3_textblock"
+                    <TextBlock x:ConnectionId='22' Name="temp3_textblock"
                                Style="{StaticResource textblock_style1}"
                                Text="{Binding list[3].main.temp}"/>
-                <TextBlock x:ConnectionId='30' Name="temp4_textblock"
+                    <TextBlock x:ConnectionId='23' Name="temp4_textblock"
                                Style="{StaticResource textblock_style1}"
                                Text="{Binding list[4].main.temp}"/>
-                <TextBlock x:ConnectionId='31' Name="temp5_textblock"
+                    <TextBlock x:ConnectionId='24' Name="temp5_textblock"
                                Style="{StaticResource textblock_style1}"
                                Text="{Binding list[5].main.temp}"/>
-                <TextBlock x:ConnectionId='32' Name="temp6_textblock"
+                    <TextBlock x:ConnectionId='25' Name="temp6_textblock"
                                Style="{StaticResource textblock_style1}"
                                Text="{Binding list[6].main.temp}"/>
-                <TextBlock x:ConnectionId='33' Name="temp7_textblock"
+                    <TextBlock x:ConnectionId='26' Name="temp7_textblock"
                                Style="{StaticResource textblock_style1}"
                                Text="{Binding list[7].main.temp}"/>
-            </StackPanel>
-            <StackPanel Margin="10,0,0,0">
-                <TextBlock x:ConnectionId='18' Name="Dec_textblock"
+                </StackPanel>
+                <StackPanel Margin="10,0,0,0">
+                    <TextBlock x:ConnectionId='11' Name="Dec_textblock"
                            FontSize="20"
                            Foreground="White"
                            HorizontalAlignment="Center"
                            FontWeight="Bold"/>
-                <TextBlock x:ConnectionId='19' Name="dec1_textblock"
+                    <TextBlock x:ConnectionId='12' Name="dec1_textblock"
                            Style="{StaticResource textblock_style1}"
                            Text="{Binding list[1].weather[0].description}"/>
-                <TextBlock x:ConnectionId='20' Name="dec2_textblock"
+                    <TextBlock x:ConnectionId='13' Name="dec2_textblock"
                            Style="{StaticResource textblock_style1}"
                            Text="{Binding list[2].weather[0].description}"/>
-                <TextBlock x:ConnectionId='21' Name="dec3_textblock"
+                    <TextBlock x:ConnectionId='14' Name="dec3_textblock"
                            Style="{StaticResource textblock_style1}"
                            Text="{Binding list[3].weather[0].description}"/>
-                <TextBlock x:ConnectionId='22' Name="dec4_textblock"
+                    <TextBlock x:ConnectionId='15' Name="dec4_textblock"
                            Style="{StaticResource textblock_style1}"
                            Text="{Binding list[4].weather[0].description}"/>
-                <TextBlock x:ConnectionId='23' Name="dec5_textblock"
+                    <TextBlock x:ConnectionId='16' Name="dec5_textblock"
                            Style="{StaticResource textblock_style1}"
                            Text="{Binding list[5].weather[0].description}"/>
-                <TextBlock x:ConnectionId='24' Name="dec6_textblock"
+                    <TextBlock x:ConnectionId='17' Name="dec6_textblock"
                            Style="{StaticResource textblock_style1}"
                            Text="{Binding list[6].weather[0].description}"/>
-                <TextBlock x:ConnectionId='25' Name="dec7_textblock"
+                    <TextBlock x:ConnectionId='18' Name="dec7_textblock"
                            Style="{StaticResource textblock_style1}"
                            Text="{Binding list[7].weather[0].description}"/>
-            </StackPanel>
-            <StackPanel Margin="10,0,0,0">
-                <TextBlock x:ConnectionId='10' Name="Icon_textblock"
+                </StackPanel>
+                <StackPanel Margin="10,0,0,0">
+                    <TextBlock x:ConnectionId='3' Name="Icon_textblock"
                            FontSize="20"
                            Foreground="White"
                            FontWeight="Bold"/>
-                <Image x:ConnectionId='11' Name="image1_image"
+                    <Image x:ConnectionId='4' Name="image1_image"
                        Style="{StaticResource iamge_style}"/>
-                <Image x:ConnectionId='12' Name="image2_image"
+                    <Image x:ConnectionId='5' Name="image2_image"
                        Style="{StaticResource iamge_style}"/>
-                <Image x:ConnectionId='13' Name="image3_image"
+                    <Image x:ConnectionId='6' Name="image3_image"
                        Style="{StaticResource iamge_style}"/>
-                <Image x:ConnectionId='14' Name="image4_image"
+                    <Image x:ConnectionId='7' Name="image4_image"
                        Style="{StaticResource iamge_style}"/>
-                <Image x:ConnectionId='15' Name="image5_image"
+                    <Image x:ConnectionId='8' Name="image5_image"
                        Style="{StaticResource iamge_style}"/>
-                <Image x:ConnectionId='16' Name="image6_image"
+                    <Image x:ConnectionId='9' Name="image6_image"
                        Style="{StaticResource iamge_style}"/>
-                <Image x:ConnectionId='17' Name="image7_image"
+                    <Image x:ConnectionId='10' Name="image7_image"
                        Style="{StaticResource iamge_style}"/>
+                </StackPanel>
             </StackPanel>
-        </StackPanel>
-    </StackPanel>
-        <StackPanel Orientation="Horizontal"
-                    Grid.Row="1"
-                    Margin="0,30,0,0"
-                    HorizontalAlignment="Center">
-            <Button x:ConnectionId='3' Name="white_button"
-                    Background="White"
-                    Height="10"
-                    Width="30"
-                                              />
-            <Button x:ConnectionId='4' Name="black_button"
-                    Background="Black"
-                    Height="10"
-                    Width="30"
-                                              />
-            <Button x:ConnectionId='5' Name="skyblue_button"
-                    Background="SkyBlue"
-                    Height="10"
-                    Width="30"
-                                                />
-            <Button x:ConnectionId='6' Name="aliceblue_button"
-                    Background="AliceBlue"
-                    Height="10"
-                    Width="30"
-                                                  />
-            <Button x:ConnectionId='7' Name="lightgray_button"
-                    Background="LightGray"
-                    Height="10"
-                    Width="30"
-                                                    />
-            <Button x:ConnectionId='8' Name="lightblue_button"
-                    Background="LightBlue"
-                    Height="10"
-                    Width="30"
-                                                  />
-            <Button x:ConnectionId='9' Name="lightcoral_button"
-                    Background="LightCoral"
-                    Height="10"
-                    Width="30"
-                                                   />
         </StackPanel>
         <ProgressRing x:ConnectionId='2' Name="home_progressring"
                       Height="100"

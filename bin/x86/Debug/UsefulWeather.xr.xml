@@ -7,13 +7,16 @@
     <RootPropertyPathName Name="main" />
     <RootPropertyPathName Name="temp" />
     <RootPropertyPathName Name="dt_txt" />
+    <RootPropertyPathName Name="city" />
+    <RootPropertyPathName Name="name" />
+    <RootPropertyPathName Name="country" />
+    <RootPropertyPathName Name="coord" />
+    <RootPropertyPathName Name="lon" />
+    <RootPropertyPathName Name="lat" />
     <RootPropertyPathName Name="wind" />
     <RootPropertyPathName Name="speed" />
     <RootPropertyPathName Name="temp_min" />
     <RootPropertyPathName Name="temp_max" />
-    <RootPropertyPathName Name="city" />
-    <RootPropertyPathName Name="name" />
-    <RootPropertyPathName Name="country" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -35,10 +38,10 @@
       <RootProperty Name="Name" />
       <RootProperty Name="Background" />
       <RootProperty Name="VerticalAlignment" />
-      <RootMethod Name="GetRow" />
-      <RootMethod Name="SetRow" />
       <RootMethod Name="GetRowSpan" />
       <RootMethod Name="SetRowSpan" />
+      <RootMethod Name="GetRow" />
+      <RootMethod Name="SetRow" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
     </RootType>
@@ -49,8 +52,8 @@
       <RootProperty Name="Children" />
       <RootProperty Name="Orientation" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Name" />
+      <RootProperty Name="HorizontalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ProgressRing">
       <RootProperty Name="Name" />
@@ -59,19 +62,6 @@
       <RootProperty Name="Foreground" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Button">
-      <RootProperty Name="Name" />
-      <RootProperty Name="Background" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Foreground" />
-      <RootProperty Name="Content" />
-      <RootProperty Name="FontSize" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="FontFamily" />
-      <RootProperty Name="Margin" />
-      <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
       <RootProperty Name="Children" />
@@ -99,8 +89,8 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="FontStyle" />
-      <RootProperty Name="FontFamily" />
       <RootProperty Name="IsTextSelectionEnabled" />
+      <RootProperty Name="FontFamily" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Name" />
@@ -115,6 +105,19 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Background" />
       <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Name" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="FontFamily" />
+      <RootProperty Name="Margin" />
+      <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="UsefulWeather.CityPage" />
     <RootType FullName="Windows.UI.Xaml.FrameworkElement">

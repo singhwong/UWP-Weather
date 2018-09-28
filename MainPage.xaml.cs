@@ -116,50 +116,62 @@ namespace UsefulWeather
         {
             try
             {
-                background_value = localSettings.Values["Background"].ToString();
+                    background_value = localSettings.Values["Background"].ToString();                  
+            }
+            catch
+            {
+            }
+            finally
+            {
+                switch (background_value)
+                {
+                    case "red": SetBackGround(red); break;
+                    case "skyblue": SetBackGround(skyBlue); break;
+                    case "black": SetBackGround(black); break;
+                    case "gray": SetBackGround(gray); break;
+                    case "lightgray": SetBackGround(lightGray); break;
+                    case "whitesmoke": SetBackGround(whiteSmoke); break;
+                    case "deeppink": SetBackGround(deepPink); break;
+                    case "antiquewhite": SetBackGround(antiqueWhite); break;
+                    case "aqua": SetBackGround(aqua); break;
+                    case "azure": SetBackGround(azure); break;
+                    case "coral": SetBackGround(coral); break;
+                    case "brown": SetBackGround(brown); break;
+                    case "darkviolet": SetBackGround(darkViolet); break;
+                    case "gold": SetBackGround(gold); break;
+                    default:
+                        break;
+                }
+            }           
+            try
+            {
                 foreground_value = localSettings.Values["Foreground"].ToString();
             }
             catch
             {
             }
-            switch (background_value)
+            finally
             {
-                case "red": SetBackGround(red); break;
-                case "skyblue": SetBackGround(skyBlue); break;
-                case "black": SetBackGround(black); break;
-                case "gray": SetBackGround(gray); break;
-                case "lightgray": SetBackGround(lightGray); break;
-                case "whitesmoke": SetBackGround(whiteSmoke); break;
-                case "deeppink": SetBackGround(deepPink); break;
-                case "antiquewhite": SetBackGround(antiqueWhite); break;
-                case "aqua": SetBackGround(aqua); break;
-                case "azure": SetBackGround(azure); break;
-                case "coral": SetBackGround(coral); break;
-                case "brown": SetBackGround(brown); break;
-                case "darkviolet": SetBackGround(darkViolet); break;
-                case "gold": SetBackGround(gold); break;
-                default:
-                    break;
-            }
-            switch (foreground_value)
-            {
-                case "red": SetForeGround(red); break;
-                case "skyblue": SetForeGround(skyBlue); break;
-                case "black": SetForeGround(black); break;
-                case "gray": SetForeGround(gray); break;
-                case "lightgray": SetForeGround(lightGray); break;
-                case "whitesmoke": SetForeGround(whiteSmoke); break;
-                case "deeppink": SetForeGround(deepPink); break;
-                case "antiquewhite": SetForeGround(antiqueWhite); break;
-                case "aqua": SetForeGround(aqua); break;
-                case "azure": SetForeGround(azure); break;
-                case "coral": SetForeGround(coral); break;
-                case "brown": SetForeGround(brown); break;
-                case "darkviolet": SetForeGround(darkViolet); break;
-                case "gold": SetForeGround(gold); break;
-                default:
-                    break;
-            }
+                switch (foreground_value)
+                {
+                    case "red": SetForeGround(red); break;
+                    case "skyblue": SetForeGround(skyBlue); break;
+                    case "black": SetForeGround(black); break;
+                    case "gray": SetForeGround(gray); break;
+                    case "lightgray": SetForeGround(lightGray); break;
+                    case "whitesmoke": SetForeGround(whiteSmoke); break;
+                    case "deeppink": SetForeGround(deepPink); break;
+                    case "antiquewhite": SetForeGround(antiqueWhite); break;
+                    case "aqua": SetForeGround(aqua); break;
+                    case "azure": SetForeGround(azure); break;
+                    case "coral": SetForeGround(coral); break;
+                    case "brown": SetForeGround(brown); break;
+                    case "darkviolet": SetForeGround(darkViolet); break;
+                    case "gold": SetForeGround(gold); break;
+                    default:
+                        break;
+                }
+            }          
         }
 
         private void back_button_Click(object sender, RoutedEventArgs e)
@@ -199,33 +211,47 @@ namespace UsefulWeather
             var color_value = selectionvalue.Content;
             switch (color_value)
             {
-                case "Red":SetBackGround(red);
+                case "Red":
+                    SetBackGround(red);
                     localSettings.Values["Background"] = "red"; break;
-                case "SkyBlue":SetBackGround(skyBlue);
+                case "SkyBlue":
+                    SetBackGround(skyBlue);
                     localSettings.Values["Background"] = "skyblue"; break;
-                case "Black":SetBackGround(black);
+                case "Black":
+                    SetBackGround(black);
                     localSettings.Values["Background"] = "black"; break;
-                case "Gray":SetBackGround(gray);
+                case "Gray":
+                    SetBackGround(gray);
                     localSettings.Values["Background"] = "gray"; break;
-                case "LightGray":SetBackGround(lightGray);
+                case "LightGray":
+                    SetBackGround(lightGray);
                     localSettings.Values["Background"] = "lightgray"; break;
-                case "WhiteSmoke":SetBackGround(whiteSmoke);
+                case "WhiteSmoke":
+                    SetBackGround(whiteSmoke);
                     localSettings.Values["Background"] = "whitesmoke"; break;
-                case "DeepPink":SetBackGround(deepPink);
+                case "DeepPink":
+                    SetBackGround(deepPink);
                     localSettings.Values["Background"] = "deeppink"; break;
-                case "antiqueWhite":SetBackGround(antiqueWhite);
+                case "antiqueWhite":
+                    SetBackGround(antiqueWhite);
                     localSettings.Values["Background"] = "antiquewhite"; break;
-                case "aqua":SetBackGround(aqua);
+                case "aqua":
+                    SetBackGround(aqua);
                     localSettings.Values["Background"] = "aqua"; break;
-                case "azure":SetBackGround(azure);
+                case "azure":
+                    SetBackGround(azure);
                     localSettings.Values["Background"] = "zaure"; break;
-                case "coral":SetBackGround(coral);
+                case "coral":
+                    SetBackGround(coral);
                     localSettings.Values["Background"] = "coral"; break;
-                case "brown":SetBackGround(brown);
+                case "brown":
+                    SetBackGround(brown);
                     localSettings.Values["Background"] = "brown"; break;
-                case "darkViolet":SetBackGround(darkViolet);
+                case "darkViolet":
+                    SetBackGround(darkViolet);
                     localSettings.Values["Background"] = "darkviolet"; break;
-                case "gold":SetBackGround(gold);
+                case "gold":
+                    SetBackGround(gold);
                     localSettings.Values["Background"] = "gold"; break;
                 default: break;
             }
@@ -238,33 +264,47 @@ namespace UsefulWeather
             var color_value = selectionvalue.Content;
             switch (color_value)
             {
-                case "Red":SetForeGround(red);
+                case "Red":
+                    SetForeGround(red);
                     localSettings.Values["Foreground"] = "red"; break;
-                case "SkyBlue":SetForeGround(skyBlue);
+                case "SkyBlue":
+                    SetForeGround(skyBlue);
                     localSettings.Values["Foreground"] = "skyblue"; break;
-                case "Black":SetForeGround(black);
+                case "Black":
+                    SetForeGround(black);
                     localSettings.Values["Foreground"] = "black"; break;
-                case "Gray":SetForeGround(gray);
+                case "Gray":
+                    SetForeGround(gray);
                     localSettings.Values["Foreground"] = "gray"; break;
-                case "LightGray":SetForeGround(lightGray);
+                case "LightGray":
+                    SetForeGround(lightGray);
                     localSettings.Values["Foreground"] = "lightgray"; break;
-                case "WhiteSmoke":SetForeGround(whiteSmoke);
+                case "WhiteSmoke":
+                    SetForeGround(whiteSmoke);
                     localSettings.Values["Foreground"] = "whitesmoke"; break;
-                case "DeepPink":SetForeGround(deepPink);
+                case "DeepPink":
+                    SetForeGround(deepPink);
                     localSettings.Values["Foreground"] = "deeppink"; break;
-                case "antiqueWhite":SetForeGround(antiqueWhite);
+                case "antiqueWhite":
+                    SetForeGround(antiqueWhite);
                     localSettings.Values["Foreground"] = "antiquewhite"; break;
-                case "aqua":SetForeGround(aqua);
+                case "aqua":
+                    SetForeGround(aqua);
                     localSettings.Values["Foreground"] = "aqua"; break;
-                case "azure":SetForeGround(azure);
+                case "azure":
+                    SetForeGround(azure);
                     localSettings.Values["Foreground"] = "azure"; break;
-                case "coral":SetForeGround(coral);
+                case "coral":
+                    SetForeGround(coral);
                     localSettings.Values["Foreground"] = "coral"; break;
-                case "brown":SetForeGround(brown);
+                case "brown":
+                    SetForeGround(brown);
                     localSettings.Values["Foreground"] = "brown"; break;
-                case "darkViolet":SetForeGround(darkViolet);
+                case "darkViolet":
+                    SetForeGround(darkViolet);
                     localSettings.Values["Foreground"] = "darkviolet"; break;
-                case "gold":SetForeGround(gold);
+                case "gold":
+                    SetForeGround(gold);
                     localSettings.Values["Foreground"] = "gold"; break;
                 default: break;
             }
@@ -308,7 +348,8 @@ namespace UsefulWeather
             ContentDialog content = new ContentDialog
             {
                 Title = "about",
-                Content = "The weather api from github",
+                Content = "The weather api from github\n" +
+                "Perhaps because of the weather api, the data is not accurate, for reference only",
                 IsPrimaryButtonEnabled = true,
                 PrimaryButtonText = "OK",
             };
@@ -328,6 +369,7 @@ namespace UsefulWeather
             }
             else if (listbox_itemfeedback.IsSelected)
             {
+                main_listbox.SelectedIndex = -1;
                 var launcher = Microsoft.Services.Store.Engagement.StoreServicesFeedbackLauncher.GetDefault();
                 await launcher.LaunchAsync();
             }

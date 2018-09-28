@@ -27,13 +27,20 @@ namespace UsefulWeather
     /// </summary>
     public sealed partial class HomePage : Page
     {
-        private SolidColorBrush white = new SolidColorBrush(Colors.White);
+        private SolidColorBrush red = new SolidColorBrush(Colors.Red);
+        private SolidColorBrush skyBlue = new SolidColorBrush(Colors.SkyBlue);
         private SolidColorBrush black = new SolidColorBrush(Colors.Black);
-        private SolidColorBrush skyblue = new SolidColorBrush(Colors.SkyBlue);
-        private SolidColorBrush lightgray = new SolidColorBrush(Colors.LightGray);
-        private SolidColorBrush lightblue = new SolidColorBrush(Colors.LightBlue);
-        private SolidColorBrush aliceblue = new SolidColorBrush(Colors.AliceBlue);
-        private SolidColorBrush lightcoral = new SolidColorBrush(Colors.LightCoral);
+        private SolidColorBrush gray = new SolidColorBrush(Colors.Gray);
+        private SolidColorBrush lightGray = new SolidColorBrush(Colors.LightGray);
+        private SolidColorBrush whiteSmoke = new SolidColorBrush(Colors.WhiteSmoke);
+        private SolidColorBrush deepPink = new SolidColorBrush(Colors.DeepPink);
+        private SolidColorBrush antiqueWhite = new SolidColorBrush(Colors.AntiqueWhite);
+        private SolidColorBrush aqua = new SolidColorBrush(Colors.Aqua);
+        private SolidColorBrush azure = new SolidColorBrush(Colors.Azure);
+        private SolidColorBrush coral = new SolidColorBrush(Colors.Coral);
+        private SolidColorBrush brown = new SolidColorBrush(Colors.Brown);
+        private SolidColorBrush darkViolet = new SolidColorBrush(Colors.DarkViolet);
+        private SolidColorBrush gold = new SolidColorBrush(Colors.Gold);
         private ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
         private string foreground_value;
         public HomePage()
@@ -115,23 +122,6 @@ namespace UsefulWeather
             TileUpdateManager.CreateTileUpdaterForApplication().Update(tileNotification);
         }
 
-        private void white_button_Click(object sender, RoutedEventArgs e)
-        {
-            TextblockForeground(white);
-            localSettings.Values["Foreground"] = "white";
-        }
-
-        private void black_button_Click(object sender, RoutedEventArgs e)
-        {
-            localSettings.Values["Foreground"] = "black";
-            TextblockForeground(black);
-        }
-
-        private void skyblue_button_Click(object sender, RoutedEventArgs e)
-        {
-            TextblockForeground(skyblue);
-            localSettings.Values["Foreground"] = "skyblue";
-        }
         private void TextblockForeground(SolidColorBrush color)
         {
             country_textblock.Foreground = color;
@@ -185,40 +175,23 @@ namespace UsefulWeather
             }
             switch (foreground_value)
             {
-                case "white":TextblockForeground(white);break;
-                case "black":TextblockForeground(black);break;
-                case "skyblue":TextblockForeground(skyblue);break;
-                case "aliceblue":TextblockForeground(aliceblue);break;
-                case "lightblue": TextblockForeground(lightblue); break;
-                case "lightgray": TextblockForeground(lightgray); break;
-                case "lightcoral": TextblockForeground(lightcoral); break;
+                case "red": TextblockForeground(red); break;
+                case "skyblue": TextblockForeground(skyBlue); break;
+                case "black": TextblockForeground(black); break;
+                case "gray": TextblockForeground(gray); break;
+                case "lightgray": TextblockForeground(lightGray); break;
+                case "whitesmoke": TextblockForeground(whiteSmoke); break;
+                case "deeppink": TextblockForeground(deepPink); break;
+                case "antiquewhite": TextblockForeground(antiqueWhite); break;
+                case "aqua": TextblockForeground(aqua); break;
+                case "azure": TextblockForeground(azure); break;
+                case "coral": TextblockForeground(coral); break;
+                case "brown": TextblockForeground(brown); break;
+                case "darkviolet": TextblockForeground(darkViolet); break;
+                case "gold": TextblockForeground(gold); break;
                 default:
                     break;
             }
-        }
-
-        private void aliceblue_button_Click(object sender, RoutedEventArgs e)
-        {
-            TextblockForeground(aliceblue);
-            localSettings.Values["Foreground"] = "aliceblue";
-        }
-
-        private void lightgray_button_Click_1(object sender, RoutedEventArgs e)
-        {
-            TextblockForeground(lightgray);
-            localSettings.Values["Foreground"] = "lightgray";
-        }
-
-        private void lightblue_button_Click(object sender, RoutedEventArgs e)
-        {
-            TextblockForeground(lightblue);
-            localSettings.Values["Foreground"] = "lightblue";
-        }
-
-        private void lightcoral_button_Click(object sender, RoutedEventArgs e)
-        {
-            TextblockForeground(lightcoral);
-            localSettings.Values["Foreground"] = "lightcoral";
         }
     }
 }
