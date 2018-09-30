@@ -107,6 +107,7 @@ namespace UsefulWeather
         {
             setting_stackPanel.Visibility = Visibility.Collapsed;
             back_button.Visibility = Visibility.Collapsed;
+            SetForeGround(black);
             itemone_bool = true;
             LocalSettings();
             SetAcrylic();
@@ -128,7 +129,7 @@ namespace UsefulWeather
                 myBrush.BackgroundSource = AcrylicBackgroundSource.HostBackdrop;
                 myBrush.TintColor = Colors.AliceBlue;
                 myBrush.FallbackColor = Colors.AliceBlue;
-                myBrush.TintOpacity = 0.4;
+                myBrush.TintOpacity = 0.3;
                 main_grid.Background = myBrush;
                 list_button.Background = myBrush;
                 refresh_button.Background = myBrush;
@@ -381,16 +382,16 @@ namespace UsefulWeather
             feedback_textblock.Foreground = color;
             feedback_Text.Foreground = color;
         }
-        private void SetBackGround(SolidColorBrush color)
-        {
-            main_grid.Background = color;
-            main_listbox.Background = color;
-            setting_listbox.Background = color;
-            list_button.Background = color;
-            back_button.Background = color;
-            refresh_button.Background = color;
-            about_button.Background = color;
-        }
+        //private void SetBackGround(SolidColorBrush color)
+        //{
+        //    main_grid.Background = color;
+        //    main_listbox.Background = color;
+        //    setting_listbox.Background = color;
+        //    list_button.Background = color;
+        //    back_button.Background = color;
+        //    refresh_button.Background = color;
+        //    about_button.Background = color;
+        //}
 
         private async void setting_listbox_Tapped(object sender, TappedRoutedEventArgs e)
         {

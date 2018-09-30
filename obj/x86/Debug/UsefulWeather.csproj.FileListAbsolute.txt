@@ -182,7 +182,6 @@ C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\mscorlib.dll
 C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\netstandard.dll
 C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\Microsoft.WindowsAzure.Storage.dll
 C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\Microsoft.WindowsAzure.Storage.pdb
-C:\Users\wang\source\repos\UWP-Weather\obj\x86\Debug\UsefulWeather.csprojAssemblyReference.cache
 C:\Users\wang\source\repos\UWP-Weather\obj\x86\Debug\App.g.i.cs
 C:\Users\wang\source\repos\UWP-Weather\obj\x86\Debug\App.g.cs
 C:\Users\wang\source\repos\UWP-Weather\obj\x86\Debug\CityPage.g.i.cs
@@ -322,3 +321,4 @@ C:\Users\wang\source\repos\UWP-Weather\obj\x86\Debug\MultipleQualifiersPerDimens
 C:\Users\wang\source\repos\UWP-Weather\obj\x86\Debug\resources.en-us.resfiles
 C:\Users\wang\source\repos\UWP-Weather\obj\x86\Debug\resources.en-us.resfiles.intermediate
 C:\Users\wang\source\repos\UWP-Weather\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\wang\source\repos\UWP-Weather\obj\x86\Debug\UsefulWeather.csprojAssemblyReference.cache

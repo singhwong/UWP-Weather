@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-30T03:15:58.868</Modified>
+      <Modified>2018-09-30T03:39:27.298</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\UsefulWeather.exe">
       <PackagePath>entrypoint\UsefulWeather.exe</PackagePath>
-      <Modified>2018-09-30T03:15:57.706</Modified>
+      <Modified>2018-09-30T03:39:26.202</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\UsefulWeather.exe.config">
       <PackagePath>UsefulWeather.exe.config</PackagePath>
@@ -1051,35 +1051,35 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2018-09-30T03:15:57.416</Modified>
+      <Modified>2018-09-30T03:39:25.908</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\CityPage.xbf">
       <PackagePath>CityPage.xbf</PackagePath>
-      <Modified>2018-09-30T03:15:57.417</Modified>
+      <Modified>2018-09-30T03:39:25.908</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\DictionaryImage.xbf">
       <PackagePath>DictionaryImage.xbf</PackagePath>
-      <Modified>2018-09-30T03:15:57.415</Modified>
+      <Modified>2018-09-30T03:39:25.906</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\DictionaryTextBlock.xbf">
       <PackagePath>DictionaryTextBlock.xbf</PackagePath>
-      <Modified>2018-09-30T03:15:57.416</Modified>
+      <Modified>2018-09-30T03:39:25.907</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\HomePage.xbf">
       <PackagePath>HomePage.xbf</PackagePath>
-      <Modified>2018-09-30T03:15:57.418</Modified>
+      <Modified>2018-09-30T03:39:25.909</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\LocationPage.xbf">
       <PackagePath>LocationPage.xbf</PackagePath>
-      <Modified>2018-09-30T03:15:57.419</Modified>
+      <Modified>2018-09-30T03:39:25.910</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2018-09-30T03:15:57.420</Modified>
+      <Modified>2018-09-30T03:39:25.910</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\SettingPage.xbf">
       <PackagePath>SettingPage.xbf</PackagePath>
-      <Modified>2018-09-30T03:15:57.421</Modified>
+      <Modified>2018-09-30T03:39:25.912</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.17134.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -1092,11 +1092,11 @@
     <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-30T03:14:28.032</Modified>
+      <Modified>2018-09-30T03:37:37.643</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wang\source\repos\UWP-Weather\bin\x86\Debug\Core\UsefulWeather.exe">
       <PackagePath>UsefulWeather.exe</PackagePath>
-      <Modified>2018-09-30T03:15:58.853</Modified>
+      <Modified>2018-09-30T03:39:27.282</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
