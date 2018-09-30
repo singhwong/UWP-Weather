@@ -186,6 +186,8 @@ namespace UsefulWeather
             }
             catch
             {
+                localSettings.Values["Foreground"] = "black";
+                foreground_value = localSettings.Values["Foreground"].ToString();
             }
             switch (foreground_value)
             {

@@ -10,7 +10,7 @@
     <WideTileSource>C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\04d.png</WideTileSource>
     <LargeTileSource>C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\01d.png</LargeTileSource>
     <AppIconSource>C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\02d.png</AppIconSource>
-    <SplashScreenSource>C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\03n.png</SplashScreenSource>
+    <SplashScreenSource>C:\Users\wang\Desktop\图片素材\Weather_512px_1129467_easyicon.net.png</SplashScreenSource>
     <BadgeLogoSource>C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\03n.png</BadgeLogoSource>
     <PackageLogoSource>C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\03n.png</PackageLogoSource>
   </PropertyGroup>

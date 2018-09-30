@@ -46,7 +46,10 @@ namespace UsefulWeather
         private SolidColorBrush gold = new SolidColorBrush(Colors.Gold);
         //private string background_value;
         private string foreground_value;
+        private double num;
+        private double acrylic_value;
         private ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
+        private ApplicationDataContainer localAcrylic = ApplicationData.Current.LocalSettings;
         //private const string SettingTheme = "Theme";
         public MainPage()
         {
@@ -109,8 +112,8 @@ namespace UsefulWeather
             back_button.Visibility = Visibility.Collapsed;
             SetForeGround(black);
             itemone_bool = true;
-            LocalSettings();
-            SetAcrylic();
+            LocalSettings();//设置前景色为上次保存的值
+            SetLoadAcrylic();//设置不透明度为上次保存的值
             #region 判定在当前设备，反馈控件是否给予显示
             if (Microsoft.Services.Store.Engagement.StoreServicesFeedbackLauncher.IsSupported())
             {
@@ -120,7 +123,7 @@ namespace UsefulWeather
            
             //ExtendAcrylicIntoTitleBar();
         }
-        private void SetAcrylic()
+        private void SetAcrylic(double num)
         {
             #region 设置亚克力背景
             if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.UI.Xaml.Media.XamlCompositionBrushBase"))
@@ -129,7 +132,7 @@ namespace UsefulWeather
                 myBrush.BackgroundSource = AcrylicBackgroundSource.HostBackdrop;
                 myBrush.TintColor = Colors.AliceBlue;
                 myBrush.FallbackColor = Colors.AliceBlue;
-                myBrush.TintOpacity = 0.3;
+                myBrush.TintOpacity = num;
                 main_grid.Background = myBrush;
                 list_button.Background = myBrush;
                 refresh_button.Background = myBrush;
@@ -381,6 +384,7 @@ namespace UsefulWeather
             github_textblock.Foreground = color;
             feedback_textblock.Foreground = color;
             feedback_Text.Foreground = color;
+            slider_textblock.Foreground = color;
         }
         //private void SetBackGround(SolidColorBrush color)
         //{
@@ -423,6 +427,28 @@ namespace UsefulWeather
                 PrimaryButtonText = "OK",
             };
             ContentDialogResult result = await content.ShowAsync();
+        }
+
+        private void setting_slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            var value = e.NewValue;
+            num = value / 100;
+            SetAcrylic(num);
+            localAcrylic.Values["value"] = num;
+        }
+        private void SetLoadAcrylic()
+        {
+            try
+            {
+                acrylic_value = (double)localAcrylic.Values["value"];
+            }
+            catch
+            {
+                acrylic_value = 0.3;
+                setting_slider.Value = 0;
+            }
+            SetAcrylic(acrylic_value);
+            setting_slider.Value = acrylic_value * 100;
         }
     }
 }

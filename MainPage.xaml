@@ -34,14 +34,14 @@
                     Foreground="White"
                     Click="refresh_button_Click"/>
             <Button Name="back_button"
-                Height="45"
-                Width="45"
-                FontFamily="Segoe MDL2 Assets"
-                Content="&#xE72B;"
-                Margin="10,0,0,0"
-                Foreground="White"
-                FontSize="30"
-                Click="back_button_Click"/>
+                    Height="45"
+                    Width="45"
+                    FontFamily="Segoe MDL2 Assets"
+                    Content="&#xE72B;"
+                    Margin="10,0,0,0"
+                    Foreground="White"
+                    FontSize="30"
+                    Click="back_button_Click"/>
             <TextBlock Name="main_title"
                    Text="CurrentWeather"
                    FontSize="30"
@@ -55,7 +55,7 @@
                        Name="main_splitview"
                        DisplayMode="CompactInline"
                        CompactPaneLength="45"
-                       OpenPaneLength="170">
+                       OpenPaneLength="180">
             <SplitView.Pane>
                 <Grid>
                     <Grid.RowDefinitions>
@@ -91,7 +91,7 @@
                                            Foreground="White"
                                            VerticalAlignment="Center"/>
                                 <TextBlock Name="location_Text"
-                                           Text="Location"
+                                           Text="Coordinates"
                                            FontSize="20"
                                            Foreground="White"
                                            Margin="20,0,0,0"/>
@@ -154,7 +154,6 @@
                         </ListBoxItem>
                     </ListBox>
                 </Grid>
-
             </SplitView.Pane>
             <SplitView.Content>
                 <Grid>
@@ -195,10 +194,12 @@
                         </StackPanel>-->
                         <StackPanel Name="foreGround_stackPanel"
                                     Orientation="Horizontal"
-                                    Margin="0,10,0,0">
+                                    Margin="0,10,0,0"
+                                    HorizontalAlignment="Center">
                             <TextBlock Name="foreGround_textblock"
                                        Text="ForeGround Color"
-                                       Foreground="White"
+                                       FontSize="20"
+                                       FontStyle="Oblique"
                                        Margin="100,0,0,0"
                                        VerticalAlignment="Center"/>
                             <ComboBox Name="foreGround_combobox"
@@ -223,27 +224,45 @@
                                 <ComboBoxItem Content="gold"/>
                             </ComboBox>
                         </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Center"
+                                    Height="100">
+                            <TextBlock Name="slider_textblock"
+                                       FontSize="20"
+                                       FontStyle="Oblique"
+                                       VerticalAlignment="Center"
+                                       Text="Opacity"/>
+                            <Slider Name="setting_slider"
+                                    Height="30"
+                                    Width="200"
+                                    Minimum="0"
+                                    Maximum="100"
+                                    Background="Pink"
+                                    Margin="10,0,0,0"
+                                    VerticalAlignment="Center"
+                                    ValueChanged="setting_slider_ValueChanged"/>
+                        </StackPanel>
                         <Button Name="about_button"
                                 Height='50'
                                 Width="100"
-                                FontSize="30"
+                                FontSize="25"
+                                FontStyle="Oblique"
                                 Content="About"
-                                Foreground="WhiteSmoke"
                                 HorizontalAlignment="Center"
                                 Click="about_button_Click_1"/>
                         <TextBlock Name="uri_textblock"
-                                   Text="Project Uri:"
-                                   FontSize="30"
-                                   Foreground="White"
+                                   Text="Project Url:"
+                                   FontSize="20"
+                                   FontStyle="Oblique"
+                                   Margin="0,20,0,0"
                                    HorizontalAlignment="Center"/>
                         <TextBlock Name="github_textblock"
                                    Text="https://github.com/singhwong/UWP-Weather"
                                    FontSize="20"
-                                   Foreground="White"
+                                   FontStyle="Oblique"
                                    IsTextSelectionEnabled="True"
                                    HorizontalAlignment="Center"/>
                     </StackPanel>
-                    
                     <ScrollViewer Name="main_scrollViewer"
                                   HorizontalScrollMode="Auto"
                                   VerticalScrollMode="Auto"
@@ -255,8 +274,7 @@
                         </Frame>
 
                     </ScrollViewer>
-                    
-                        <!--<ColorPicker x:Name="main_colorPicker"
+                    <!--<ColorPicker x:Name="main_colorPicker"
                                          HorizontalAlignment="Left"
                                          Margin="100,0,0,0"
                                          Width="100"

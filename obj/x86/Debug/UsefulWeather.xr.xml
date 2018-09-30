@@ -54,6 +54,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Name" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ProgressRing">
       <RootProperty Name="Name" />
@@ -81,7 +82,6 @@
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Name" />
       <RootProperty Name="FontSize" />
-      <RootProperty Name="Foreground" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Style" />
@@ -89,6 +89,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="IsTextSelectionEnabled" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Foreground" />
       <RootProperty Name="FontStyle" />
       <RootProperty Name="FontFamily" />
     </RootType>
@@ -110,12 +111,13 @@
       <RootProperty Name="Name" />
       <RootProperty Name="Width" />
       <RootProperty Name="Background" />
-      <RootProperty Name="Foreground" />
       <RootProperty Name="Content" />
       <RootProperty Name="Height" />
       <RootProperty Name="FontSize" />
+      <RootProperty Name="FontStyle" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="FontFamily" />
+      <RootProperty Name="Foreground" />
       <RootProperty Name="Margin" />
       <RootEvent Name="Click" />
     </RootType>
@@ -167,6 +169,17 @@
       <RootProperty Name="Name" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Slider">
+      <RootProperty Name="Name" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Minimum" />
+      <RootProperty Name="Maximum" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootEvent Name="ValueChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="Name" />

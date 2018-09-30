@@ -16,7 +16,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
-            <Button x:ConnectionId='30' Name="list_button"
+            <Button x:ConnectionId='32' Name="list_button"
                     Height="45"
                     Width="45"
                     FontFamily="Segoe MDL2 Assets"
@@ -24,7 +24,7 @@
                     FontSize="30"
                     Foreground="White"
                                              />
-            <Button x:ConnectionId='31' Name="refresh_button"
+            <Button x:ConnectionId='33' Name="refresh_button"
                     Height="45"
                     Width="45"
                     FontFamily="Segoe MDL2 Assets"
@@ -33,16 +33,16 @@
                     Margin="10,0,0,0"
                     Foreground="White"
                                                 />
-            <Button x:ConnectionId='32' Name="back_button"
-                Height="45"
-                Width="45"
-                FontFamily="Segoe MDL2 Assets"
-                Content="&#xE72B;"
-                Margin="10,0,0,0"
-                Foreground="White"
-                FontSize="30"
-                                         />
-            <TextBlock x:ConnectionId='33' Name="main_title"
+            <Button x:ConnectionId='34' Name="back_button"
+                    Height="45"
+                    Width="45"
+                    FontFamily="Segoe MDL2 Assets"
+                    Content="&#xE72B;"
+                    Margin="10,0,0,0"
+                    Foreground="White"
+                    FontSize="30"
+                                             />
+            <TextBlock x:ConnectionId='35' Name="main_title"
                    Text="CurrentWeather"
                    FontSize="30"
                    Margin="30,0,0,0"
@@ -55,7 +55,7 @@
                        Name="main_splitview"
                        DisplayMode="CompactInline"
                        CompactPaneLength="45"
-                       OpenPaneLength="170">
+                       OpenPaneLength="180">
             <SplitView.Pane>
                 <Grid>
                     <Grid.RowDefinitions>
@@ -91,7 +91,7 @@
                                            Foreground="White"
                                            VerticalAlignment="Center"/>
                                 <TextBlock x:ConnectionId='18' Name="location_Text"
-                                           Text="Location"
+                                           Text="Coordinates"
                                            FontSize="20"
                                            Foreground="White"
                                            Margin="20,0,0,0"/>
@@ -154,7 +154,6 @@
                         </ListBoxItem>
                     </ListBox>
                 </Grid>
-
             </SplitView.Pane>
             <SplitView.Content>
                 <Grid>
@@ -195,13 +194,15 @@
                         </StackPanel>-->
                         <StackPanel x:ConnectionId='24' Name="foreGround_stackPanel"
                                     Orientation="Horizontal"
-                                    Margin="0,10,0,0">
-                            <TextBlock x:ConnectionId='28' Name="foreGround_textblock"
+                                    Margin="0,10,0,0"
+                                    HorizontalAlignment="Center">
+                            <TextBlock x:ConnectionId='30' Name="foreGround_textblock"
                                        Text="ForeGround Color"
-                                       Foreground="White"
+                                       FontSize="20"
+                                       FontStyle="Oblique"
                                        Margin="100,0,0,0"
                                        VerticalAlignment="Center"/>
-                            <ComboBox x:ConnectionId='29' Name="foreGround_combobox"
+                            <ComboBox x:ConnectionId='31' Name="foreGround_combobox"
                                                                                              
                                       Margin="30,0,0,0"
                                       Width="150"
@@ -223,27 +224,45 @@
                                 <ComboBoxItem Content="gold"/>
                             </ComboBox>
                         </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Center"
+                                    Height="100">
+                            <TextBlock x:ConnectionId='28' Name="slider_textblock"
+                                       FontSize="20"
+                                       FontStyle="Oblique"
+                                       VerticalAlignment="Center"
+                                       Text="Opacity"/>
+                            <Slider x:ConnectionId='29' Name="setting_slider"
+                                    Height="30"
+                                    Width="200"
+                                    Minimum="0"
+                                    Maximum="100"
+                                    Background="Pink"
+                                    Margin="10,0,0,0"
+                                    VerticalAlignment="Center"
+                                                                              />
+                        </StackPanel>
                         <Button x:ConnectionId='25' Name="about_button"
                                 Height='50'
                                 Width="100"
-                                FontSize="30"
+                                FontSize="25"
+                                FontStyle="Oblique"
                                 Content="About"
-                                Foreground="WhiteSmoke"
                                 HorizontalAlignment="Center"
                                                             />
                         <TextBlock x:ConnectionId='26' Name="uri_textblock"
-                                   Text="Project Uri:"
-                                   FontSize="30"
-                                   Foreground="White"
+                                   Text="Project Url:"
+                                   FontSize="20"
+                                   FontStyle="Oblique"
+                                   Margin="0,20,0,0"
                                    HorizontalAlignment="Center"/>
                         <TextBlock x:ConnectionId='27' Name="github_textblock"
                                    Text="https://github.com/singhwong/UWP-Weather"
                                    FontSize="20"
-                                   Foreground="White"
+                                   FontStyle="Oblique"
                                    IsTextSelectionEnabled="True"
                                    HorizontalAlignment="Center"/>
                     </StackPanel>
-                    
                     <ScrollViewer x:ConnectionId='22' Name="main_scrollViewer"
                                   HorizontalScrollMode="Auto"
                                   VerticalScrollMode="Auto"
@@ -255,8 +274,7 @@
                         </Frame>
 
                     </ScrollViewer>
-                    
-                        <!--<ColorPicker x:Name="main_colorPicker"
+                    <!--<ColorPicker x:Name="main_colorPicker"
                                          HorizontalAlignment="Left"
                                          Margin="100,0,0,0"
                                          Width="100"

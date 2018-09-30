@@ -49,7 +49,7 @@ namespace UsefulWeather
 
         private async void city_button_Click(object sender, RoutedEventArgs e)
         {
-            
+            LoadForeground();
             location_progressring.IsActive = true;
             try
             {               
@@ -169,6 +169,8 @@ namespace UsefulWeather
             }
             catch
             {
+                localSettings.Values["Foreground"] = "black";
+                foreground_value = localSettings.Values["Foreground"].ToString();
             }
             switch (foreground_value)
             {
