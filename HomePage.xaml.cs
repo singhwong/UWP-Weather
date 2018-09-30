@@ -72,6 +72,7 @@ namespace UsefulWeather
                 lat_textString.Text = "Latitude: ";
                 lon_textString.Text = "Longitude: ";
                 ShowMessage();
+                //UpdateMessage();
                 var icon = String.Format("ms-appx:///Assets/WeatherIcons/{0}.png", weather.list[0].weather[0].icon);
                 main_Image.Source = new BitmapImage(new Uri(icon, UriKind.Absolute));
 
@@ -123,7 +124,14 @@ namespace UsefulWeather
             var tileNotification = new TileNotification(tileXml);
             TileUpdateManager.CreateTileUpdaterForApplication().Update(tileNotification);
         }
+        //private void UpdateMessage()
+        //{
+        //    var tileContent = new Uri("https://webapplication120180929095216.chinacloudsites.cn//");
+        //    var requestedInterval = PeriodicUpdateRecurrence.HalfHour;
 
+        //    var updater = TileUpdateManager.CreateTileUpdaterForApplication();
+        //    updater.StartPeriodicUpdate(tileContent, requestedInterval);
+        //}
         private void TextblockForeground(SolidColorBrush color)
         {
             country_textblock.Foreground = color;

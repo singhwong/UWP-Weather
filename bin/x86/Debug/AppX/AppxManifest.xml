@@ -7,7 +7,7 @@
 
   有关程序包清单文件的详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=241727
  -->
-  <Identity Name="ba762727-160c-4510-954c-c61ecc0f4584" Publisher="CN=wang" Version="1.0.0.0" ProcessorArchitecture="x86" />
+  <Identity Name="usefulweather" Publisher="CN=wang" Version="1.0.0.0" ProcessorArchitecture="x86" />
   <mp:PhoneIdentity PhoneProductId="ba762727-160c-4510-954c-c61ecc0f4584" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>UsefulWeather</DisplayName>
@@ -26,7 +26,8 @@
   <Applications>
     <Application Id="App" Executable="UsefulWeather.exe" EntryPoint="UsefulWeather.App">
       <uap:VisualElements DisplayName="UsefulWeather" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\WeatherIcons.02d.png" Description="UsefulWeather" BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" ShortName="Weather">
+        <uap:LockScreen Notification="badge" BadgeLogo="Assets\BadgeLogo.png" />
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" ShortName="Weather" Square310x310Logo="Assets\LargeTile.png" Square71x71Logo="Assets\SmallTile.png">
           <uap:ShowNameOnTiles>
             <uap:ShowOn Tile="square150x150Logo" />
           </uap:ShowNameOnTiles>

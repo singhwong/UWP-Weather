@@ -8,7 +8,6 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     Loaded="Page_Loaded">
-
     <Grid Name="main_grid"
           Background="Gray"
           VerticalAlignment="Stretch">
@@ -23,7 +22,6 @@
                     FontFamily="Segoe MDL2 Assets"
                     Content="&#xE71D;"
                     FontSize="30"
-                    Background="Gray"
                     Foreground="White"
                     Click="list_button_Click"/>
             <Button Name="refresh_button"
@@ -33,7 +31,6 @@
                     Content="&#xE72C;"
                     FontSize="25"
                     Margin="10,0,0,0"
-                    Background="Gray"
                     Foreground="White"
                     Click="refresh_button_Click"/>
             <Button Name="back_button"
@@ -43,7 +40,6 @@
                 Content="&#xE72B;"
                 Margin="10,0,0,0"
                 Foreground="White"
-                Background="Gray"
                 FontSize="30"
                 Click="back_button_Click"/>
             <TextBlock Name="main_title"
@@ -68,7 +64,6 @@
                     </Grid.RowDefinitions>
                     <ListBox Name="main_listbox"
                              SelectionMode="Single"
-                             Background="Gray"
                              SelectionChanged="main_listbox_SelectionChanged">
                         <ListBoxItem Name="listbox_itemone">
                             <StackPanel Orientation="Horizontal">
@@ -169,7 +164,7 @@
                     </Grid.RowDefinitions>
                     <StackPanel Name="setting_stackPanel"
                                 HorizontalAlignment="Center">
-                        <StackPanel Name="backGround_stackPanel"
+                        <!--<StackPanel Name="backGround_stackPanel"
                                 Orientation="Horizontal">
                             <TextBlock Name="backGround_textblock"
                                        Text="BackGround Color"
@@ -180,7 +175,6 @@
                                       SelectionChanged="backGround_combobox_SelectionChanged"
                                       Margin="30,0,0,0"
                                       Width="150"
-                                      Background="White"
                                       HorizontalContentAlignment="Center"
                                       VerticalAlignment="Center">
                                 <ComboBoxItem Content="Red"/>
@@ -198,7 +192,7 @@
                                 <ComboBoxItem Content="darkViolet"/>
                                 <ComboBoxItem Content="gold"/>
                             </ComboBox>
-                        </StackPanel>
+                        </StackPanel>-->
                         <StackPanel Name="foreGround_stackPanel"
                                     Orientation="Horizontal"
                                     Margin="0,10,0,0">
@@ -211,7 +205,6 @@
                                       SelectionChanged="foreGround_combobox_SelectionChanged"
                                       Margin="30,0,0,0"
                                       Width="150"
-                                      Background="White"
                                       HorizontalContentAlignment="Center"
                                       VerticalAlignment="Center">
                                 <ComboBoxItem Content="Red"/>
@@ -230,15 +223,14 @@
                                 <ComboBoxItem Content="gold"/>
                             </ComboBox>
                         </StackPanel>
-                        <Button Name="aobut_button"
+                        <Button Name="about_button"
                                 Height='50'
                                 Width="100"
                                 FontSize="30"
                                 Content="About"
                                 Foreground="WhiteSmoke"
-                                Background="Gray"
                                 HorizontalAlignment="Center"
-                                Click="aobut_button_Click"/>
+                                Click="about_button_Click_1"/>
                         <TextBlock Name="uri_textblock"
                                    Text="Project Uri:"
                                    FontSize="30"

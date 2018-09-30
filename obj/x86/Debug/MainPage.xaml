@@ -8,7 +8,6 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
                         >
-
     <Grid x:ConnectionId='2' Name="main_grid"
           Background="Gray"
           VerticalAlignment="Stretch">
@@ -17,36 +16,33 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
-            <Button x:ConnectionId='33' Name="list_button"
+            <Button x:ConnectionId='30' Name="list_button"
                     Height="45"
                     Width="45"
                     FontFamily="Segoe MDL2 Assets"
                     Content="&#xE71D;"
                     FontSize="30"
-                    Background="Gray"
                     Foreground="White"
                                              />
-            <Button x:ConnectionId='34' Name="refresh_button"
+            <Button x:ConnectionId='31' Name="refresh_button"
                     Height="45"
                     Width="45"
                     FontFamily="Segoe MDL2 Assets"
                     Content="&#xE72C;"
                     FontSize="25"
                     Margin="10,0,0,0"
-                    Background="Gray"
                     Foreground="White"
                                                 />
-            <Button x:ConnectionId='35' Name="back_button"
+            <Button x:ConnectionId='32' Name="back_button"
                 Height="45"
                 Width="45"
                 FontFamily="Segoe MDL2 Assets"
                 Content="&#xE72B;"
                 Margin="10,0,0,0"
                 Foreground="White"
-                Background="Gray"
                 FontSize="30"
                                          />
-            <TextBlock x:ConnectionId='36' Name="main_title"
+            <TextBlock x:ConnectionId='33' Name="main_title"
                    Text="CurrentWeather"
                    FontSize="30"
                    Margin="30,0,0,0"
@@ -68,7 +64,6 @@
                     </Grid.RowDefinitions>
                     <ListBox x:ConnectionId='4' Name="main_listbox"
                              SelectionMode="Single"
-                             Background="Gray"
                                                                              >
                         <ListBoxItem x:ConnectionId='12' Name="listbox_itemone">
                             <StackPanel Orientation="Horizontal">
@@ -169,18 +164,17 @@
                     </Grid.RowDefinitions>
                     <StackPanel x:ConnectionId='21' Name="setting_stackPanel"
                                 HorizontalAlignment="Center">
-                        <StackPanel x:ConnectionId='24' Name="backGround_stackPanel"
+                        <!--<StackPanel Name="backGround_stackPanel"
                                 Orientation="Horizontal">
-                            <TextBlock x:ConnectionId='31' Name="backGround_textblock"
+                            <TextBlock Name="backGround_textblock"
                                        Text="BackGround Color"
                                        Foreground="White"
                                        Margin="100,0,0,0"
                                        VerticalAlignment="Center"/>
-                            <ComboBox x:ConnectionId='32' Name="backGround_combobox"
-                                                                                             
+                            <ComboBox Name="backGround_combobox"
+                                      SelectionChanged="backGround_combobox_SelectionChanged"
                                       Margin="30,0,0,0"
                                       Width="150"
-                                      Background="White"
                                       HorizontalContentAlignment="Center"
                                       VerticalAlignment="Center">
                                 <ComboBoxItem Content="Red"/>
@@ -198,20 +192,19 @@
                                 <ComboBoxItem Content="darkViolet"/>
                                 <ComboBoxItem Content="gold"/>
                             </ComboBox>
-                        </StackPanel>
-                        <StackPanel x:ConnectionId='25' Name="foreGround_stackPanel"
+                        </StackPanel>-->
+                        <StackPanel x:ConnectionId='24' Name="foreGround_stackPanel"
                                     Orientation="Horizontal"
                                     Margin="0,10,0,0">
-                            <TextBlock x:ConnectionId='29' Name="foreGround_textblock"
+                            <TextBlock x:ConnectionId='28' Name="foreGround_textblock"
                                        Text="ForeGround Color"
                                        Foreground="White"
                                        Margin="100,0,0,0"
                                        VerticalAlignment="Center"/>
-                            <ComboBox x:ConnectionId='30' Name="foreGround_combobox"
+                            <ComboBox x:ConnectionId='29' Name="foreGround_combobox"
                                                                                              
                                       Margin="30,0,0,0"
                                       Width="150"
-                                      Background="White"
                                       HorizontalContentAlignment="Center"
                                       VerticalAlignment="Center">
                                 <ComboBoxItem Content="Red"/>
@@ -230,21 +223,20 @@
                                 <ComboBoxItem Content="gold"/>
                             </ComboBox>
                         </StackPanel>
-                        <Button x:ConnectionId='26' Name="aobut_button"
+                        <Button x:ConnectionId='25' Name="about_button"
                                 Height='50'
                                 Width="100"
                                 FontSize="30"
                                 Content="About"
                                 Foreground="WhiteSmoke"
-                                Background="Gray"
                                 HorizontalAlignment="Center"
-                                                          />
-                        <TextBlock x:ConnectionId='27' Name="uri_textblock"
+                                                            />
+                        <TextBlock x:ConnectionId='26' Name="uri_textblock"
                                    Text="Project Uri:"
                                    FontSize="30"
                                    Foreground="White"
                                    HorizontalAlignment="Center"/>
-                        <TextBlock x:ConnectionId='28' Name="github_textblock"
+                        <TextBlock x:ConnectionId='27' Name="github_textblock"
                                    Text="https://github.com/singhwong/UWP-Weather"
                                    FontSize="20"
                                    Foreground="White"

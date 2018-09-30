@@ -146,8 +146,8 @@
     <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
       <RootProperty Name="Name" />
       <RootProperty Name="SelectionMode" />
-      <RootProperty Name="Background" />
       <RootProperty Name="Items" />
+      <RootProperty Name="Background" />
       <RootEvent Name="SelectionChanged" />
       <RootEvent Name="Tapped" />
     </RootType>
@@ -172,7 +172,6 @@
       <RootProperty Name="Name" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
-      <RootProperty Name="Background" />
       <RootProperty Name="HorizontalContentAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Items" />

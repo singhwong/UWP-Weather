@@ -16,6 +16,64 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Page.Resources>
+    <!--<VisualStateManager.VisualStateGroups>
+        <VisualStateGroup>
+            <VisualState>
+                <VisualState.StateTriggers>
+                    <AdaptiveTrigger MinWindowWidth="0"/>
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Target="country_textblock.FontSize" Value="20"/>
+                    <Setter Target="cityname_textblock.FontSize" Value="20"/>
+                    <Setter Target="temp_textblock.FontSize" Value="20"/>
+                    <Setter Target="C_textblock.FontSize" Value="20"/>
+                    <Setter Target="mainDec_textblock.FontSize" Value="20"/>
+                    <Setter Target="mainMaxTem_String.FontSize" Value="15"/>
+                    <Setter Target="mainMaxTem_textblock.FontSize" Value="15"/>
+                    <Setter Target="MaxTempC_textblock.FontSize" Value="15"/>
+                    <Setter Target="mainMinTem_String.FontSize" Value="15"/>
+                    <Setter Target="mainMinTem_textblock.FontSize" Value="15"/>
+                    <Setter Target="MinTempC_textblock.FontSize" Value="15"/>
+                    <Setter Target="mainWindSpeed_String.FontSize" Value="15"/>
+                    <Setter Target="mainWindSpeed_textblock.FontSize" Value="15"/>
+                    <Setter Target="WindSpeedUnit_String.FontSize" Value="15"/>
+                    <Setter Target="lat_textString.FontSize" Value="15"/>
+                    <Setter Target="lat_textblock.FontSize" Value="15"/>
+                    <Setter Target="lon_textString.FontSize" Value="15"/>
+                    <Setter Target="lon_textblock.FontSize" Value="15"/>
+                    <Setter Target="main_Image.Height" Value="150"/>
+                    <Setter Target="main_Image.Width" Value="150"/>
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState>
+                <VisualState.StateTriggers>
+                    <AdaptiveTrigger MinWindowWidth="700"/>
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Target="country_textblock.FontSize" Value="30"/>
+                    <Setter Target="cityname_textblock.FontSize" Value="30"/>
+                    <Setter Target="temp_textblock.FontSize" Value="30"/>
+                    <Setter Target="C_textblock.FontSize" Value="30"/>
+                    <Setter Target="mainDec_textblock.FontSize" Value="30"/>
+                    <Setter Target="mainMaxTem_String.FontSize" Value="20"/>
+                    <Setter Target="mainMaxTem_textblock.FontSize" Value="20"/>
+                    <Setter Target="MaxTempC_textblock.FontSize" Value="20"/>
+                    <Setter Target="mainMinTem_String.FontSize" Value="20"/>
+                    <Setter Target="mainMinTem_textblock.FontSize" Value="20"/>
+                    <Setter Target="MinTempC_textblock.FontSize" Value="20"/>
+                    <Setter Target="mainWindSpeed_String.FontSize" Value="20"/>
+                    <Setter Target="mainWindSpeed_textblock.FontSize" Value="20"/>
+                    <Setter Target="WindSpeedUnit_String.FontSize" Value="20"/>
+                    <Setter Target="lat_textString.FontSize" Value="20"/>
+                    <Setter Target="lat_textblock.FontSize" Value="20"/>
+                    <Setter Target="lon_textString.FontSize" Value="20"/>
+                    <Setter Target="lon_textblock.FontSize" Value="20"/>
+                    <Setter Target="main_Image.Height" Value="200"/>
+                    <Setter Target="main_Image.Width" Value="200"/>
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>-->
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>

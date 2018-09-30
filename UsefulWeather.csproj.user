@@ -4,4 +4,14 @@
     <DeviceId>30F105C9-681E-420b-A277-7C086EAD8A4E</DeviceId>
     <UseEmulator>true</UseEmulator>
   </PropertyGroup>
+  <PropertyGroup>
+    <SmallTileSource>D:\wang\AbsoluteBeginnersWin10\UWP-062\UWP-062\UWPWeather\UWPWeather\Assets\Weather\01d.png</SmallTileSource>
+    <MediumTileSource>C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\03d.png</MediumTileSource>
+    <WideTileSource>C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\04d.png</WideTileSource>
+    <LargeTileSource>C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\01d.png</LargeTileSource>
+    <AppIconSource>C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\02d.png</AppIconSource>
+    <SplashScreenSource>C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\03n.png</SplashScreenSource>
+    <BadgeLogoSource>C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\03n.png</BadgeLogoSource>
+    <PackageLogoSource>C:\Users\wang\source\repos\UWP-Weather\Assets\WeatherIcons\03n.png</PackageLogoSource>
+  </PropertyGroup>
 </Project>
