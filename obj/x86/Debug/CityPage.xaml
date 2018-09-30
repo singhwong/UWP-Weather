@@ -34,8 +34,8 @@
                          Margin="10"/>
                 <Button x:ConnectionId='56' Name="cityname_button"
                         Width="110"
-                        Background="Pink"
-                        Content="Get Weather"
+                        Background="Snow"
+                        Content="Enter"
                                                      />
             </StackPanel>
             <RelativePanel>
@@ -47,25 +47,25 @@
                 <TextBlock x:ConnectionId='36' Name="cityname_textblock"
                            FontSize="30"
                            FontWeight="Bold"
+                           IsTextSelectionEnabled="True"
                            RelativePanel.Below="country_textblock"
                            RelativePanel.AlignLeftWithPanel="True"                          
                            Text="{Binding city.name}"/>
                 <TextBlock x:ConnectionId='37' Name="temp_textblock"
                            FontSize="30"
                            FontWeight="Bold"
-                           RelativePanel.Below="country_textblock"
-                           RelativePanel.RightOf="cityname_textblock"
-                           Margin="30,0,0,0"                          
+                           RelativePanel.Below="cityname_textblock"
+                           RelativePanel.AlignLeftWithPanel="True"                       
                            Text="{Binding list[0].main.temp}"/>
                 <TextBlock x:ConnectionId='38' Name="C_textblock"
                            FontSize="30"
                            FontWeight="Bold"
-                           RelativePanel.Below="country_textblock"
+                           RelativePanel.Below="cityname_textblock"
                            RelativePanel.RightOf="temp_textblock"/>
                 <TextBlock x:ConnectionId='39' Name="mainDec_textblock"
                            FontSize="30"
                            FontWeight="Bold"
-                           RelativePanel.Below="cityname_textblock"                        
+                           RelativePanel.Below="temp_textblock"                       
                            Text="{Binding list[0].weather[0].description}"/>
                 <TextBlock x:ConnectionId='40' Name="mainMaxTem_String"
                            FontSize="20"

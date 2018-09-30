@@ -5,7 +5,6 @@
     <Style x:Name="textblock_style1"
            TargetType="TextBlock">
         <Setter Property="FontSize" Value="20"/>
-        <Setter Property="Foreground" Value="SkyBlue"/>
         <Setter Property="Margin" Value="0,7,0,7"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="FontStyle" Value="Italic"/>
