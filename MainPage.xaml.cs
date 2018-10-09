@@ -30,6 +30,7 @@ namespace UsefulWeather
         private bool itemone_bool = false;
         private bool itemtwo_bool = false;
         private bool itemthree_bool = false;
+        #region 声明颜色并赋值
         private SolidColorBrush red = new SolidColorBrush(Colors.Red);
         private SolidColorBrush skyBlue = new SolidColorBrush(Colors.SkyBlue);
         private SolidColorBrush black = new SolidColorBrush(Colors.Black);
@@ -44,6 +45,7 @@ namespace UsefulWeather
         private SolidColorBrush brown = new SolidColorBrush(Colors.Brown);
         private SolidColorBrush darkViolet = new SolidColorBrush(Colors.DarkViolet);
         private SolidColorBrush gold = new SolidColorBrush(Colors.Gold);
+        #endregion
         //private string background_value;
         private string foreground_value;
         private double num;

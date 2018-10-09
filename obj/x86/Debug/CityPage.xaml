@@ -17,6 +17,89 @@
         </ResourceDictionary>
     </Page.Resources>
     <Grid>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="country_textblock.FontSize" Value="20"/>
+                        <Setter Target="cityname_textblock.FontSize" Value="20"/>
+                        <Setter Target="temp_textblock.FontSize" Value="20"/>
+                        <Setter Target="C_textblock.FontSize" Value="20"/>
+                        <Setter Target="mainDec_textblock.FontSize" Value="20"/>
+                        <Setter Target="mainMaxTem_String.FontSize" Value="15"/>
+                        <Setter Target="mainMaxTem_textblock.FontSize" Value="15"/>
+                        <Setter Target="MaxTempC_textblock.FontSize" Value="15"/>
+                        <Setter Target="mainMinTem_String.FontSize" Value="15"/>
+                        <Setter Target="mainMinTem_textblock.FontSize" Value="15"/>
+                        <Setter Target="MinTempC_textblock.FontSize" Value="15"/>
+                        <Setter Target="mainWindSpeed_String.FontSize" Value="15"/>
+                        <Setter Target="mainWindSpeed_textblock.FontSize" Value="15"/>
+                        <Setter Target="WindSpeedUnit_String.FontSize" Value="15"/>
+                        <Setter Target="lat_textString.FontSize" Value="15"/>
+                        <Setter Target="lat_textblock.FontSize" Value="15"/>
+                        <Setter Target="lon_textString.FontSize" Value="15"/>
+                        <Setter Target="lon_textblock.FontSize" Value="15"/>
+                        <Setter Target="main_Image.Height" Value="150"/>
+                        <Setter Target="main_Image.Width" Value="150"/>
+                        <Setter Target="main_Image.Margin" Value="0,0,80,0"/>
+
+                        <Setter Target="Time_textblock.FontSize" Value="15"/>
+                        <Setter Target="time1_textblock.FontSize" Value="15"/>
+                        <Setter Target="time2_textblock.FontSize" Value="15"/>
+                        <Setter Target="time3_textblock.FontSize" Value="15"/>
+                        <Setter Target="time4_textblock.FontSize" Value="15"/>
+                        <Setter Target="time5_textblock.FontSize" Value="15"/>
+                        <Setter Target="time6_textblock.FontSize" Value="15"/>
+                        <Setter Target="time7_textblock.FontSize" Value="15"/>
+
+                        <Setter Target="Temp_textblock.FontSize" Value="15"/>
+                        <Setter Target="temp1_textblock.FontSize" Value="15"/>
+                        <Setter Target="temp2_textblock.FontSize" Value="15"/>
+                        <Setter Target="temp3_textblock.FontSize" Value="15"/>
+                        <Setter Target="temp4_textblock.FontSize" Value="15"/>
+                        <Setter Target="temp5_textblock.FontSize" Value="15"/>
+                        <Setter Target="temp6_textblock.FontSize" Value="15"/>
+                        <Setter Target="temp7_textblock.FontSize" Value="15"/>
+
+                        <Setter Target="Dec_textblock.FontSize" Value="15"/>
+                        <Setter Target="dec1_textblock.FontSize" Value="15"/>
+                        <Setter Target="dec2_textblock.FontSize" Value="15"/>
+                        <Setter Target="dec3_textblock.FontSize" Value="15"/>
+                        <Setter Target="dec4_textblock.FontSize" Value="15"/>
+                        <Setter Target="dec5_textblock.FontSize" Value="15"/>
+                        <Setter Target="dec6_textblock.FontSize" Value="15"/>
+                        <Setter Target="dec7_textblock.FontSize" Value="15"/>
+
+                        <Setter Target="Icon_textblock.FontSize" Value="15"/>
+                        <Setter Target="image1_image.Height" Value="32"/>
+                        <Setter Target="image2_image.Height" Value="32"/>
+                        <Setter Target="image3_image.Height" Value="32"/>
+                        <Setter Target="image4_image.Height" Value="32"/>
+                        <Setter Target="image5_image.Height" Value="32"/>
+                        <Setter Target="image6_image.Height" Value="32"/>
+                        <Setter Target="image7_image.Height" Value="32"/>
+
+                        <Setter Target="image1_image.Width" Value="32"/>
+                        <Setter Target="image2_image.Width" Value="32"/>
+                        <Setter Target="image3_image.Width" Value="32"/>
+                        <Setter Target="image4_image.Width" Value="32"/>
+                        <Setter Target="image5_image.Width" Value="32"/>
+                        <Setter Target="image6_image.Width" Value="32"/>
+                        <Setter Target="image7_image.Width" Value="32"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="700"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
