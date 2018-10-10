@@ -75,21 +75,21 @@
                         <Setter Target="dec7_textblock.FontSize" Value="15"/>
 
                         <Setter Target="Icon_textblock.FontSize" Value="15"/>
-                        <Setter Target="image1_image.Height" Value="32"/>
-                        <Setter Target="image2_image.Height" Value="32"/>
-                        <Setter Target="image3_image.Height" Value="32"/>
-                        <Setter Target="image4_image.Height" Value="32"/>
-                        <Setter Target="image5_image.Height" Value="32"/>
-                        <Setter Target="image6_image.Height" Value="32"/>
-                        <Setter Target="image7_image.Height" Value="32"/>
+                        <Setter Target="image1_image.Height" Value="33"/>
+                        <Setter Target="image2_image.Height" Value="33"/>
+                        <Setter Target="image3_image.Height" Value="33"/>
+                        <Setter Target="image4_image.Height" Value="33"/>
+                        <Setter Target="image5_image.Height" Value="33"/>
+                        <Setter Target="image6_image.Height" Value="33"/>
+                        <Setter Target="image7_image.Height" Value="33"/>
 
-                        <Setter Target="image1_image.Width" Value="32"/>
-                        <Setter Target="image2_image.Width" Value="32"/>
-                        <Setter Target="image3_image.Width" Value="32"/>
-                        <Setter Target="image4_image.Width" Value="32"/>
-                        <Setter Target="image5_image.Width" Value="32"/>
-                        <Setter Target="image6_image.Width" Value="32"/>
-                        <Setter Target="image7_image.Width" Value="32"/>
+                        <Setter Target="image1_image.Width" Value="33"/>
+                        <Setter Target="image2_image.Width" Value="33"/>
+                        <Setter Target="image3_image.Width" Value="33"/>
+                        <Setter Target="image4_image.Width" Value="33"/>
+                        <Setter Target="image5_image.Width" Value="33"/>
+                        <Setter Target="image6_image.Width" Value="33"/>
+                        <Setter Target="image7_image.Width" Value="33"/>
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState>
