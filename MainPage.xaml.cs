@@ -184,20 +184,34 @@ namespace UsefulWeather
             {
                 switch (foreground_value)
                 {
-                    case "red": SetForeGround(red);break;
-                    case "skyblue": SetForeGround(skyBlue);break;
-                    case "black": SetForeGround(black);break;
-                    case "gray": SetForeGround(gray);break;
-                    case "lightgray": SetForeGround(lightGray);break;
-                    case "whitesmoke": SetForeGround(whiteSmoke);break;
-                    case "deeppink": SetForeGround(deepPink);break;
-                    case "antiquewhite": SetForeGround(antiqueWhite);break;
-                    case "aqua": SetForeGround(aqua);break;
-                    case "azure": SetForeGround(azure);break;
-                    case "coral": SetForeGround(coral);break;
-                    case "brown": SetForeGround(brown);break;
-                    case "darkviolet": SetForeGround(darkViolet);break;
-                    case "gold": SetForeGround(gold);break;
+                    case "red": SetForeGround(red);
+                        foreGround_combobox.SelectedIndex = 0; break;
+                    case "skyblue": SetForeGround(skyBlue);
+                        foreGround_combobox.SelectedIndex = 1; break;
+                    case "black": SetForeGround(black);
+                        foreGround_combobox.SelectedIndex = 2; break;
+                    case "gray": SetForeGround(gray);
+                        foreGround_combobox.SelectedIndex = 3; break;
+                    case "lightgray": SetForeGround(lightGray);
+                        foreGround_combobox.SelectedIndex = 4; break;
+                    case "whitesmoke": SetForeGround(whiteSmoke);
+                        foreGround_combobox.SelectedIndex = 5; break;
+                    case "deeppink": SetForeGround(deepPink);
+                        foreGround_combobox.SelectedIndex = 6; break;
+                    case "antiquewhite": SetForeGround(antiqueWhite);
+                        foreGround_combobox.SelectedIndex = 7; break;
+                    case "aqua": SetForeGround(aqua);
+                        foreGround_combobox.SelectedIndex = 8; break;
+                    case "azure": SetForeGround(azure);
+                        foreGround_combobox.SelectedIndex = 9; break;
+                    case "coral": SetForeGround(coral);
+                        foreGround_combobox.SelectedIndex = 10; break;
+                    case "brown": SetForeGround(brown);
+                        foreGround_combobox.SelectedIndex = 11; break;
+                    case "darkviolet": SetForeGround(darkViolet);
+                        foreGround_combobox.SelectedIndex = 12; break;
+                    case "gold": SetForeGround(gold);
+                        foreGround_combobox.SelectedIndex = 13; break;
                     default:
                         break;
                 }
@@ -219,46 +233,60 @@ namespace UsefulWeather
                 {
                     case "red":
                         myBrush.TintColor = Colors.Red;
-                        myBrush.FallbackColor = Colors.Red; break;
+                        myBrush.FallbackColor = Colors.Red;
+                        backGround_combobox.SelectedIndex = 0; break;
                     case "skyblue":
                         myBrush.TintColor = Colors.SkyBlue;
-                        myBrush.FallbackColor = Colors.SkyBlue; break;
+                        myBrush.FallbackColor = Colors.SkyBlue;
+                        backGround_combobox.SelectedIndex = 1; break;
                     case "black":
                         myBrush.TintColor = Colors.Black;
-                        myBrush.FallbackColor = Colors.Black; break;
+                        myBrush.FallbackColor = Colors.Black;
+                        backGround_combobox.SelectedIndex = 2; break;
                     case "gray":
                         myBrush.TintColor = Colors.Gray;
-                        myBrush.FallbackColor = Colors.Gray; break;
+                        myBrush.FallbackColor = Colors.Gray;
+                        backGround_combobox.SelectedIndex = 3; break;
                     case "lightgray":
                         myBrush.TintColor = Colors.LightGray;
-                        myBrush.FallbackColor = Colors.LightGray; break;
+                        myBrush.FallbackColor = Colors.LightGray;
+                        backGround_combobox.SelectedIndex = 4; break;
                     case "whitesmoke":
                         myBrush.TintColor = Colors.WhiteSmoke;
-                        myBrush.FallbackColor = Colors.WhiteSmoke; break;
+                        myBrush.FallbackColor = Colors.WhiteSmoke;
+                        backGround_combobox.SelectedIndex = 5; break;
                     case "deeppink":
                         myBrush.TintColor = Colors.DeepPink;
-                        myBrush.FallbackColor = Colors.DeepPink; break;
+                        myBrush.FallbackColor = Colors.DeepPink;
+                        backGround_combobox.SelectedIndex = 6; break;
                     case "antiquewhite":
                         myBrush.TintColor = Colors.AntiqueWhite;
-                        myBrush.FallbackColor = Colors.AntiqueWhite; break;
+                        myBrush.FallbackColor = Colors.AntiqueWhite;
+                        backGround_combobox.SelectedIndex = 7; break;
                     case "aqua":
                         myBrush.TintColor = Colors.Aqua;
-                        myBrush.FallbackColor = Colors.Aqua; break;
+                        myBrush.FallbackColor = Colors.Aqua;
+                        backGround_combobox.SelectedIndex = 8; break;
                     case "azure":
                         myBrush.TintColor = Colors.Azure;
-                        myBrush.FallbackColor = Colors.Azure; break;
+                        myBrush.FallbackColor = Colors.Azure;
+                        backGround_combobox.SelectedIndex = 9; break;
                     case "coral":
                         myBrush.TintColor = Colors.Coral;
-                        myBrush.FallbackColor = Colors.Coral; break;
+                        myBrush.FallbackColor = Colors.Coral;
+                        backGround_combobox.SelectedIndex = 10; break;
                     case "brown":
                         myBrush.TintColor = Colors.Brown;
-                        myBrush.FallbackColor = Colors.Brown; break;
+                        myBrush.FallbackColor = Colors.Brown;
+                        backGround_combobox.SelectedIndex = 11; break;
                     case "darkviolet":
                         myBrush.TintColor = Colors.DarkViolet;
-                        myBrush.FallbackColor = Colors.DarkViolet; break;
+                        myBrush.FallbackColor = Colors.DarkViolet;
+                        backGround_combobox.SelectedIndex = 12; break;
                     case "gold":
                         myBrush.TintColor = Colors.Gold;
-                        myBrush.FallbackColor = Colors.Gold; break;
+                        myBrush.FallbackColor = Colors.Gold;
+                        backGround_combobox.SelectedIndex = 13; break;
                     default:
                         break;
                 }
