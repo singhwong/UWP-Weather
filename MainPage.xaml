@@ -53,7 +53,7 @@
        
         <SplitView Grid.Row="1"
                        Name="main_splitview"
-                       DisplayMode="CompactInline"
+                       DisplayMode="CompactOverlay"
                        CompactPaneLength="45"
                        OpenPaneLength="180">
             <SplitView.Pane>
@@ -163,11 +163,12 @@
                     </Grid.RowDefinitions>
                     <StackPanel Name="setting_stackPanel"
                                 HorizontalAlignment="Center">
-                        <!--<StackPanel Name="backGround_stackPanel"
+                        <StackPanel Name="backGround_stackPanel"
                                 Orientation="Horizontal">
                             <TextBlock Name="backGround_textblock"
                                        Text="BackGround Color"
-                                       Foreground="White"
+                                       FontSize="20"
+                                       FontStyle="Oblique"
                                        Margin="100,0,0,0"
                                        VerticalAlignment="Center"/>
                             <ComboBox Name="backGround_combobox"
@@ -191,7 +192,7 @@
                                 <ComboBoxItem Content="darkViolet"/>
                                 <ComboBoxItem Content="gold"/>
                             </ComboBox>
-                        </StackPanel>-->
+                        </StackPanel>
                         <StackPanel Name="foreGround_stackPanel"
                                     Orientation="Horizontal"
                                     Margin="0,10,0,0"

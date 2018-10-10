@@ -142,7 +142,7 @@
                 <Button x:ConnectionId='58' Name="city_button"                      
                         Grid.RowSpan="2"
                         Grid.Column="2"
-                        Width="110"
+                        Width="80"
                         Background="Snow"
                         Content="Enter"
                                                  />

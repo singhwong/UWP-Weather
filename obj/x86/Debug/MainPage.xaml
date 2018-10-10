@@ -16,7 +16,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
-            <Button x:ConnectionId='32' Name="list_button"
+            <Button x:ConnectionId='35' Name="list_button"
                     Height="45"
                     Width="45"
                     FontFamily="Segoe MDL2 Assets"
@@ -24,7 +24,7 @@
                     FontSize="30"
                     Foreground="White"
                                              />
-            <Button x:ConnectionId='33' Name="refresh_button"
+            <Button x:ConnectionId='36' Name="refresh_button"
                     Height="45"
                     Width="45"
                     FontFamily="Segoe MDL2 Assets"
@@ -33,7 +33,7 @@
                     Margin="10,0,0,0"
                     Foreground="White"
                                                 />
-            <Button x:ConnectionId='34' Name="back_button"
+            <Button x:ConnectionId='37' Name="back_button"
                     Height="45"
                     Width="45"
                     FontFamily="Segoe MDL2 Assets"
@@ -42,7 +42,7 @@
                     Foreground="White"
                     FontSize="30"
                                              />
-            <TextBlock x:ConnectionId='35' Name="main_title"
+            <TextBlock x:ConnectionId='38' Name="main_title"
                    Text="CurrentWeather"
                    FontSize="30"
                    Margin="30,0,0,0"
@@ -53,7 +53,7 @@
        
         <SplitView x:ConnectionId='3' Grid.Row="1"
                        Name="main_splitview"
-                       DisplayMode="CompactInline"
+                       DisplayMode="CompactOverlay"
                        CompactPaneLength="45"
                        OpenPaneLength="180">
             <SplitView.Pane>
@@ -163,15 +163,16 @@
                     </Grid.RowDefinitions>
                     <StackPanel x:ConnectionId='21' Name="setting_stackPanel"
                                 HorizontalAlignment="Center">
-                        <!--<StackPanel Name="backGround_stackPanel"
+                        <StackPanel x:ConnectionId='24' Name="backGround_stackPanel"
                                 Orientation="Horizontal">
-                            <TextBlock Name="backGround_textblock"
+                            <TextBlock x:ConnectionId='33' Name="backGround_textblock"
                                        Text="BackGround Color"
-                                       Foreground="White"
+                                       FontSize="20"
+                                       FontStyle="Oblique"
                                        Margin="100,0,0,0"
                                        VerticalAlignment="Center"/>
-                            <ComboBox Name="backGround_combobox"
-                                      SelectionChanged="backGround_combobox_SelectionChanged"
+                            <ComboBox x:ConnectionId='34' Name="backGround_combobox"
+                                                                                             
                                       Margin="30,0,0,0"
                                       Width="150"
                                       HorizontalContentAlignment="Center"
@@ -191,18 +192,18 @@
                                 <ComboBoxItem Content="darkViolet"/>
                                 <ComboBoxItem Content="gold"/>
                             </ComboBox>
-                        </StackPanel>-->
-                        <StackPanel x:ConnectionId='24' Name="foreGround_stackPanel"
+                        </StackPanel>
+                        <StackPanel x:ConnectionId='25' Name="foreGround_stackPanel"
                                     Orientation="Horizontal"
                                     Margin="0,10,0,0"
                                     HorizontalAlignment="Center">
-                            <TextBlock x:ConnectionId='30' Name="foreGround_textblock"
+                            <TextBlock x:ConnectionId='31' Name="foreGround_textblock"
                                        Text="ForeGround Color"
                                        FontSize="20"
                                        FontStyle="Oblique"
                                        Margin="100,0,0,0"
                                        VerticalAlignment="Center"/>
-                            <ComboBox x:ConnectionId='31' Name="foreGround_combobox"
+                            <ComboBox x:ConnectionId='32' Name="foreGround_combobox"
                                                                                              
                                       Margin="30,0,0,0"
                                       Width="150"
@@ -227,12 +228,12 @@
                         <StackPanel Orientation="Horizontal"
                                     HorizontalAlignment="Center"
                                     Height="100">
-                            <TextBlock x:ConnectionId='28' Name="slider_textblock"
+                            <TextBlock x:ConnectionId='29' Name="slider_textblock"
                                        FontSize="20"
                                        FontStyle="Oblique"
                                        VerticalAlignment="Center"
                                        Text="Opacity"/>
-                            <Slider x:ConnectionId='29' Name="setting_slider"
+                            <Slider x:ConnectionId='30' Name="setting_slider"
                                     Height="30"
                                     Width="200"
                                     Minimum="0"
@@ -242,7 +243,7 @@
                                     VerticalAlignment="Center"
                                                                               />
                         </StackPanel>
-                        <Button x:ConnectionId='25' Name="about_button"
+                        <Button x:ConnectionId='26' Name="about_button"
                                 Height='50'
                                 Width="100"
                                 FontSize="25"
@@ -250,13 +251,13 @@
                                 Content="About"
                                 HorizontalAlignment="Center"
                                                             />
-                        <TextBlock x:ConnectionId='26' Name="uri_textblock"
+                        <TextBlock x:ConnectionId='27' Name="uri_textblock"
                                    Text="Project Url:"
                                    FontSize="20"
                                    FontStyle="Oblique"
                                    Margin="0,20,0,0"
                                    HorizontalAlignment="Center"/>
-                        <TextBlock x:ConnectionId='27' Name="github_textblock"
+                        <TextBlock x:ConnectionId='28' Name="github_textblock"
                                    Text="https://github.com/singhwong/UWP-Weather"
                                    FontSize="20"
                                    FontStyle="Oblique"

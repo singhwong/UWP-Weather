@@ -116,7 +116,7 @@
                          Background="White"
                          Margin="10"/>
                 <Button Name="cityname_button"
-                        Width="110"
+                        Width="80"
                         Background="Snow"
                         Content="Enter"
                         Click="cityname_button_Click"/>

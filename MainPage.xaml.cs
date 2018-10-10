@@ -47,11 +47,15 @@ namespace UsefulWeather
         private SolidColorBrush gold = new SolidColorBrush(Colors.Gold);
         #endregion
         //private string background_value;
+        private string background_value;
         private string foreground_value;
         private double num;
         private double acrylic_value;
         private ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
         private ApplicationDataContainer localAcrylic = ApplicationData.Current.LocalSettings;
+        private ApplicationDataContainer local_background = ApplicationData.Current.LocalSettings;
+
+        private AcrylicBrush myBrush = new AcrylicBrush();
         //private const string SettingTheme = "Theme";
         public MainPage()
         {
@@ -112,9 +116,9 @@ namespace UsefulWeather
         {
             setting_stackPanel.Visibility = Visibility.Collapsed;
             back_button.Visibility = Visibility.Collapsed;
-            SetForeGround(black);
             itemone_bool = true;
             LocalSettings();//设置前景色为上次保存的值
+            GetLocalBackground();
             SetLoadAcrylic();//设置不透明度为上次保存的值
             #region 判定在当前设备，反馈控件是否给予显示
             if (Microsoft.Services.Store.Engagement.StoreServicesFeedbackLauncher.IsSupported())
@@ -130,10 +134,9 @@ namespace UsefulWeather
             #region 设置亚克力背景
             if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.UI.Xaml.Media.XamlCompositionBrushBase"))
             {
-                AcrylicBrush myBrush = new AcrylicBrush();
+                
                 myBrush.BackgroundSource = AcrylicBackgroundSource.HostBackdrop;
-                myBrush.TintColor = Colors.AliceBlue;
-                myBrush.FallbackColor = Colors.AliceBlue;
+                
                 myBrush.TintOpacity = num;
                 main_grid.Background = myBrush;
                 list_button.Background = myBrush;
@@ -168,65 +171,98 @@ namespace UsefulWeather
         }
         #endregion
         private void LocalSettings()
-        {
-            //try
-            //{
-            //        background_value = localSettings.Values["Background"].ToString();                  
-            //}
-            //catch
-            //{
-            //}
-            //finally
-            //{
-            //    switch (background_value)
-            //    {
-            //        case "red": SetBackGround(red); break;
-            //        case "skyblue": SetBackGround(skyBlue); break;
-            //        case "black": SetBackGround(black); break;
-            //        case "gray": SetBackGround(gray); break;
-            //        case "lightgray": SetBackGround(lightGray); break;
-            //        case "whitesmoke": SetBackGround(whiteSmoke); break;
-            //        case "deeppink": SetBackGround(deepPink); break;
-            //        case "antiquewhite": SetBackGround(antiqueWhite); break;
-            //        case "aqua": SetBackGround(aqua); break;
-            //        case "azure": SetBackGround(azure); break;
-            //        case "coral": SetBackGround(coral); break;
-            //        case "brown": SetBackGround(brown); break;
-            //        case "darkviolet": SetBackGround(darkViolet); break;
-            //        case "gold": SetBackGround(gold); break;
-            //        default:
-            //            break;
-            //    }
-            //}           
+        {         
             try
             {
                 foreground_value = localSettings.Values["Foreground"].ToString();
             }
             catch
             {
-            }
+                foreground_value = "black";
+            }          
             finally
             {
                 switch (foreground_value)
                 {
-                    case "red": SetForeGround(red); break;
-                    case "skyblue": SetForeGround(skyBlue); break;
-                    case "black": SetForeGround(black); break;
-                    case "gray": SetForeGround(gray); break;
-                    case "lightgray": SetForeGround(lightGray); break;
-                    case "whitesmoke": SetForeGround(whiteSmoke); break;
-                    case "deeppink": SetForeGround(deepPink); break;
-                    case "antiquewhite": SetForeGround(antiqueWhite); break;
-                    case "aqua": SetForeGround(aqua); break;
-                    case "azure": SetForeGround(azure); break;
-                    case "coral": SetForeGround(coral); break;
-                    case "brown": SetForeGround(brown); break;
-                    case "darkviolet": SetForeGround(darkViolet); break;
-                    case "gold": SetForeGround(gold); break;
+                    case "red": SetForeGround(red);break;
+                    case "skyblue": SetForeGround(skyBlue);break;
+                    case "black": SetForeGround(black);break;
+                    case "gray": SetForeGround(gray);break;
+                    case "lightgray": SetForeGround(lightGray);break;
+                    case "whitesmoke": SetForeGround(whiteSmoke);break;
+                    case "deeppink": SetForeGround(deepPink);break;
+                    case "antiquewhite": SetForeGround(antiqueWhite);break;
+                    case "aqua": SetForeGround(aqua);break;
+                    case "azure": SetForeGround(azure);break;
+                    case "coral": SetForeGround(coral);break;
+                    case "brown": SetForeGround(brown);break;
+                    case "darkviolet": SetForeGround(darkViolet);break;
+                    case "gold": SetForeGround(gold);break;
                     default:
                         break;
                 }
             }          
+        }
+        private void GetLocalBackground()
+        {
+            try
+            {
+                background_value = local_background.Values["Background"].ToString();
+            }
+            catch
+            {
+                background_value = "deeppink";
+            }
+            finally
+            {
+                switch (background_value)
+                {
+                    case "red":
+                        myBrush.TintColor = Colors.Red;
+                        myBrush.FallbackColor = Colors.Red; break;
+                    case "skyblue":
+                        myBrush.TintColor = Colors.SkyBlue;
+                        myBrush.FallbackColor = Colors.SkyBlue; break;
+                    case "black":
+                        myBrush.TintColor = Colors.Black;
+                        myBrush.FallbackColor = Colors.Black; break;
+                    case "gray":
+                        myBrush.TintColor = Colors.Gray;
+                        myBrush.FallbackColor = Colors.Gray; break;
+                    case "lightgray":
+                        myBrush.TintColor = Colors.LightGray;
+                        myBrush.FallbackColor = Colors.LightGray; break;
+                    case "whitesmoke":
+                        myBrush.TintColor = Colors.WhiteSmoke;
+                        myBrush.FallbackColor = Colors.WhiteSmoke; break;
+                    case "deeppink":
+                        myBrush.TintColor = Colors.DeepPink;
+                        myBrush.FallbackColor = Colors.DeepPink; break;
+                    case "antiquewhite":
+                        myBrush.TintColor = Colors.AntiqueWhite;
+                        myBrush.FallbackColor = Colors.AntiqueWhite; break;
+                    case "aqua":
+                        myBrush.TintColor = Colors.Aqua;
+                        myBrush.FallbackColor = Colors.Aqua; break;
+                    case "azure":
+                        myBrush.TintColor = Colors.Azure;
+                        myBrush.FallbackColor = Colors.Azure; break;
+                    case "coral":
+                        myBrush.TintColor = Colors.Coral;
+                        myBrush.FallbackColor = Colors.Coral; break;
+                    case "brown":
+                        myBrush.TintColor = Colors.Brown;
+                        myBrush.FallbackColor = Colors.Brown; break;
+                    case "darkviolet":
+                        myBrush.TintColor = Colors.DarkViolet;
+                        myBrush.FallbackColor = Colors.DarkViolet; break;
+                    case "gold":
+                        myBrush.TintColor = Colors.Gold;
+                        myBrush.FallbackColor = Colors.Gold; break;
+                    default:
+                        break;
+                }
+            }
         }
 
         private void back_button_Click(object sender, RoutedEventArgs e)
@@ -258,59 +294,6 @@ namespace UsefulWeather
         {
             main_frame.Navigate(typeof(HomePage));
         }
-
-        //private void backGround_combobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        //{
-        //    var value = (ComboBox)sender;
-        //    var selectionvalue = (ComboBoxItem)value.SelectedItem;
-        //    var color_value = selectionvalue.Content;
-        //    switch (color_value)
-        //    {
-        //        case "Red":
-        //            SetBackGround(red);
-        //            localSettings.Values["Background"] = "red"; break;
-        //        case "SkyBlue":
-        //            SetBackGround(skyBlue);
-        //            localSettings.Values["Background"] = "skyblue"; break;
-        //        case "Black":
-        //            SetBackGround(black);
-        //            localSettings.Values["Background"] = "black"; break;
-        //        case "Gray":
-        //            SetBackGround(gray);
-        //            localSettings.Values["Background"] = "gray"; break;
-        //        case "LightGray":
-        //            SetBackGround(lightGray);
-        //            localSettings.Values["Background"] = "lightgray"; break;
-        //        case "WhiteSmoke":
-        //            SetBackGround(whiteSmoke);
-        //            localSettings.Values["Background"] = "whitesmoke"; break;
-        //        case "DeepPink":
-        //            SetBackGround(deepPink);
-        //            localSettings.Values["Background"] = "deeppink"; break;
-        //        case "antiqueWhite":
-        //            SetBackGround(antiqueWhite);
-        //            localSettings.Values["Background"] = "antiquewhite"; break;
-        //        case "aqua":
-        //            SetBackGround(aqua);
-        //            localSettings.Values["Background"] = "aqua"; break;
-        //        case "azure":
-        //            SetBackGround(azure);
-        //            localSettings.Values["Background"] = "zaure"; break;
-        //        case "coral":
-        //            SetBackGround(coral);
-        //            localSettings.Values["Background"] = "coral"; break;
-        //        case "brown":
-        //            SetBackGround(brown);
-        //            localSettings.Values["Background"] = "brown"; break;
-        //        case "darkViolet":
-        //            SetBackGround(darkViolet);
-        //            localSettings.Values["Background"] = "darkviolet"; break;
-        //        case "gold":
-        //            SetBackGround(gold);
-        //            localSettings.Values["Background"] = "gold"; break;
-        //        default: break;
-        //    }
-        //}
 
         private void foreGround_combobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -379,7 +362,7 @@ namespace UsefulWeather
             city_Text.Foreground = color;
             setting_textblock.Foreground = color;
             setting_Text.Foreground = color;
-            //backGround_textblock.Foreground = color;
+            backGround_textblock.Foreground = color;
             foreGround_textblock.Foreground = color;
             about_button.Foreground = color;
             uri_textblock.Foreground = color;
@@ -388,16 +371,6 @@ namespace UsefulWeather
             feedback_Text.Foreground = color;
             slider_textblock.Foreground = color;
         }
-        //private void SetBackGround(SolidColorBrush color)
-        //{
-        //    main_grid.Background = color;
-        //    main_listbox.Background = color;
-        //    setting_listbox.Background = color;
-        //    list_button.Background = color;
-        //    back_button.Background = color;
-        //    refresh_button.Background = color;
-        //    about_button.Background = color;
-        //}
 
         private async void setting_listbox_Tapped(object sender, TappedRoutedEventArgs e)
         {
@@ -451,6 +424,86 @@ namespace UsefulWeather
             }
             SetAcrylic(acrylic_value);
             setting_slider.Value = acrylic_value * 100;
+        }
+
+        private void backGround_combobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var value = (ComboBox)sender;
+            var selectionvalue = (ComboBoxItem)value.SelectedItem;
+            var color_value = selectionvalue.Content.ToString();
+            switch (color_value)
+            {
+                case "Red":
+                    myBrush.TintColor = Colors.Red;
+                    myBrush.FallbackColor = Colors.Red;
+                    SetAcrylic(num);
+                    local_background.Values["Background"] = "red";break;
+                case "SkyBlue":
+                    myBrush.TintColor = Colors.SkyBlue;
+                    myBrush.FallbackColor = Colors.SkyBlue;
+                    SetAcrylic(num);
+                    local_background.Values["Background"] = "skyblue";break;
+                case "Black":
+                    myBrush.TintColor = Colors.Black;
+                    myBrush.FallbackColor = Colors.Black;
+                    SetAcrylic(num);
+                    local_background.Values["Background"] = "black"; break;
+                case "Gray":
+                    myBrush.TintColor = Colors.Gray;
+                    myBrush.FallbackColor = Colors.Gray;
+                    SetAcrylic(num);
+                    local_background.Values["Background"] = "gray"; break;
+                case "LightGray":
+                    myBrush.TintColor = Colors.LightGray;
+                    myBrush.FallbackColor = Colors.LightGray;
+                    SetAcrylic(num);
+                    local_background.Values["Background"] = "lightgray"; break;
+                case "WhiteSmoke":
+                    myBrush.TintColor = Colors.WhiteSmoke;
+                    myBrush.FallbackColor = Colors.WhiteSmoke;
+                    SetAcrylic(num);
+                    local_background.Values["Background"] = "whitesmoke"; break;
+                case "DeepPink":
+                    myBrush.TintColor = Colors.DeepPink;
+                    myBrush.FallbackColor = Colors.DeepPink;
+                    SetAcrylic(num);
+                    local_background.Values["Background"] = "deeppink"; break;
+                case "antiqueWhite":
+                    myBrush.TintColor = Colors.AntiqueWhite;
+                    myBrush.FallbackColor = Colors.AntiqueWhite;
+                    SetAcrylic(num);
+                    local_background.Values["Background"] = "antiquewhite"; break;
+                case "aqua":
+                    myBrush.TintColor = Colors.Aqua;
+                    myBrush.FallbackColor = Colors.Aqua;
+                    SetAcrylic(num);
+                    local_background.Values["Background"] = "aqua"; break;
+                case "azure":
+                    myBrush.TintColor = Colors.Azure;
+                    myBrush.FallbackColor = Colors.Azure;
+                    SetAcrylic(num);
+                    local_background.Values["Background"] = "azure"; break;
+                case "coral":
+                    myBrush.TintColor = Colors.Coral;
+                    myBrush.FallbackColor = Colors.Coral;
+                    SetAcrylic(num);
+                    local_background.Values["Background"] = "coral"; break;
+                case "brown":
+                    myBrush.TintColor = Colors.Brown;
+                    myBrush.FallbackColor = Colors.Brown;
+                    SetAcrylic(num);                  
+                    local_background.Values["Background"] = "brown"; break;
+                case "darkViolet":
+                    myBrush.TintColor = Colors.DarkViolet;
+                    myBrush.FallbackColor = Colors.DarkViolet;
+                    SetAcrylic(num);
+                    local_background.Values["Background"] = "darkviolet"; break;
+                case "gold":
+                    myBrush.TintColor = Colors.Gold;
+                    myBrush.FallbackColor = Colors.Gold;
+                    local_background.Values["Background"] = "gold"; break;
+                default: break;
+            }
         }
     }
 }
