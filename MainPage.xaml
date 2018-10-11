@@ -243,6 +243,22 @@
                                     VerticalAlignment="Center"
                                     ValueChanged="setting_slider_ValueChanged"/>
                         </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Name="liveTile_button"
+                                    Height="40"
+                                    Width="70"
+                                    Content="ImageFile"
+                                    Margin="0,0,30,0"
+                                    Click="liveTile_button_Click"/>
+                            <Button Name="liveTileEnter_button"
+                                    Height="40"
+                                    Width="70"
+                                    Content="TileImageEnter"
+                                    Click="liveTileEnter_button_Click"/>
+
+                        </StackPanel>
+                        
+                        
                         <Button Name="about_button"
                                 Height='50'
                                 Width="100"

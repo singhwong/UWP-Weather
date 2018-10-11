@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using UsefulWeather.Models;
 using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Storage;
+using Windows.Storage.Pickers;
 using Windows.System.Profile;
 using Windows.UI;
 using Windows.UI.ViewManagement;
@@ -16,6 +18,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x804 上介绍了“空白页”项模板
@@ -56,11 +59,15 @@ namespace UsefulWeather
         private ApplicationDataContainer local_background = ApplicationData.Current.LocalSettings;
 
         private AcrylicBrush myBrush = new AcrylicBrush();
+
+        private LiveTile live_tile;
+        private string image_source;
         //private const string SettingTheme = "Theme";
         public MainPage()
         {
             this.InitializeComponent();
             main_frame.Navigate(typeof(HomePage));
+            live_tile = new LiveTile();
         }
 
         private void list_button_Click(object sender, RoutedEventArgs e)
@@ -126,17 +133,18 @@ namespace UsefulWeather
                 this.listbox_itemfeedback.Visibility = Visibility.Visible;
             }
             #endregion
-           
+
             //ExtendAcrylicIntoTitleBar();
+
         }
         private void SetAcrylic(double num)
         {
             #region 设置亚克力背景
             if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.UI.Xaml.Media.XamlCompositionBrushBase"))
             {
-                
+
                 myBrush.BackgroundSource = AcrylicBackgroundSource.HostBackdrop;
-                
+
                 myBrush.TintOpacity = num;
                 main_grid.Background = myBrush;
                 list_button.Background = myBrush;
@@ -171,7 +179,7 @@ namespace UsefulWeather
         }
         #endregion
         private void LocalSettings()
-        {         
+        {
             try
             {
                 foreground_value = localSettings.Values["Foreground"].ToString();
@@ -179,43 +187,57 @@ namespace UsefulWeather
             catch
             {
                 foreground_value = "black";
-            }          
+            }
             finally
             {
                 switch (foreground_value)
                 {
-                    case "red": SetForeGround(red);
+                    case "red":
+                        SetForeGround(red);
                         foreGround_combobox.SelectedIndex = 0; break;
-                    case "skyblue": SetForeGround(skyBlue);
+                    case "skyblue":
+                        SetForeGround(skyBlue);
                         foreGround_combobox.SelectedIndex = 1; break;
-                    case "black": SetForeGround(black);
+                    case "black":
+                        SetForeGround(black);
                         foreGround_combobox.SelectedIndex = 2; break;
-                    case "gray": SetForeGround(gray);
+                    case "gray":
+                        SetForeGround(gray);
                         foreGround_combobox.SelectedIndex = 3; break;
-                    case "lightgray": SetForeGround(lightGray);
+                    case "lightgray":
+                        SetForeGround(lightGray);
                         foreGround_combobox.SelectedIndex = 4; break;
-                    case "whitesmoke": SetForeGround(whiteSmoke);
+                    case "whitesmoke":
+                        SetForeGround(whiteSmoke);
                         foreGround_combobox.SelectedIndex = 5; break;
-                    case "deeppink": SetForeGround(deepPink);
+                    case "deeppink":
+                        SetForeGround(deepPink);
                         foreGround_combobox.SelectedIndex = 6; break;
-                    case "antiquewhite": SetForeGround(antiqueWhite);
+                    case "antiquewhite":
+                        SetForeGround(antiqueWhite);
                         foreGround_combobox.SelectedIndex = 7; break;
-                    case "aqua": SetForeGround(aqua);
+                    case "aqua":
+                        SetForeGround(aqua);
                         foreGround_combobox.SelectedIndex = 8; break;
-                    case "azure": SetForeGround(azure);
+                    case "azure":
+                        SetForeGround(azure);
                         foreGround_combobox.SelectedIndex = 9; break;
-                    case "coral": SetForeGround(coral);
+                    case "coral":
+                        SetForeGround(coral);
                         foreGround_combobox.SelectedIndex = 10; break;
-                    case "brown": SetForeGround(brown);
+                    case "brown":
+                        SetForeGround(brown);
                         foreGround_combobox.SelectedIndex = 11; break;
-                    case "darkviolet": SetForeGround(darkViolet);
+                    case "darkviolet":
+                        SetForeGround(darkViolet);
                         foreGround_combobox.SelectedIndex = 12; break;
-                    case "gold": SetForeGround(gold);
+                    case "gold":
+                        SetForeGround(gold);
                         foreGround_combobox.SelectedIndex = 13; break;
                     default:
                         break;
                 }
-            }          
+            }
         }
         private void GetLocalBackground()
         {
@@ -465,12 +487,12 @@ namespace UsefulWeather
                     myBrush.TintColor = Colors.Red;
                     myBrush.FallbackColor = Colors.Red;
                     SetAcrylic(num);
-                    local_background.Values["Background"] = "red";break;
+                    local_background.Values["Background"] = "red"; break;
                 case "SkyBlue":
                     myBrush.TintColor = Colors.SkyBlue;
                     myBrush.FallbackColor = Colors.SkyBlue;
                     SetAcrylic(num);
-                    local_background.Values["Background"] = "skyblue";break;
+                    local_background.Values["Background"] = "skyblue"; break;
                 case "Black":
                     myBrush.TintColor = Colors.Black;
                     myBrush.FallbackColor = Colors.Black;
@@ -519,7 +541,7 @@ namespace UsefulWeather
                 case "brown":
                     myBrush.TintColor = Colors.Brown;
                     myBrush.FallbackColor = Colors.Brown;
-                    SetAcrylic(num);                  
+                    SetAcrylic(num);
                     local_background.Values["Background"] = "brown"; break;
                 case "darkViolet":
                     myBrush.TintColor = Colors.DarkViolet;
@@ -532,6 +554,42 @@ namespace UsefulWeather
                     local_background.Values["Background"] = "gold"; break;
                 default: break;
             }
+        }
+
+        private void liveTile_button_Click(object sender, RoutedEventArgs e)
+        {
+            GetLocalImage();
+        }
+
+        private async void GetLocalImage()
+        {
+            FileOpenPicker file = new FileOpenPicker();
+            file.FileTypeFilter.Add(".jpg");
+            StorageFile image_file = await file.PickSingleFileAsync();
+            if (image_file != null)
+            {
+                BitmapImage bitmap = new BitmapImage();
+                using (var stream = await image_file.OpenAsync(Windows.Storage.FileAccessMode.Read))
+                {
+                    bitmap.SetSource(stream);
+                }
+                StorageFolder localFolder = ApplicationData.Current.LocalFolder;
+                StorageFile fileCopy = await image_file.CopyAsync(localFolder, image_file.Name, NameCollisionOption.ReplaceExisting);
+            }
+            try
+            {
+                image_source = "ms-appdata:///local/" + image_file.Name;
+            }
+            catch
+            {
+                image_source = "ms-appx:///Assets/girl.jpg";
+            }
+
+        }
+
+        private void liveTileEnter_button_Click(object sender, RoutedEventArgs e)
+        {
+            live_tile.AddTile(image_source);
         }
     }
 }

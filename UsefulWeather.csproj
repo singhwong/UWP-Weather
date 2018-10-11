@@ -104,7 +104,8 @@
     <Compile Include="LocationPage.xaml.cs">
       <DependentUpon>LocationPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LocationWeather.cs" />
+    <Compile Include="Models\LiveTile.cs" />
+    <Compile Include="Models\LocationWeather.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -112,7 +113,7 @@
     <Compile Include="SettingPage.xaml.cs">
       <DependentUpon>SettingPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="weatherAPI.cs" />
+    <Compile Include="Models\weatherAPI.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -127,6 +128,7 @@
     <Content Include="Assets\BadgeLogo.scale-150.png" />
     <Content Include="Assets\BadgeLogo.scale-200.png" />
     <Content Include="Assets\BadgeLogo.scale-400.png" />
+    <Content Include="Assets\girl.jpg" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-125.png" />
     <Content Include="Assets\LargeTile.scale-150.png" />
@@ -183,6 +185,7 @@
     <Content Include="Assets\WeatherIcons\13n.png" />
     <Content Include="Assets\WeatherIcons\50d.png" />
     <Content Include="Assets\WeatherIcons\50n.png" />
+    <Content Include="Assets\weather_146.66666666667px_1140386_easyicon.net.png" />
     <Content Include="Assets\Wide310x150Logo.scale-100.png" />
     <Content Include="Assets\Wide310x150Logo.scale-125.png" />
     <Content Include="Assets\Wide310x150Logo.scale-150.png" />
@@ -231,13 +234,16 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.1.7</Version>
+      <Version>6.1.9</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Services.Store.Engagement">
       <Version>10.1711.28001</Version>
     </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications">
+      <Version>4.0.0</Version>
+    </PackageReference>
     <PackageReference Include="WindowsAzure.Storage">
-      <Version>9.1.1</Version>
+      <Version>9.3.2</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Toolkit.Uwp.Notifications;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -27,6 +28,7 @@ namespace UsefulWeather
     /// </summary>
     public sealed partial class HomePage : Page
     {
+        #region 颜色初始并赋值
         private SolidColorBrush red = new SolidColorBrush(Colors.Red);
         private SolidColorBrush skyBlue = new SolidColorBrush(Colors.SkyBlue);
         private SolidColorBrush black = new SolidColorBrush(Colors.Black);
@@ -41,6 +43,7 @@ namespace UsefulWeather
         private SolidColorBrush brown = new SolidColorBrush(Colors.Brown);
         private SolidColorBrush darkViolet = new SolidColorBrush(Colors.DarkViolet);
         private SolidColorBrush gold = new SolidColorBrush(Colors.Gold);
+        #endregion
         private ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
         private string foreground_value;
         public HomePage()
