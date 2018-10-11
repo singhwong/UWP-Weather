@@ -79,7 +79,7 @@ namespace UsefulWeather
                 mainMaxTem_String.Text = "Max Temp:";
                 mainMinTem_String.Text = "Min Temp:";
                 mainWindSpeed_String.Text = "Wind Speed:";
-                WindSpeedUnit_String.Text = "km/h";
+                WindSpeedUnit_String.Text = "m/s";
                 MaxTempC_textblock.Text = "°C";
                 MinTempC_textblock.Text = "°C";
                 lat_textString.Text = "Latitude: ";
@@ -294,7 +294,7 @@ namespace UsefulWeather
             live_tile.AddTile("City", cityname_textblock.Text, image_source);
             live_tile.AddTile("Temperature", temp_textblock.Text + "°C", image_source);
             live_tile.AddTile("Describe", mainDec_textblock.Text, image_source);
-            live_tile.AddTile("WindSpeed", mainWindSpeed_textblock.Text + "km/h", image_source);
+            live_tile.AddTile("WindSpeed", mainWindSpeed_textblock.Text + "m/s", image_source);
         }
     }
 }

@@ -67,7 +67,7 @@ namespace UsefulWeather
                 mainMaxTem_String.Text = "Max Temp:";
                 mainMinTem_String.Text = "Min Temp:";
                 mainWindSpeed_String.Text = "Wind Speed:";
-                WindSpeedUnit_String.Text = "km/h";
+                WindSpeedUnit_String.Text = "m/s";
                 MaxTempC_textblock.Text = "°C";
                 MinTempC_textblock.Text = "°C";
                 lat_textString.Text = "Latitude: ";
