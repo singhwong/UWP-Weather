@@ -129,8 +129,6 @@ namespace UsefulWeather
             }
             catch
             {
-                image_source = "ms-appx:///Assets/girl.jpg";
-                TileContent();
             }
             home_progressring.IsActive = false;
             liveTile_button.Visibility = Visibility.Visible;

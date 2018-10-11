@@ -31,7 +31,7 @@ namespace UsefulWeather
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-            TileUpdateManager.CreateTileUpdaterForApplication().Clear();
+            //TileUpdateManager.CreateTileUpdaterForApplication().Clear();
             TileUpdateManager.CreateTileUpdaterForApplication().EnableNotificationQueue(true);
         }
 
