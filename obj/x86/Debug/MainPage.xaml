@@ -16,7 +16,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
-            <Button x:ConnectionId='37' Name="list_button"
+            <Button x:ConnectionId='35' Name="list_button"
                     Height="45"
                     Width="45"
                     FontFamily="Segoe MDL2 Assets"
@@ -24,7 +24,7 @@
                     FontSize="30"
                     Foreground="White"
                                              />
-            <Button x:ConnectionId='38' Name="refresh_button"
+            <Button x:ConnectionId='36' Name="refresh_button"
                     Height="45"
                     Width="45"
                     FontFamily="Segoe MDL2 Assets"
@@ -33,7 +33,7 @@
                     Margin="10,0,0,0"
                     Foreground="White"
                                                 />
-            <Button x:ConnectionId='39' Name="back_button"
+            <Button x:ConnectionId='37' Name="back_button"
                     Height="45"
                     Width="45"
                     FontFamily="Segoe MDL2 Assets"
@@ -42,7 +42,7 @@
                     Foreground="White"
                     FontSize="30"
                                              />
-            <TextBlock x:ConnectionId='40' Name="main_title"
+            <TextBlock x:ConnectionId='38' Name="main_title"
                    Text="CurrentWeather"
                    FontSize="30"
                    Margin="30,0,0,0"
@@ -165,13 +165,13 @@
                                 HorizontalAlignment="Center">
                         <StackPanel x:ConnectionId='24' Name="backGround_stackPanel"
                                 Orientation="Horizontal">
-                            <TextBlock x:ConnectionId='35' Name="backGround_textblock"
+                            <TextBlock x:ConnectionId='33' Name="backGround_textblock"
                                        Text="BackGround Color"
                                        FontSize="20"
                                        FontStyle="Oblique"
                                        Margin="100,0,0,0"
                                        VerticalAlignment="Center"/>
-                            <ComboBox x:ConnectionId='36' Name="backGround_combobox"
+                            <ComboBox x:ConnectionId='34' Name="backGround_combobox"
                                                                                              
                                       Margin="30,0,0,0"
                                       Width="150"
@@ -197,13 +197,13 @@
                                     Orientation="Horizontal"
                                     Margin="0,10,0,0"
                                     HorizontalAlignment="Center">
-                            <TextBlock x:ConnectionId='33' Name="foreGround_textblock"
+                            <TextBlock x:ConnectionId='31' Name="foreGround_textblock"
                                        Text="ForeGround Color"
                                        FontSize="20"
                                        FontStyle="Oblique"
                                        Margin="100,0,0,0"
                                        VerticalAlignment="Center"/>
-                            <ComboBox x:ConnectionId='34' Name="foreGround_combobox"
+                            <ComboBox x:ConnectionId='32' Name="foreGround_combobox"
                                                                                              
                                       Margin="30,0,0,0"
                                       Width="150"
@@ -228,12 +228,12 @@
                         <StackPanel Orientation="Horizontal"
                                     HorizontalAlignment="Center"
                                     Height="100">
-                            <TextBlock x:ConnectionId='31' Name="slider_textblock"
+                            <TextBlock x:ConnectionId='29' Name="slider_textblock"
                                        FontSize="20"
                                        FontStyle="Oblique"
                                        VerticalAlignment="Center"
                                        Text="Opacity"/>
-                            <Slider x:ConnectionId='32' Name="setting_slider"
+                            <Slider x:ConnectionId='30' Name="setting_slider"
                                     Height="30"
                                     Width="200"
                                     Minimum="0"
@@ -243,22 +243,7 @@
                                     VerticalAlignment="Center"
                                                                               />
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button x:ConnectionId='29' Name="liveTile_button"
-                                    Height="40"
-                                    Width="70"
-                                    Content="ImageFile"
-                                    Margin="0,0,30,0"
-                                                                 />
-                            <Button x:ConnectionId='30' Name="liveTileEnter_button"
-                                    Height="40"
-                                    Width="70"
-                                    Content="TileImageEnter"
-                                                                      />
 
-                        </StackPanel>
-                        
-                        
                         <Button x:ConnectionId='26' Name="about_button"
                                 Height='50'
                                 Width="100"

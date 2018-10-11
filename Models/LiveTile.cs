@@ -10,28 +10,111 @@ namespace UsefulWeather.Models
 {
     public class LiveTile
     {
-        public void AddTile(string image_source)
+        private TileContent tile_content;
+        public void AddTile(string title, string detail, string image_source)
         {
-            TileContent tile_content = SetTileContent(image_source);
+            tile_content = SetTileContent(title, detail, image_source);
             var notification = new TileNotification(tile_content.GetXml());
             TileUpdateManager.CreateTileUpdaterForApplication().Update(notification);
         }
 
-        public TileContent SetTileContent(string image_source)
+        public TileContent SetTileContent(string title, string detail, string image_source)
         {
             return new TileContent()
             {
                 Visual = new TileVisual()
                 {
-                    TileMedium = new TileBinding()
+                    TileSmall = new TileBinding()
                     {
                         Content = new TileBindingContentAdaptive()
-                        {                         
+                        {
+                            Children =
+                        {
+                            new AdaptiveText()
+                            {
+                                Text = title,
+                                HintStyle = AdaptiveTextStyle.Title
+                            },
+                            new AdaptiveText()
+                            {
+                                Text = detail,
+                                HintStyle = AdaptiveTextStyle.Subtitle
+                            }
+                        },
                             BackgroundImage = new TileBackgroundImage()
                             {
                                 Source = image_source
                             }
-                        }                        
+                        }
+                    },
+                    TileMedium = new TileBinding()
+                    {
+                        Content = new TileBindingContentAdaptive()
+                        {
+                            Children =
+                        {
+                            new AdaptiveText()
+                            {
+                                Text = title,
+                                HintStyle = AdaptiveTextStyle.Title
+                            },
+                            new AdaptiveText()
+                            {
+                                Text = detail,
+                                HintStyle = AdaptiveTextStyle.Subtitle
+                            }
+                        },
+                            BackgroundImage = new TileBackgroundImage()
+                            {
+                                Source = image_source
+                            }
+                        }
+                    },
+                    TileWide = new TileBinding()
+                    {
+                        Content = new TileBindingContentAdaptive()
+                        {
+                            Children =
+                        {
+                            new AdaptiveText()
+                            {
+                                Text = title,
+                                HintStyle = AdaptiveTextStyle.Title
+                            },
+                            new AdaptiveText()
+                            {
+                                Text = detail,
+                                HintStyle = AdaptiveTextStyle.Subtitle
+                            }
+                        },
+                            BackgroundImage = new TileBackgroundImage()
+                            {
+                                Source = image_source
+                            }
+                        }
+                    },
+                    TileLarge = new TileBinding()
+                    {
+                        Content = new TileBindingContentAdaptive()
+                        {
+                            Children =
+                        {
+                            new AdaptiveText()
+                            {
+                                Text = title,
+                                HintStyle = AdaptiveTextStyle.Title
+                            },
+                            new AdaptiveText()
+                            {
+                                Text = detail,
+                                HintStyle = AdaptiveTextStyle.Subtitle
+                            }
+                        },
+                            BackgroundImage = new TileBackgroundImage()
+                            {
+                                Source = image_source
+                            }
+                        }
                     }
                 }
             };

@@ -16,7 +16,7 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Page.Resources>
-    
+
     <Grid>
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
@@ -90,6 +90,9 @@
                         <Setter Target="image5_image.Width" Value="33"/>
                         <Setter Target="image6_image.Width" Value="33"/>
                         <Setter Target="image7_image.Width" Value="33"/>
+
+                        <Setter Target="liveTile_button.Width" Value="180"/>
+                        <Setter Target="liveTileEnter_button.Width" Value="180"/>
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState>
@@ -306,6 +309,23 @@
                 </StackPanel>
             </StackPanel>
         </StackPanel>
+        <Grid Grid.Row="1">
+            <Button Name="liveTile_button"
+                    Height="40"
+                    Width="237"
+                    Background="White"
+                    FontWeight="Bold"
+                    Content="Modify LiveTile Image"
+                    Click="liveTile_button_Click"/>
+            <Button Name="liveTileEnter_button"
+                    Height="40"
+                    Width="237"
+                    Background="White"
+                    FontWeight="Bold"
+                    Content="Determine"
+                    HorizontalAlignment="Right"
+                    Click="liveTileEnter_button_Click"/>
+        </Grid>
         <ProgressRing Name="home_progressring"
                       Height="100"
                       Width="100"

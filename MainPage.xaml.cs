@@ -60,14 +60,10 @@ namespace UsefulWeather
 
         private AcrylicBrush myBrush = new AcrylicBrush();
 
-        private LiveTile live_tile;
-        private string image_source;
-        //private const string SettingTheme = "Theme";
         public MainPage()
         {
             this.InitializeComponent();
             main_frame.Navigate(typeof(HomePage));
-            live_tile = new LiveTile();
         }
 
         private void list_button_Click(object sender, RoutedEventArgs e)
@@ -556,41 +552,6 @@ namespace UsefulWeather
             }
         }
 
-        private void liveTile_button_Click(object sender, RoutedEventArgs e)
-        {
-            GetLocalImage();
-        }
-
-        private async void GetLocalImage()
-        {
-            FileOpenPicker file = new FileOpenPicker();
-            file.FileTypeFilter.Add(".jpg");
-            StorageFile image_file = await file.PickSingleFileAsync();
-            if (image_file != null)
-            {
-                BitmapImage bitmap = new BitmapImage();
-                using (var stream = await image_file.OpenAsync(Windows.Storage.FileAccessMode.Read))
-                {
-                    bitmap.SetSource(stream);
-                }
-                StorageFolder localFolder = ApplicationData.Current.LocalFolder;
-                StorageFile fileCopy = await image_file.CopyAsync(localFolder, image_file.Name, NameCollisionOption.ReplaceExisting);
-            }
-            try
-            {
-                image_source = "ms-appdata:///local/" + image_file.Name;
-            }
-            catch
-            {
-                image_source = "ms-appx:///Assets/girl.jpg";
-            }
-
-        }
-
-        private void liveTileEnter_button_Click(object sender, RoutedEventArgs e)
-        {
-            live_tile.AddTile(image_source);
-        }
     }
 }
 
