@@ -53,6 +53,9 @@ namespace UsefulWeather
         private string foreground_value;
         private bool IsSetSucceed = true;
         private string content_str;
+
+        private ApplicationDataContainer local_imagePath = ApplicationData.Current.LocalSettings;
+        //private string image_pathStr;
         public HomePage()
         {
             this.InitializeComponent();
@@ -123,13 +126,16 @@ namespace UsefulWeather
                 };
                 ContentDialogResult result = await cd.ShowAsync();
             }
-            try
-            {
-                TileContent();
-            }
-            catch
-            {
-            }
+                try
+                {
+                    image_source = localSettings.Values["image_path"].ToString();
+                    TileContent();
+                }
+                catch
+                {
+                    image_source = "Assets/girl.jpg";
+                    TileContent();
+                }             
             home_progressring.IsActive = false;
             liveTile_button.Visibility = Visibility.Visible;
             liveTileEnter_button.Visibility = Visibility.Visible;
@@ -280,6 +286,7 @@ namespace UsefulWeather
             {
                 image_source = "ms-appdata:///local/" + image_file.Name;
                 IsSetSucceed = true;
+                localSettings.Values["image_path"] = image_source;
             }
             catch
             {

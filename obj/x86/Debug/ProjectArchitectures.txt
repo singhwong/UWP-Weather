@@ -1,1 +1,1 @@
-C:\Users\singhwong\source\repos\UWP\UWP-Weather\UsefulWeather.csproj;x86
+C:\Users\wang\source\repos\UWP-Weather\UsefulWeather.csproj;x86
