@@ -7,3 +7,5 @@ A simple weather UWP
 
 The function is relatively simple
 
+
+![PNG](https://github.com/singhwong/UWP-Weather/blob/master/weather.PNG)
