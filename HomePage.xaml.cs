@@ -53,7 +53,7 @@ namespace UsefulWeather
         private string foreground_value;
         private bool IsSetSucceed = true;
         private string content_str;
-
+        private bool IsConnectionError = false;
         private ApplicationDataContainer local_imagePath = ApplicationData.Current.LocalSettings;
         //private string image_pathStr;
         public HomePage()
@@ -125,6 +125,7 @@ namespace UsefulWeather
                     PrimaryButtonText = "OK",
                 };
                 ContentDialogResult result = await cd.ShowAsync();
+                IsConnectionError = true;               
             }
                 try
                 {
@@ -137,9 +138,16 @@ namespace UsefulWeather
                     TileContent();
                 }             
             home_progressring.IsActive = false;
-            liveTile_button.Visibility = Visibility.Visible;
-            liveTileEnter_button.Visibility = Visibility.Visible;
-
+            if (IsConnectionError)
+            {
+                liveTile_button.Visibility = Visibility.Collapsed;
+                liveTileEnter_button.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                liveTile_button.Visibility = Visibility.Visible;
+                liveTileEnter_button.Visibility = Visibility.Visible;
+            }            
         }
 
         //private void ShowMessage()
@@ -296,7 +304,7 @@ namespace UsefulWeather
         private void TileContent()
         {
             live_tile.AddTile("Country", country_textblock.Text, image_source);
-            live_tile.AddTile("City", cityname_textblock.Text, image_source);
+            live_tile.AddTile("Location", cityname_textblock.Text, image_source);
             live_tile.AddTile("Temperature", temp_textblock.Text + "°C", image_source);
             live_tile.AddTile("Describe", mainDec_textblock.Text, image_source);
             live_tile.AddTile("WindSpeed", mainWindSpeed_textblock.Text + "m/s", image_source);
